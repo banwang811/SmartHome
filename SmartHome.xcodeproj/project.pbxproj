@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5C009D61B1CA33F004CAA23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009D51B1CA33F004CAA23 /* main.m */; };
+		A5C009D91B1CA33F004CAA23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009D81B1CA33F004CAA23 /* AppDelegate.m */; };
+		A5C009E11B1CA33F004CAA23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C009E01B1CA33F004CAA23 /* Images.xcassets */; };
+		A5C009E41B1CA33F004CAA23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C009E21B1CA33F004CAA23 /* LaunchScreen.xib */; };
+		A5C009F01B1CA33F004CAA23 /* SmartHomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009EF1B1CA33F004CAA23 /* SmartHomeTests.m */; };
+		A5C009FA1B1CA3FD004CAA23 /* SHImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5C009F91B1CA3FD004CAA23 /* SHImage.plist */; };
+		A5C009FD1B1CA46E004CAA23 /* SHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009FC1B1CA46E004CAA23 /* SHBaseViewController.m */; };
+		A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009FF1B1CA49A004CAA23 /* SHNavigationController.m */; };
+		A5C00A031B1CA4C5004CAA23 /* SHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A021B1CA4C5004CAA23 /* SHTabBarController.m */; };
+		A5C00A091B1CA5A9004CAA23 /* SHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A081B1CA5A9004CAA23 /* SHTableViewCell.m */; };
+		A5C00A111B1CA7D1004CAA23 /* SHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A101B1CA7D1004CAA23 /* SHHomeViewController.m */; };
+		A5C00A141B1CA7E4004CAA23 /* SHSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A131B1CA7E4004CAA23 /* SHSetingViewController.m */; };
+		A5C00A1B1B1CA889004CAA23 /* SHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A1A1B1CA889004CAA23 /* SHMessageViewController.m */; };
+		A5C00A261B1CAB4C004CAA23 /* SHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A251B1CAB4C004CAA23 /* SHLoginViewController.m */; };
+		A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */; };
+		A5C00A361B1CBC57004CAA23 /* SHContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A351B1CBC57004CAA23 /* SHContentView.m */; };
+		A5C00A391B1CBC8C004CAA23 /* SHSideContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A381B1CBC8C004CAA23 /* SHSideContentView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5C009EA1B1CA33F004CAA23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5C009C81B1CA33F004CAA23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5C009CF1B1CA33F004CAA23;
+			remoteInfo = SmartHome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5C009D01B1CA33F004CAA23 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C009D41B1CA33F004CAA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C009D51B1CA33F004CAA23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5C009D71B1CA33F004CAA23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5C009D81B1CA33F004CAA23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5C009E01B1CA33F004CAA23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A5C009E31B1CA33F004CAA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A5C009E91B1CA33F004CAA23 /* SmartHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C009EE1B1CA33F004CAA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C009EF1B1CA33F004CAA23 /* SmartHomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartHomeTests.m; sourceTree = "<group>"; };
+		A5C009F91B1CA3FD004CAA23 /* SHImage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SHImage.plist; sourceTree = "<group>"; };
+		A5C009FB1B1CA46E004CAA23 /* SHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHBaseViewController.h; path = ../SHBaseViewController.h; sourceTree = "<group>"; };
+		A5C009FC1B1CA46E004CAA23 /* SHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHBaseViewController.m; path = ../SHBaseViewController.m; sourceTree = "<group>"; };
+		A5C009FE1B1CA49A004CAA23 /* SHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHNavigationController.h; path = ../SHNavigationController.h; sourceTree = "<group>"; };
+		A5C009FF1B1CA49A004CAA23 /* SHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHNavigationController.m; path = ../SHNavigationController.m; sourceTree = "<group>"; };
+		A5C00A011B1CA4C5004CAA23 /* SHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHTabBarController.h; path = ../SHTabBarController.h; sourceTree = "<group>"; };
+		A5C00A021B1CA4C5004CAA23 /* SHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHTabBarController.m; path = ../SHTabBarController.m; sourceTree = "<group>"; };
+		A5C00A071B1CA5A9004CAA23 /* SHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTableViewCell.h; sourceTree = "<group>"; };
+		A5C00A081B1CA5A9004CAA23 /* SHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTableViewCell.m; sourceTree = "<group>"; };
+		A5C00A0F1B1CA7D1004CAA23 /* SHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHomeViewController.h; sourceTree = "<group>"; };
+		A5C00A101B1CA7D1004CAA23 /* SHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHHomeViewController.m; sourceTree = "<group>"; };
+		A5C00A121B1CA7E4004CAA23 /* SHSetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSetingViewController.h; sourceTree = "<group>"; };
+		A5C00A131B1CA7E4004CAA23 /* SHSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSetingViewController.m; sourceTree = "<group>"; };
+		A5C00A191B1CA889004CAA23 /* SHMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMessageViewController.h; sourceTree = "<group>"; };
+		A5C00A1A1B1CA889004CAA23 /* SHMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMessageViewController.m; sourceTree = "<group>"; };
+		A5C00A241B1CAB4C004CAA23 /* SHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLoginViewController.h; sourceTree = "<group>"; };
+		A5C00A251B1CAB4C004CAA23 /* SHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLoginViewController.m; sourceTree = "<group>"; };
+		A5C00A2D1B1CAF34004CAA23 /* UIColor+SHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SHColor.h"; sourceTree = "<group>"; };
+		A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SHColor.m"; sourceTree = "<group>"; };
+		A5C00A321B1CB13C004CAA23 /* SmartHome.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartHome.pch; sourceTree = "<group>"; };
+		A5C00A341B1CBC57004CAA23 /* SHContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHContentView.h; sourceTree = "<group>"; };
+		A5C00A351B1CBC57004CAA23 /* SHContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHContentView.m; sourceTree = "<group>"; };
+		A5C00A371B1CBC8C004CAA23 /* SHSideContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideContentView.h; sourceTree = "<group>"; };
+		A5C00A381B1CBC8C004CAA23 /* SHSideContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideContentView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5C009CD1B1CA33F004CAA23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C009E61B1CA33F004CAA23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5C009C71B1CA33F004CAA23 = {
+			isa = PBXGroup;
+			children = (
+				A5C009D21B1CA33F004CAA23 /* SmartHome */,
+				A5C009EC1B1CA33F004CAA23 /* SmartHomeTests */,
+				A5C009D11B1CA33F004CAA23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5C009D11B1CA33F004CAA23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5C009D01B1CA33F004CAA23 /* SmartHome.app */,
+				A5C009E91B1CA33F004CAA23 /* SmartHomeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5C009D21B1CA33F004CAA23 /* SmartHome */ = {
+			isa = PBXGroup;
+			children = (
+				A5C009D71B1CA33F004CAA23 /* AppDelegate.h */,
+				A5C009D81B1CA33F004CAA23 /* AppDelegate.m */,
+				A5C00A0A1B1CA5F4004CAA23 /* Module */,
+				A5C00A061B1CA573004CAA23 /* Improt */,
+				A5C00A051B1CA54B004CAA23 /* Common */,
+				A5C00A041B1CA539004CAA23 /* Base */,
+				A5C00A151B1CA837004CAA23 /* Message */,
+				A5C00A231B1CAB2D004CAA23 /* Login */,
+				A5C00A0E1B1CA770004CAA23 /* Seting */,
+				A5C00A0D1B1CA75D004CAA23 /* Home */,
+				A5C00A1C1B1CA946004CAA23 /* Tool */,
+				A5C00A281B1CAD7B004CAA23 /* Model */,
+				A5C00A2C1B1CAED5004CAA23 /* Categorys */,
+				A5C009E01B1CA33F004CAA23 /* Images.xcassets */,
+				A5C009E21B1CA33F004CAA23 /* LaunchScreen.xib */,
+				A5C009D31B1CA33F004CAA23 /* Supporting Files */,
+			);
+			path = SmartHome;
+			sourceTree = "<group>";
+		};
+		A5C009D31B1CA33F004CAA23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5C009D41B1CA33F004CAA23 /* Info.plist */,
+				A5C009D51B1CA33F004CAA23 /* main.m */,
+				A5C009F91B1CA3FD004CAA23 /* SHImage.plist */,
+				A5C00A321B1CB13C004CAA23 /* SmartHome.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5C009EC1B1CA33F004CAA23 /* SmartHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5C009EF1B1CA33F004CAA23 /* SmartHomeTests.m */,
+				A5C009ED1B1CA33F004CAA23 /* Supporting Files */,
+			);
+			path = SmartHomeTests;
+			sourceTree = "<group>";
+		};
+		A5C009ED1B1CA33F004CAA23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5C009EE1B1CA33F004CAA23 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5C00A041B1CA539004CAA23 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A5C009FB1B1CA46E004CAA23 /* SHBaseViewController.h */,
+				A5C009FC1B1CA46E004CAA23 /* SHBaseViewController.m */,
+				A5C009FE1B1CA49A004CAA23 /* SHNavigationController.h */,
+				A5C009FF1B1CA49A004CAA23 /* SHNavigationController.m */,
+				A5C00A011B1CA4C5004CAA23 /* SHTabBarController.h */,
+				A5C00A021B1CA4C5004CAA23 /* SHTabBarController.m */,
+				A5C00A071B1CA5A9004CAA23 /* SHTableViewCell.h */,
+				A5C00A081B1CA5A9004CAA23 /* SHTableViewCell.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A5C00A051B1CA54B004CAA23 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A5C00A061B1CA573004CAA23 /* Improt */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Improt;
+			sourceTree = "<group>";
+		};
+		A5C00A0A1B1CA5F4004CAA23 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A5C00A0C1B1CA628004CAA23 /* Connect */,
+				A5C00A0B1B1CA618004CAA23 /* Data */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A5C00A0B1B1CA618004CAA23 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A5C00A0C1B1CA628004CAA23 /* Connect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Connect;
+			sourceTree = "<group>";
+		};
+		A5C00A0D1B1CA75D004CAA23 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A5C00A0F1B1CA7D1004CAA23 /* SHHomeViewController.h */,
+				A5C00A101B1CA7D1004CAA23 /* SHHomeViewController.m */,
+				A5C00A341B1CBC57004CAA23 /* SHContentView.h */,
+				A5C00A351B1CBC57004CAA23 /* SHContentView.m */,
+				A5C00A371B1CBC8C004CAA23 /* SHSideContentView.h */,
+				A5C00A381B1CBC8C004CAA23 /* SHSideContentView.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A5C00A0E1B1CA770004CAA23 /* Seting */ = {
+			isa = PBXGroup;
+			children = (
+				A5C00A121B1CA7E4004CAA23 /* SHSetingViewController.h */,
+				A5C00A131B1CA7E4004CAA23 /* SHSetingViewController.m */,
+			);
+			path = Seting;
+			sourceTree = "<group>";
+		};
+		A5C00A151B1CA837004CAA23 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A5C00A191B1CA889004CAA23 /* SHMessageViewController.h */,
+				A5C00A1A1B1CA889004CAA23 /* SHMessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		A5C00A1C1B1CA946004CAA23 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A5C00A231B1CAB2D004CAA23 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A5C00A241B1CAB4C004CAA23 /* SHLoginViewController.h */,
+				A5C00A251B1CAB4C004CAA23 /* SHLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A5C00A281B1CAD7B004CAA23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5C00A2C1B1CAED5004CAA23 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				A5C00A2D1B1CAF34004CAA23 /* UIColor+SHColor.h */,
+				A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5C009CF1B1CA33F004CAA23 /* SmartHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C009F31B1CA33F004CAA23 /* Build configuration list for PBXNativeTarget "SmartHome" */;
+			buildPhases = (
+				A5C009CC1B1CA33F004CAA23 /* Sources */,
+				A5C009CD1B1CA33F004CAA23 /* Frameworks */,
+				A5C009CE1B1CA33F004CAA23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartHome;
+			productName = SmartHome;
+			productReference = A5C009D01B1CA33F004CAA23 /* SmartHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5C009E81B1CA33F004CAA23 /* SmartHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C009F61B1CA33F004CAA23 /* Build configuration list for PBXNativeTarget "SmartHomeTests" */;
+			buildPhases = (
+				A5C009E51B1CA33F004CAA23 /* Sources */,
+				A5C009E61B1CA33F004CAA23 /* Frameworks */,
+				A5C009E71B1CA33F004CAA23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5C009EB1B1CA33F004CAA23 /* PBXTargetDependency */,
+			);
+			name = SmartHomeTests;
+			productName = SmartHomeTests;
+			productReference = A5C009E91B1CA33F004CAA23 /* SmartHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5C009C81B1CA33F004CAA23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = banwang;
+				TargetAttributes = {
+					A5C009CF1B1CA33F004CAA23 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					A5C009E81B1CA33F004CAA23 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = A5C009CF1B1CA33F004CAA23;
+					};
+				};
+			};
+			buildConfigurationList = A5C009CB1B1CA33F004CAA23 /* Build configuration list for PBXProject "SmartHome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5C009C71B1CA33F004CAA23;
+			productRefGroup = A5C009D11B1CA33F004CAA23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5C009CF1B1CA33F004CAA23 /* SmartHome */,
+				A5C009E81B1CA33F004CAA23 /* SmartHomeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5C009CE1B1CA33F004CAA23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C009E41B1CA33F004CAA23 /* LaunchScreen.xib in Resources */,
+				A5C009FA1B1CA3FD004CAA23 /* SHImage.plist in Resources */,
+				A5C009E11B1CA33F004CAA23 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C009E71B1CA33F004CAA23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5C009CC1B1CA33F004CAA23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C00A391B1CBC8C004CAA23 /* SHSideContentView.m in Sources */,
+				A5C00A031B1CA4C5004CAA23 /* SHTabBarController.m in Sources */,
+				A5C00A261B1CAB4C004CAA23 /* SHLoginViewController.m in Sources */,
+				A5C009D91B1CA33F004CAA23 /* AppDelegate.m in Sources */,
+				A5C00A111B1CA7D1004CAA23 /* SHHomeViewController.m in Sources */,
+				A5C009FD1B1CA46E004CAA23 /* SHBaseViewController.m in Sources */,
+				A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */,
+				A5C00A091B1CA5A9004CAA23 /* SHTableViewCell.m in Sources */,
+				A5C00A361B1CBC57004CAA23 /* SHContentView.m in Sources */,
+				A5C00A1B1B1CA889004CAA23 /* SHMessageViewController.m in Sources */,
+				A5C009D61B1CA33F004CAA23 /* main.m in Sources */,
+				A5C00A141B1CA7E4004CAA23 /* SHSetingViewController.m in Sources */,
+				A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C009E51B1CA33F004CAA23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C009F01B1CA33F004CAA23 /* SmartHomeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5C009EB1B1CA33F004CAA23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5C009CF1B1CA33F004CAA23 /* SmartHome */;
+			targetProxy = A5C009EA1B1CA33F004CAA23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5C009E21B1CA33F004CAA23 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C009E31B1CA33F004CAA23 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5C009F11B1CA33F004CAA23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5C009F21B1CA33F004CAA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5C009F41B1CA33F004CAA23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SmartHome/SmartHome.pch";
+				INFOPLIST_FILE = SmartHome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5C009F51B1CA33F004CAA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SmartHome/SmartHome.pch";
+				INFOPLIST_FILE = SmartHome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A5C009F71B1CA33F004CAA23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmartHomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartHome.app/SmartHome";
+			};
+			name = Debug;
+		};
+		A5C009F81B1CA33F004CAA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmartHomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartHome.app/SmartHome";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5C009CB1B1CA33F004CAA23 /* Build configuration list for PBXProject "SmartHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C009F11B1CA33F004CAA23 /* Debug */,
+				A5C009F21B1CA33F004CAA23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5C009F31B1CA33F004CAA23 /* Build configuration list for PBXNativeTarget "SmartHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C009F41B1CA33F004CAA23 /* Debug */,
+				A5C009F51B1CA33F004CAA23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A5C009F61B1CA33F004CAA23 /* Build configuration list for PBXNativeTarget "SmartHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C009F71B1CA33F004CAA23 /* Debug */,
+				A5C009F81B1CA33F004CAA23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5C009C81B1CA33F004CAA23 /* Project object */;
+}

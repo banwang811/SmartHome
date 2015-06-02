@@ -1,0 +1,24 @@
+//
+//  SmartHome.pch
+//  SmartHome
+//
+//  Created by banwang on 15/6/1.
+//  Copyright (c) 2015年 banwang. All rights reserved.
+//
+
+#ifndef SmartHome_SmartHome_pch
+#define SmartHome_SmartHome_pch
+
+
+#import "UIColor+SHColor.h"
+#import "AppDelegate.h"
+
+#define SHAPP_DELEGATE  ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+#define IOS_7_OR_LATER ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+#define IOS_8_OR_LATER ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+
+#define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
+
+#endif
