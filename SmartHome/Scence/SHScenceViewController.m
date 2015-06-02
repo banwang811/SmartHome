@@ -1,18 +1,18 @@
 //
-//  SHSetingViewController.m
+//  SHScenceViewController.m
 //  SmartHome
 //
-//  Created by banwang on 15/6/1.
+//  Created by banwang on 15/6/2.
 //  Copyright (c) 2015年 banwang. All rights reserved.
 //
 
-#import "SHSetingViewController.h"
+#import "SHScenceViewController.h"
 
-@interface SHSetingViewController ()
+@interface SHScenceViewController ()
 
 @end
 
-@implementation SHSetingViewController
+@implementation SHScenceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,6 +21,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

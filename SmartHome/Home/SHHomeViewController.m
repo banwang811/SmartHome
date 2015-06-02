@@ -7,9 +7,8 @@
 //
 
 #import "SHHomeViewController.h"
-#import "SHContentView.h"
 
-@interface SHHomeViewController ()<SHContentViewDelegate>
+@interface SHHomeViewController ()
 
 @end
 
@@ -22,19 +21,7 @@
 
 - (void)setupSubViewController
 {
-    SHContentView *customView = [[SHContentView alloc] initWithFrame:self.view.bounds parentView:self.view];
-    [[customView layer] setShadowOffset:CGSizeMake(10, 10)];
-    [[customView layer] setShadowRadius:20];
-    [[customView layer] setShadowOpacity:1];
-    [[customView layer] setShadowColor:[UIColor blackColor].CGColor];
-    customView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:customView];
-}
 
-
-- (void)panContentView
-{
-    SHAPP_DELEGATE.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

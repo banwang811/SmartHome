@@ -20,8 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor themeColor];
-    SHNavigationController *navController = [[SHNavigationController alloc] initWithRootViewController:[SHLoginViewController new]];
-    self.window.rootViewController = navController;
+    self.window.rootViewController = [SHLoginViewController new];
     [self.window makeKeyAndVisible];
     return YES;
 }

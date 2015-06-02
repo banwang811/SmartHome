@@ -1,14 +1,14 @@
 //
-//  SHSideContentView.m
+//  SHSceneTableViewCell.m
 //  SmartHome
 //
 //  Created by banwang on 15/6/2.
 //  Copyright (c) 2015年 banwang. All rights reserved.
 //
 
-#import "SHSideContentView.h"
+#import "SHSceneTableViewCell.h"
 
-@implementation SHSideContentView
+@implementation SHSceneTableViewCell
 
 /*
 // Only override drawRect: if you perform custom drawing.

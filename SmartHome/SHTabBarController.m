@@ -12,6 +12,9 @@
 #import "SHMessageViewController.h"
 #import "SHSetingViewController.h"
 #import "SHNavigationController.h"
+#import "SHRoomViewController.h"
+#import "SHScenceViewController.h"
+
 
 @interface SHTabBarController ()
 
@@ -21,29 +24,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBar.hidden = YES;
-    [self setupTabBar];
     [self setupSubViewController];
-}
-
-- (void)setupTabBar
-{
-    self.tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 49, SCREEN_WIDTH, 49)];
-    self.tabBarView.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:self.tabBarView];
 }
 
 - (void)setupSubViewController
 {
     // add sub viewController
-    SHHomeViewController *hVC = [[SHHomeViewController alloc] init];
-    [self addSubViewController:hVC title:@"Home" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_highlighted"];
+    SHRoomViewController *hVC = [[SHRoomViewController alloc] init];
+    [self addSubViewController:hVC title:@"房间" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_highlighted"];
     
-    SHMessageViewController *mVC = [[SHMessageViewController alloc] init];
-    [self addSubViewController:mVC title:@"Messages" imageName:@"tabbar_messages" selectedImageName:@"tabbar_messages_highlighted"];
+    SHScenceViewController *mVC = [[SHScenceViewController alloc] init];
+    [self addSubViewController:mVC title:@"情景" imageName:@"tabbar_messages" selectedImageName:@"tabbar_messages_highlighted"];
     
     SHSetingViewController *sVC = [[SHSetingViewController alloc] init];
-    [self addSubViewController:sVC title:@"Settings" imageName:@"tabbar_settings" selectedImageName:@"tabbar_settings_highlighted"];
+    [self addSubViewController:sVC title:@"设置" imageName:@"tabbar_settings" selectedImageName:@"tabbar_settings_highlighted"];
 }
 
 - (void)addSubViewController:(UIViewController *)subVC title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName

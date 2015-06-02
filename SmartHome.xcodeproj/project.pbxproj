@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B571B1DEE1D005ABF68 /* SHCellModel.m */; };
+		A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B5C1B1DF171005ABF68 /* YYFMDatabase.m */; };
+		A5096B6E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B5E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m */; };
+		A5096B6F1B1DF171005ABF68 /* YYFMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B601B1DF171005ABF68 /* YYFMDatabasePool.m */; };
+		A5096B701B1DF171005ABF68 /* YYFMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B621B1DF171005ABF68 /* YYFMDatabaseQueue.m */; };
+		A5096B711B1DF171005ABF68 /* YYFMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B651B1DF171005ABF68 /* YYFMResultSet.m */; };
+		A5096B721B1DF171005ABF68 /* NSMeapDB.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B681B1DF171005ABF68 /* NSMeapDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A5096B731B1DF171005ABF68 /* NSMeapDBBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B6A1B1DF171005ABF68 /* NSMeapDBBaseObject.m */; };
+		A5096B741B1DF171005ABF68 /* NSMeapSqlHanldler.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B6C1B1DF171005ABF68 /* NSMeapSqlHanldler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A5096B761B1DF1F6005ABF68 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5096B751B1DF1F6005ABF68 /* libsqlite3.0.dylib */; };
+		A5096B7B1B1DF2AF005ABF68 /* SHScenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B7A1B1DF2AF005ABF68 /* SHScenceViewController.m */; };
+		A5096B7E1B1DF2BE005ABF68 /* SHRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B7D1B1DF2BE005ABF68 /* SHRoomViewController.m */; };
+		A5096B841B1DF633005ABF68 /* SHRoomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B831B1DF633005ABF68 /* SHRoomTableViewCell.m */; };
+		A5096B871B1DF66F005ABF68 /* SHSceneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B861B1DF66F005ABF68 /* SHSceneTableViewCell.m */; };
+		A5096B8A1B1DF690005ABF68 /* SHRoomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B891B1DF690005ABF68 /* SHRoomCellModel.m */; };
+		A5096B8D1B1DF6A5005ABF68 /* SHScenceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B8C1B1DF6A5005ABF68 /* SHScenceModel.m */; };
+		A5096B931B1DF915005ABF68 /* SHRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B921B1DF915005ABF68 /* SHRoomView.m */; };
 		A5C009D61B1CA33F004CAA23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009D51B1CA33F004CAA23 /* main.m */; };
 		A5C009D91B1CA33F004CAA23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009D81B1CA33F004CAA23 /* AppDelegate.m */; };
 		A5C009E11B1CA33F004CAA23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C009E01B1CA33F004CAA23 /* Images.xcassets */; };
@@ -22,8 +39,6 @@
 		A5C00A1B1B1CA889004CAA23 /* SHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A1A1B1CA889004CAA23 /* SHMessageViewController.m */; };
 		A5C00A261B1CAB4C004CAA23 /* SHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A251B1CAB4C004CAA23 /* SHLoginViewController.m */; };
 		A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */; };
-		A5C00A361B1CBC57004CAA23 /* SHContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A351B1CBC57004CAA23 /* SHContentView.m */; };
-		A5C00A391B1CBC8C004CAA23 /* SHSideContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A381B1CBC8C004CAA23 /* SHSideContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +52,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5096B561B1DEE1D005ABF68 /* SHCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCellModel.h; sourceTree = "<group>"; };
+		A5096B571B1DEE1D005ABF68 /* SHCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCellModel.m; sourceTree = "<group>"; };
+		A5096B5B1B1DF171005ABF68 /* YYFMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFMDatabase.h; sourceTree = "<group>"; };
+		A5096B5C1B1DF171005ABF68 /* YYFMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFMDatabase.m; sourceTree = "<group>"; };
+		A5096B5D1B1DF171005ABF68 /* YYFMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A5096B5E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A5096B5F1B1DF171005ABF68 /* YYFMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFMDatabasePool.h; sourceTree = "<group>"; };
+		A5096B601B1DF171005ABF68 /* YYFMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFMDatabasePool.m; sourceTree = "<group>"; };
+		A5096B611B1DF171005ABF68 /* YYFMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFMDatabaseQueue.h; sourceTree = "<group>"; };
+		A5096B621B1DF171005ABF68 /* YYFMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFMDatabaseQueue.m; sourceTree = "<group>"; };
+		A5096B631B1DF171005ABF68 /* YYFMDBHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFMDBHeader.h; sourceTree = "<group>"; };
+		A5096B641B1DF171005ABF68 /* YYFMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFMResultSet.h; sourceTree = "<group>"; };
+		A5096B651B1DF171005ABF68 /* YYFMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFMResultSet.m; sourceTree = "<group>"; };
+		A5096B671B1DF171005ABF68 /* NSMeapDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMeapDB.h; sourceTree = "<group>"; };
+		A5096B681B1DF171005ABF68 /* NSMeapDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMeapDB.m; sourceTree = "<group>"; };
+		A5096B691B1DF171005ABF68 /* NSMeapDBBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMeapDBBaseObject.h; sourceTree = "<group>"; };
+		A5096B6A1B1DF171005ABF68 /* NSMeapDBBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMeapDBBaseObject.m; sourceTree = "<group>"; };
+		A5096B6B1B1DF171005ABF68 /* NSMeapSqlHanldler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMeapSqlHanldler.h; sourceTree = "<group>"; };
+		A5096B6C1B1DF171005ABF68 /* NSMeapSqlHanldler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMeapSqlHanldler.m; sourceTree = "<group>"; };
+		A5096B751B1DF1F6005ABF68 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		A5096B791B1DF2AF005ABF68 /* SHScenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHScenceViewController.h; sourceTree = "<group>"; };
+		A5096B7A1B1DF2AF005ABF68 /* SHScenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHScenceViewController.m; sourceTree = "<group>"; };
+		A5096B7C1B1DF2BE005ABF68 /* SHRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomViewController.h; sourceTree = "<group>"; };
+		A5096B7D1B1DF2BE005ABF68 /* SHRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomViewController.m; sourceTree = "<group>"; };
+		A5096B821B1DF633005ABF68 /* SHRoomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomTableViewCell.h; sourceTree = "<group>"; };
+		A5096B831B1DF633005ABF68 /* SHRoomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomTableViewCell.m; sourceTree = "<group>"; };
+		A5096B851B1DF66F005ABF68 /* SHSceneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSceneTableViewCell.h; sourceTree = "<group>"; };
+		A5096B861B1DF66F005ABF68 /* SHSceneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSceneTableViewCell.m; sourceTree = "<group>"; };
+		A5096B881B1DF690005ABF68 /* SHRoomCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomCellModel.h; sourceTree = "<group>"; };
+		A5096B891B1DF690005ABF68 /* SHRoomCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomCellModel.m; sourceTree = "<group>"; };
+		A5096B8B1B1DF6A5005ABF68 /* SHScenceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHScenceModel.h; sourceTree = "<group>"; };
+		A5096B8C1B1DF6A5005ABF68 /* SHScenceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHScenceModel.m; sourceTree = "<group>"; };
+		A5096B911B1DF915005ABF68 /* SHRoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomView.h; sourceTree = "<group>"; };
+		A5096B921B1DF915005ABF68 /* SHRoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomView.m; sourceTree = "<group>"; };
 		A5C009D01B1CA33F004CAA23 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C009D41B1CA33F004CAA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5C009D51B1CA33F004CAA23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,10 +116,6 @@
 		A5C00A2D1B1CAF34004CAA23 /* UIColor+SHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SHColor.h"; sourceTree = "<group>"; };
 		A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SHColor.m"; sourceTree = "<group>"; };
 		A5C00A321B1CB13C004CAA23 /* SmartHome.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartHome.pch; sourceTree = "<group>"; };
-		A5C00A341B1CBC57004CAA23 /* SHContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHContentView.h; sourceTree = "<group>"; };
-		A5C00A351B1CBC57004CAA23 /* SHContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHContentView.m; sourceTree = "<group>"; };
-		A5C00A371B1CBC8C004CAA23 /* SHSideContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideContentView.h; sourceTree = "<group>"; };
-		A5C00A381B1CBC8C004CAA23 /* SHSideContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideContentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5096B761B1DF1F6005ABF68 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +137,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5096B591B1DF159005ABF68 /* Meap */ = {
+			isa = PBXGroup;
+			children = (
+				A5096B5A1B1DF171005ABF68 /* FMDB */,
+				A5096B661B1DF171005ABF68 /* NSMeapDBManagement */,
+			);
+			path = Meap;
+			sourceTree = "<group>";
+		};
+		A5096B5A1B1DF171005ABF68 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A5096B5B1B1DF171005ABF68 /* YYFMDatabase.h */,
+				A5096B5C1B1DF171005ABF68 /* YYFMDatabase.m */,
+				A5096B5D1B1DF171005ABF68 /* YYFMDatabaseAdditions.h */,
+				A5096B5E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m */,
+				A5096B5F1B1DF171005ABF68 /* YYFMDatabasePool.h */,
+				A5096B601B1DF171005ABF68 /* YYFMDatabasePool.m */,
+				A5096B611B1DF171005ABF68 /* YYFMDatabaseQueue.h */,
+				A5096B621B1DF171005ABF68 /* YYFMDatabaseQueue.m */,
+				A5096B631B1DF171005ABF68 /* YYFMDBHeader.h */,
+				A5096B641B1DF171005ABF68 /* YYFMResultSet.h */,
+				A5096B651B1DF171005ABF68 /* YYFMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		A5096B661B1DF171005ABF68 /* NSMeapDBManagement */ = {
+			isa = PBXGroup;
+			children = (
+				A5096B671B1DF171005ABF68 /* NSMeapDB.h */,
+				A5096B681B1DF171005ABF68 /* NSMeapDB.m */,
+				A5096B691B1DF171005ABF68 /* NSMeapDBBaseObject.h */,
+				A5096B6A1B1DF171005ABF68 /* NSMeapDBBaseObject.m */,
+				A5096B6B1B1DF171005ABF68 /* NSMeapSqlHanldler.h */,
+				A5096B6C1B1DF171005ABF68 /* NSMeapSqlHanldler.m */,
+			);
+			path = NSMeapDBManagement;
+			sourceTree = "<group>";
+		};
+		A5096B771B1DF26E005ABF68 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				A5096B7C1B1DF2BE005ABF68 /* SHRoomViewController.h */,
+				A5096B7D1B1DF2BE005ABF68 /* SHRoomViewController.m */,
+				A5096B821B1DF633005ABF68 /* SHRoomTableViewCell.h */,
+				A5096B831B1DF633005ABF68 /* SHRoomTableViewCell.m */,
+				A5096B881B1DF690005ABF68 /* SHRoomCellModel.h */,
+				A5096B891B1DF690005ABF68 /* SHRoomCellModel.m */,
+				A5096B911B1DF915005ABF68 /* SHRoomView.h */,
+				A5096B921B1DF915005ABF68 /* SHRoomView.m */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		A5096B781B1DF28D005ABF68 /* Scence */ = {
+			isa = PBXGroup;
+			children = (
+				A5096B791B1DF2AF005ABF68 /* SHScenceViewController.h */,
+				A5096B7A1B1DF2AF005ABF68 /* SHScenceViewController.m */,
+				A5096B851B1DF66F005ABF68 /* SHSceneTableViewCell.h */,
+				A5096B861B1DF66F005ABF68 /* SHSceneTableViewCell.m */,
+				A5096B8B1B1DF6A5005ABF68 /* SHScenceModel.h */,
+				A5096B8C1B1DF6A5005ABF68 /* SHScenceModel.m */,
+			);
+			path = Scence;
+			sourceTree = "<group>";
+		};
 		A5C009C71B1CA33F004CAA23 = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +228,10 @@
 			children = (
 				A5C009D71B1CA33F004CAA23 /* AppDelegate.h */,
 				A5C009D81B1CA33F004CAA23 /* AppDelegate.m */,
-				A5C00A0A1B1CA5F4004CAA23 /* Module */,
-				A5C00A061B1CA573004CAA23 /* Improt */,
 				A5C00A051B1CA54B004CAA23 /* Common */,
 				A5C00A041B1CA539004CAA23 /* Base */,
+				A5096B781B1DF28D005ABF68 /* Scence */,
+				A5096B771B1DF26E005ABF68 /* Room */,
 				A5C00A151B1CA837004CAA23 /* Message */,
 				A5C00A231B1CAB2D004CAA23 /* Login */,
 				A5C00A0E1B1CA770004CAA23 /* Seting */,
@@ -125,6 +239,8 @@
 				A5C00A1C1B1CA946004CAA23 /* Tool */,
 				A5C00A281B1CAD7B004CAA23 /* Model */,
 				A5C00A2C1B1CAED5004CAA23 /* Categorys */,
+				A5C00A0A1B1CA5F4004CAA23 /* Module */,
+				A5C00A061B1CA573004CAA23 /* Improt */,
 				A5C009E01B1CA33F004CAA23 /* Images.xcassets */,
 				A5C009E21B1CA33F004CAA23 /* LaunchScreen.xib */,
 				A5C009D31B1CA33F004CAA23 /* Supporting Files */,
@@ -185,6 +301,8 @@
 		A5C00A061B1CA573004CAA23 /* Improt */ = {
 			isa = PBXGroup;
 			children = (
+				A5096B751B1DF1F6005ABF68 /* libsqlite3.0.dylib */,
+				A5096B591B1DF159005ABF68 /* Meap */,
 			);
 			path = Improt;
 			sourceTree = "<group>";
@@ -217,10 +335,6 @@
 			children = (
 				A5C00A0F1B1CA7D1004CAA23 /* SHHomeViewController.h */,
 				A5C00A101B1CA7D1004CAA23 /* SHHomeViewController.m */,
-				A5C00A341B1CBC57004CAA23 /* SHContentView.h */,
-				A5C00A351B1CBC57004CAA23 /* SHContentView.m */,
-				A5C00A371B1CBC8C004CAA23 /* SHSideContentView.h */,
-				A5C00A381B1CBC8C004CAA23 /* SHSideContentView.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -262,6 +376,8 @@
 		A5C00A281B1CAD7B004CAA23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A5096B561B1DEE1D005ABF68 /* SHCellModel.h */,
+				A5096B571B1DEE1D005ABF68 /* SHCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,19 +491,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C00A391B1CBC8C004CAA23 /* SHSideContentView.m in Sources */,
+				A5096B741B1DF171005ABF68 /* NSMeapSqlHanldler.m in Sources */,
+				A5096B731B1DF171005ABF68 /* NSMeapDBBaseObject.m in Sources */,
+				A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */,
+				A5096B8A1B1DF690005ABF68 /* SHRoomCellModel.m in Sources */,
+				A5096B711B1DF171005ABF68 /* YYFMResultSet.m in Sources */,
 				A5C00A031B1CA4C5004CAA23 /* SHTabBarController.m in Sources */,
+				A5096B871B1DF66F005ABF68 /* SHSceneTableViewCell.m in Sources */,
+				A5096B6F1B1DF171005ABF68 /* YYFMDatabasePool.m in Sources */,
 				A5C00A261B1CAB4C004CAA23 /* SHLoginViewController.m in Sources */,
 				A5C009D91B1CA33F004CAA23 /* AppDelegate.m in Sources */,
+				A5096B931B1DF915005ABF68 /* SHRoomView.m in Sources */,
+				A5096B7E1B1DF2BE005ABF68 /* SHRoomViewController.m in Sources */,
 				A5C00A111B1CA7D1004CAA23 /* SHHomeViewController.m in Sources */,
+				A5096B7B1B1DF2AF005ABF68 /* SHScenceViewController.m in Sources */,
 				A5C009FD1B1CA46E004CAA23 /* SHBaseViewController.m in Sources */,
 				A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */,
+				A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */,
 				A5C00A091B1CA5A9004CAA23 /* SHTableViewCell.m in Sources */,
-				A5C00A361B1CBC57004CAA23 /* SHContentView.m in Sources */,
+				A5096B8D1B1DF6A5005ABF68 /* SHScenceModel.m in Sources */,
+				A5096B6E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m in Sources */,
 				A5C00A1B1B1CA889004CAA23 /* SHMessageViewController.m in Sources */,
 				A5C009D61B1CA33F004CAA23 /* main.m in Sources */,
+				A5096B701B1DF171005ABF68 /* YYFMDatabaseQueue.m in Sources */,
 				A5C00A141B1CA7E4004CAA23 /* SHSetingViewController.m in Sources */,
 				A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */,
+				A5096B841B1DF633005ABF68 /* SHRoomTableViewCell.m in Sources */,
+				A5096B721B1DF171005ABF68 /* NSMeapDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +704,7 @@
 				A5C009F51B1CA33F004CAA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5C009F61B1CA33F004CAA23 /* Build configuration list for PBXNativeTarget "SmartHomeTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +713,7 @@
 				A5C009F81B1CA33F004CAA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
