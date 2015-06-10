@@ -9,9 +9,19 @@
 #ifndef SmartHome_SmartHome_pch
 #define SmartHome_SmartHome_pch
 
-
+//扩展
 #import "UIColor+SHColor.h"
+
+
 #import "AppDelegate.h"
+
+//数据库
+#import "NSMeapDB.h"
+#import "NSSceneModel.h"
+#import "NSRoomModel.h"
+#import "NSDeviceModel.h"
+
+
 
 #define SHAPP_DELEGATE  ((AppDelegate *)[UIApplication sharedApplication].delegate)
 

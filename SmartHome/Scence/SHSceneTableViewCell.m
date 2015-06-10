@@ -8,14 +8,28 @@
 
 #import "SHSceneTableViewCell.h"
 
+@interface SHSceneTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *actionButton;
+
+
+@end
+
 @implementation SHSceneTableViewCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+- (void)setModel:(SHSceneModel *)model
+{
+    self.nameLabel.text = model.title;
+    self.imageView.image = [UIImage imageNamed:model.iconName];
+    _model = model;
 }
-*/
+
+- (IBAction)actionClick:(UIButton *)sender {
+    
+}
+
 
 @end

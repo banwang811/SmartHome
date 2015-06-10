@@ -7,16 +7,11 @@
 //
 
 #import "SHTableViewCell.h"
-#import "SHRoomCellModel.m"
-#import "SHRoomView.h"
+#import "SHRoomCellModel.h"
 
 @interface SHRoomTableViewCell : SHTableViewCell
 
-@property (nonatomic, strong) SHRoomCellModel  *cellModel;
-
-@property (nonatomic, strong) SHRoomView       *roomView;
-
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, strong) SHRoomCellModel  *model;
 
 
 @end

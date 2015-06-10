@@ -29,6 +29,7 @@ typedef void(^QueryResultBlock)(NSArray *results);
  */
 @property (nonatomic, strong) NSString      *password;
 
++ (NSMeapDB *)shareMeap;
 
 #pragma mark - 库文件
 /**

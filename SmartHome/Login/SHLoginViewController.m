@@ -8,7 +8,9 @@
 
 #import "SHLoginViewController.h"
 #import "AppDelegate.h"
-#import "SHTabBarController.h"
+//#import "SHTabBarController.h"
+#import "SidebarViewController.h"
+
 @interface SHLoginViewController ()
 
 
@@ -38,10 +40,12 @@
 
 - (void)logInButtonClick
 {
-    SHTabBarController *tabBarController = [[SHTabBarController alloc] init];
-    SHAPP_DELEGATE.tabBarController = tabBarController;
-
-    SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.tabBarController;
+//    SHTabBarController *tabBarController = [[SHTabBarController alloc] init];
+//    SHAPP_DELEGATE.tabBarController = tabBarController;
+//
+//    SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.tabBarController;
+    
+    SHAPP_DELEGATE.window.rootViewController = [[SidebarViewController alloc] initWithNibName:@"SidebarViewController" bundle:nil];
 }
 
 - (void)didReceiveMemoryWarning {

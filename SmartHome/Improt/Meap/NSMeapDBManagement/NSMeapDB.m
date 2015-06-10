@@ -28,6 +28,16 @@
     [super dealloc];
 }
 
++ (NSMeapDB *)shareMeap
+{
+    static NSMeapDB *shareMeap = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shareMeap = [[NSMeapDB alloc] init];
+    });
+    return shareMeap;
+}
+
 
 - (id)init
 {

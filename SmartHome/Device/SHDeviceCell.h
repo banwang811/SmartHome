@@ -1,0 +1,16 @@
+//
+//  SHDeviceCell.h
+//  SmartHome
+//
+//  Created by banwang on 15/6/8.
+//  Copyright (c) 2015年 banwang. All rights reserved.
+//
+
+#import "SHTableViewCell.h"
+#import "SHDeviceModel.h"
+
+@interface SHDeviceCell : SHTableViewCell
+
+@property (nonatomic, strong) SHDeviceModel *model;
+
+@end

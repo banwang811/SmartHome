@@ -14,7 +14,7 @@
 #import "SHNavigationController.h"
 #import "SHRoomViewController.h"
 #import "SHScenceViewController.h"
-
+#import "SHDeviceViewController.h"
 
 @interface SHTabBarController ()
 
@@ -36,6 +36,9 @@
     SHScenceViewController *mVC = [[SHScenceViewController alloc] init];
     [self addSubViewController:mVC title:@"情景" imageName:@"tabbar_messages" selectedImageName:@"tabbar_messages_highlighted"];
     
+    SHDeviceViewController *dVC = [[SHDeviceViewController alloc] init];
+    [self addSubViewController:dVC title:@"设备" imageName:@"tabbar_messages" selectedImageName:@"tabbar_messages_highlighted"];
+
     SHSetingViewController *sVC = [[SHSetingViewController alloc] init];
     [self addSubViewController:sVC title:@"设置" imageName:@"tabbar_settings" selectedImageName:@"tabbar_settings_highlighted"];
 }

@@ -7,7 +7,10 @@
 //
 
 #import "SHTableViewCell.h"
+#import "SHSceneModel.h"
 
 @interface SHSceneTableViewCell : SHTableViewCell
+
+@property (nonatomic, strong) SHSceneModel             *model;
 
 @end
