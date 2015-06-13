@@ -42,16 +42,30 @@
 
 @property (nonatomic, assign) SHDeviceViewController_type controllerType;
 
+@property (nonatomic, strong) NSMutableArray            *titleArray;
+
 @end
 
 @implementation SHDeviceViewController
-
+/*
+NSDeviceModelType_Light,//普通灯
+NSDeviceModelType_DimmingLight,//调光灯
+NSDeviceModelType_TV,//电视
+NSDeviceModelType_Aircondition,//空调
+NSDeviceModelType_Socket,//智能插座
+NSDeviceModelType_Curtain,//窗帘
+NSDeviceModelType_FloorHeating,//地暖
+NSDeviceModelType_OpenStaircase,//开窗器
+NSDeviceModelType_THTB,//温湿度传感器
+NSDeviceModelType_Camera,//摄像头控制
+*/
 - (id)initWithType:(SHDeviceViewController_type)type
 {
     if (self = [super init]) {
         self.models = [NSMutableArray array];
         self.pickerArray = [NSArray arrayWithObjects:@"打开",@"关闭", nil];
         self.controllerType = type;
+        self.titleArray = [NSMutableArray arrayWithObjects:@"普通灯", @"调光灯",@"电视",@"空调",@"智能插座",@"窗帘",@"地暖",@"开窗器",@"温湿度传感器",@"摄像头控制",nil];
     }
     return self;
 }
@@ -63,7 +77,8 @@
     {
         NSInteger j = random() %10;
         NSDeviceModel *model = [[NSDeviceModel alloc] init];
-        model.deviceName = [[NSString alloc] initWithFormat:@"设备%d",i];
+        NSString *deviceName = [self.titleArray objectAtIndex:j];
+        model.deviceName = deviceName;
         model.deviceID = [[NSString alloc] initWithFormat:@"设备%d",i];
         model.deviceType = (NSDeviceModelType)j;
         [model saveDB];
@@ -246,10 +261,39 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    SHTVControlController *controller = [[SHTVControlController alloc] init];
-//    [self.navigationController pushViewController:controller animated:YES];
-    SHAirconditionController *controller = [[SHAirconditionController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
+    UIViewController *controller = nil;
+    SHDeviceModel *model = self.models[indexPath.row];
+    switch (model.deviceType) {
+        case NSDeviceModelType_Light:
+            break;
+        case NSDeviceModelType_DimmingLight:
+            break;
+        case NSDeviceModelType_TV:
+            controller = [[SHTVControlController alloc] init];
+            break;
+        case NSDeviceModelType_Aircondition:
+            controller = [[SHAirconditionController alloc] init];
+            break;
+        case NSDeviceModelType_Socket:
+            break;
+        case NSDeviceModelType_Curtain:
+            break;
+        case NSDeviceModelType_FloorHeating:
+            break;
+        case NSDeviceModelType_OpenStaircase:
+            break;
+        case NSDeviceModelType_THTB:
+            break;
+        case NSDeviceModelType_Camera:
+            break;
+        default:
+            break;
+    }
+    if (controller) {
+        [self.navigationController pushViewController:controller animated:YES];
+    }else{
+        return;
+    }
 }
 
 

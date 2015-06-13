@@ -23,6 +23,12 @@
     [super viewDidLoad];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.title = @"空调控制器";
+}
+
 - (void)setupContentView
 {
     self.controlView = [[SHAircondationView alloc] initWithFrame:CGRectMake(0, 0,self.view.frame.size.width, self.view.frame.size.height)];

@@ -37,7 +37,7 @@
     self.imageView.image = [UIImage imageNamed:model.iconName];
     self.rangeLabel.text = model.rangeName;
     BOOL show = [self showControlButton:model.deviceType];
-    self.controlButton.hidden = show;
+    self.controlButton.hidden = !show;
     if (show)
     {
         if (model.deviceState == NSDeviceModelState_On)
@@ -68,22 +68,22 @@
             isShow = NO;
             break;
         case NSDeviceModelType_Socket:
-            isShow = NO;
+            isShow = YES;
             break;
         case NSDeviceModelType_Curtain:
-            isShow = NO;
+            isShow = YES;
             break;
         case NSDeviceModelType_FloorHeating:
-            isShow = NO;
+            isShow = YES;
             break;
         case NSDeviceModelType_OpenStaircase:
-            isShow = NO;
+            isShow = YES;
             break;
         case NSDeviceModelType_THTB:
-            isShow = NO;
+            isShow = YES;
             break;
         case NSDeviceModelType_Camera:
-            isShow = NO;
+            isShow = YES;
             break;
         default:
             break;
