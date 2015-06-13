@@ -36,14 +36,59 @@
     self.nameLabel.text = model.title;
     self.imageView.image = [UIImage imageNamed:model.iconName];
     self.rangeLabel.text = model.rangeName;
-    if (model.deviceState == NSDeviceModelState_On)
+    BOOL show = [self showControlButton:model.deviceType];
+    self.controlButton.hidden = show;
+    if (show)
     {
-        [self.controlButton setTitle:@"打开" forState:UIControlStateNormal];
-    }else
-    {
-        [self.controlButton setTitle:@"关闭" forState:UIControlStateNormal];
+        if (model.deviceState == NSDeviceModelState_On)
+        {
+            [self.controlButton setTitle:@"打开" forState:UIControlStateNormal];
+        }else
+        {
+            [self.controlButton setTitle:@"关闭" forState:UIControlStateNormal];
+        }
     }
     _model = model;
+}
+
+- (BOOL)showControlButton:(NSDeviceModelType)deviceType
+{
+    BOOL isShow = NO;
+    switch (deviceType) {
+        case NSDeviceModelType_Light:
+            isShow = YES;
+            break;
+        case NSDeviceModelType_DimmingLight:
+            isShow = YES;
+            break;
+        case NSDeviceModelType_TV:
+            isShow = NO;
+            break;
+        case NSDeviceModelType_Aircondition:
+            isShow = NO;
+            break;
+        case NSDeviceModelType_Socket:
+            isShow = NO;
+            break;
+        case NSDeviceModelType_Curtain:
+            isShow = NO;
+            break;
+        case NSDeviceModelType_FloorHeating:
+            isShow = NO;
+            break;
+        case NSDeviceModelType_OpenStaircase:
+            isShow = NO;
+            break;
+        case NSDeviceModelType_THTB:
+            isShow = NO;
+            break;
+        case NSDeviceModelType_Camera:
+            isShow = NO;
+            break;
+        default:
+            break;
+    }
+    return isShow;
 }
 
 - (IBAction)changState:(UIButton *)sender {

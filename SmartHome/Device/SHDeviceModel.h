@@ -14,4 +14,6 @@
 
 @property (nonatomic, assign) NSDeviceModelState    deviceState;
 
+@property (nonatomic, assign) NSDeviceModelType     deviceType;
+
 @end

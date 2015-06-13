@@ -23,7 +23,7 @@
 
 
 #import "SHAdapter.h"
-
+#import "SHError.h"
 
 #define SHAPP_DELEGATE  ((AppDelegate *)[UIApplication sharedApplication].delegate)
 

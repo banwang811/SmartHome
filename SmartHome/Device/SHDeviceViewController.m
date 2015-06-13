@@ -9,11 +9,14 @@
 #import "SHDeviceViewController.h"
 #import "SHAddDeviceViewController.h"
 #import "SHSelectViewController.h"
-
 //common
 #import "SHDeviceModel.h"
 #import "SHDeviceCell.h"
 #import "SHPickerView.h"
+//other
+#import "SHTVControlController.h"
+#import "SHAirconditionController.h"
+
 
 @interface SHDeviceViewController ()<UITableViewDataSource,
                                     UITableViewDelegate,
@@ -58,9 +61,11 @@
     
     for (int i= 0; i < 20; i ++)
     {
+        NSInteger j = random() %10;
         NSDeviceModel *model = [[NSDeviceModel alloc] init];
         model.deviceName = [[NSString alloc] initWithFormat:@"设备%d",i];
         model.deviceID = [[NSString alloc] initWithFormat:@"设备%d",i];
+        model.deviceType = (NSDeviceModelType)j;
         [model saveDB];
     }
     
@@ -89,6 +94,7 @@
         cellModel.Id = model.deviceID;
         cellModel.iconName = model.deviceIcon;
         cellModel.deviceState = model.deviceState;
+        cellModel.deviceType = model.deviceType;
         [self.models addObject:cellModel];
     }
     [self.tableView reloadData];
@@ -236,6 +242,14 @@
         }];
     };
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    SHTVControlController *controller = [[SHTVControlController alloc] init];
+//    [self.navigationController pushViewController:controller animated:YES];
+    SHAirconditionController *controller = [[SHAirconditionController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
