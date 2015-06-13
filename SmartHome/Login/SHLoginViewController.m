@@ -10,7 +10,8 @@
 #import "AppDelegate.h"
 #import "SidebarViewController.h"
 #import "SHLoginView.h"
-
+#import "SHForgetPasswordController.h"
+#import "SHRegisterController.h"
 @interface SHLoginViewController ()
 
 @property (nonatomic, strong) SHLoginView               *loginView;
@@ -22,10 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
     [self setupContentView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
 
 - (void)setupContentView
 {
@@ -36,6 +41,15 @@
     }
     self.loginView.loginBlock = ^{
         SHAPP_DELEGATE.window.rootViewController = [[SidebarViewController alloc] initWithNibName:@"SidebarViewController" bundle:nil];
+    };
+    __weak SHLoginViewController *weakSelf = self;
+    self.loginView.forgetBlock = ^{
+        SHForgetPasswordController *forget = [[SHForgetPasswordController alloc] init];
+        [weakSelf.navigationController pushViewController:forget animated:YES];
+    };
+    self.loginView.registerBlock = ^{
+        SHRegisterController *controller = [[SHRegisterController alloc] init];
+        [weakSelf.navigationController pushViewController:controller animated:YES];
     };
     [self.view addSubview:self.loginView];
 }

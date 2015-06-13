@@ -73,21 +73,21 @@
     self.forgetPassword.titleLabel.font = [UIFont systemFontOfSize:13];
     self.forgetPassword.backgroundColor = [UIColor defaultColor];
     [self.forgetPassword setTitle:@"忘记密码" forState:UIControlStateNormal];
-    [self.forgetPassword addTarget:self action:@selector(logInButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.forgetPassword addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.forgetPassword];
     
     self.logInButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.logInButton.frame = CGRectMake(40, self.passwordTextField.frame.origin.y + Height + 60, self.frame.size.width - 80, Height);
     self.logInButton.backgroundColor = [UIColor defaultColor];
     [self.logInButton setTitle:@"登录" forState:UIControlStateNormal];
-    [self.logInButton addTarget:self action:@selector(logInButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.logInButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.logInButton];
     
     self.registeredButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.registeredButton.frame = CGRectMake(40, self.logInButton.frame.origin.y + Height + 20 , self.frame.size.width - 80, Height);
     self.registeredButton.backgroundColor = [UIColor defaultColor];
     [self.registeredButton setTitle:@"注册" forState:UIControlStateNormal];
-    [self.registeredButton addTarget:self action:@selector(logInButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.registeredButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.registeredButton];
 }
 
@@ -120,10 +120,20 @@
     [self.passwordTextField resignFirstResponder];
 }
 
-- (void)logInButtonClick
+- (void)buttonClick:(UIButton *)button
 {
-    if (self.loginBlock) {
-        self.loginBlock();
+    if (button == self.logInButton) {
+        if (self.loginBlock) {
+            self.loginBlock();
+        }
+    }else if (button == self.registeredButton){
+        if (self.registerBlock) {
+            self.registerBlock();
+        }
+    }else if (button == self.forgetPassword){
+        if (self.forgetBlock) {
+            self.forgetBlock();
+        }
     }
 }
 

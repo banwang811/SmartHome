@@ -25,7 +25,9 @@
     //打开数据库文件
     [[SHDataManager shareManager] prepareDB];
     //登录
-    self.window.rootViewController = [SHLoginViewController new];
+//    self.window.rootViewController = [SHLoginViewController new];
+    self.window.rootViewController = [[SHNavigationController alloc] initWithRootViewController:[SHLoginViewController new]];
+
     [self.window makeKeyAndVisible];
     return YES;
 }

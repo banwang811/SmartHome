@@ -57,7 +57,7 @@
     self.changeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.changeButton.frame = CGRectMake(40, self.resPasswordTextField.frame.origin.y + Height + 20 , self.frame.size.width - 80, Height);
     self.changeButton.backgroundColor = [UIColor defaultColor];
-    [self.changeButton setTitle:@"注册" forState:UIControlStateNormal];
+    [self.changeButton setTitle:@"确定" forState:UIControlStateNormal];
     [self.changeButton addTarget:self action:@selector(changeButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.changeButton];
 

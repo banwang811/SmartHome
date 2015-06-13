@@ -12,4 +12,8 @@
 
 @property (nonatomic, strong) void(^loginBlock)();
 
+@property (nonatomic, strong) void(^registerBlock)();
+
+@property (nonatomic, strong) void(^forgetBlock)();
+
 @end

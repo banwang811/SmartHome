@@ -9,6 +9,8 @@
 #import "SHAddDeviceViewController.h"
 #import "SHAddCell.h"
 #import "SHAddModel.h"
+#import "SHManuallyAddController.h"
+#import "SHScanViewController.h"
 
 @interface SHAddDeviceViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -86,6 +88,18 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0)
+    {
+        SHScanViewController *controller = [[SHScanViewController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }else
+    {
+        SHManuallyAddController *controller = [[SHManuallyAddController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
