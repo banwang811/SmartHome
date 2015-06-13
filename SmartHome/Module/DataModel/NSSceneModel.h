@@ -20,4 +20,7 @@
 
 @property (nonatomic, strong) NSString              *extension;
 
+
++ (NSArray *)fetchScenes;
+
 @end

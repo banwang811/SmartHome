@@ -8,13 +8,12 @@
 
 #import "SHLoginViewController.h"
 #import "AppDelegate.h"
-//#import "SHTabBarController.h"
 #import "SidebarViewController.h"
+#import "SHLoginView.h"
 
 @interface SHLoginViewController ()
 
-
-@property (nonatomic, strong) UIButton          *logInButton;
+@property (nonatomic, strong) SHLoginView               *loginView;
 
 @end
 
@@ -25,27 +24,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupContentView];
-    // Do any additional setup after loading the view.
 }
 
 - (void)setupContentView
 {
-    self.logInButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.logInButton.frame = CGRectMake(100, 100, 200, 40);
-    self.logInButton.backgroundColor = [UIColor defaultColor];
-    [self.logInButton setTitle:@"login" forState:UIControlStateNormal];
-    [self.logInButton addTarget:self action:@selector(logInButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.logInButton];
-}
-
-- (void)logInButtonClick
-{
-//    SHTabBarController *tabBarController = [[SHTabBarController alloc] init];
-//    SHAPP_DELEGATE.tabBarController = tabBarController;
-//
-//    SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.tabBarController;
+    self.loginView = [[SHLoginView alloc] initWithFrame:CGRectMake(0, 100, SHWidth, SHHeight - 200)];
     
-    SHAPP_DELEGATE.window.rootViewController = [[SidebarViewController alloc] initWithNibName:@"SidebarViewController" bundle:nil];
+    self.loginView.loginBlock = ^{
+        SHAPP_DELEGATE.window.rootViewController = [[SidebarViewController alloc] initWithNibName:@"SidebarViewController" bundle:nil];
+    };
+    [self.view addSubview:self.loginView];
 }
 
 - (void)didReceiveMemoryWarning {

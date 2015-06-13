@@ -9,6 +9,7 @@
 #import "SHSceneViewController.h"
 #import "SHSceneModel.h"
 #import "SHSceneTableViewCell.h"
+#import "SHSceneSetingController.h"
 
 
 @interface SHSceneViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -35,16 +36,25 @@
     
     [self setupContentView];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self reloadData];
 }
 
 - (void)reloadData
 {
-    for (int i= 0; i < 20; i ++)
+    NSArray *sceneModels= [NSSceneModel fetchScenes];
+    [self.models removeAllObjects];
+    for (NSSceneModel *model in sceneModels)
     {
-        NSString *str = [[NSString alloc] initWithFormat:@"场景%d",i];
-        SHSceneModel *model = [SHSceneModel itemWithTitle:str iconName:@""];
-        [self.models addObject:model];
+        SHSceneModel *cellModel = [[SHSceneModel alloc] init];
+        cellModel.title = model.sceneName;
+        cellModel.iconName = model.sceneIcon;
+        cellModel.Id = model.sceneID;
+        [self.models addObject:cellModel];
     }
     [self.tableView reloadData];
 }
@@ -70,7 +80,8 @@
 
 - (void)addDevice
 {
-    
+    SHSceneSetingController *controller = [[SHSceneSetingController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - tableviewDelegate

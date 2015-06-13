@@ -18,6 +18,12 @@
 
 @property (nonatomic, strong) NSString              *roomMembers;
 
+@property (nonatomic, strong) NSString              *deviceID;
+
 @property (nonatomic, strong) NSString              *extension;
+
++ (NSArray *)fetchRooms;
+
++ (void)deleteDB:(NSString *)roomID;
 
 @end

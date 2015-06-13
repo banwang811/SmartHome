@@ -8,6 +8,12 @@
 
 #import "NSMeapDBBaseObject.h"
 
+typedef enum{
+    NSDeviceModelState_On,
+    NSDeviceModelState_Stop,
+    NSDeviceModelState_Off,
+}NSDeviceModelState;
+
 @interface NSDeviceModel : NSMeapDBBaseObject
 
 @property (nonatomic, strong) NSString              *deviceID;
@@ -17,5 +23,13 @@
 @property (nonatomic, strong) NSString              *deviceIcon;
 
 @property (nonatomic, strong) NSString              *extension;
+
+@property (nonatomic, assign) NSDeviceModelState    deviceState;
+
++ (NSArray *)fetchDevices:(NSString *)deviceID;
+
++ (void)deleteDevice:(NSString *)deviceID;
+
++ (void)feacthDevices:(NSString *)roomID complete:(void(^)())comlete;
 
 @end

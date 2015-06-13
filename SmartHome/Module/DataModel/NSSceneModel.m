@@ -13,9 +13,13 @@
 /**
  *  读取数据库 更新本地数据
  */
-+ (void)reloadDB
++ (NSArray *)fetchScenes
 {
-    
+    NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
+                                                     conditions:nil
+                                                           args:nil
+                                                          order:nil];
+    return array;
 }
 
 /**
@@ -26,7 +30,7 @@
     [[NSMeapDB shareMeap] createTable:[self class]];
     // 存数据库
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
-                                                     conditions:@"roomID = ?"
+                                                     conditions:@"sceneID = ?"
                                                            args:[NSArray arrayWithObjects:self.sceneID, nil]
                                                           order:nil];
     if (array && [array count] > 0)
@@ -48,7 +52,7 @@
 - (void)uploadDB
 {
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
-                                                     conditions:@"roomID = ?"
+                                                     conditions:@"sceneID = ?"
                                                            args:[NSArray arrayWithObjects:self.sceneID, nil]
                                                           order:nil];
     if (array && [array count] > 0)
@@ -69,7 +73,7 @@
  */
 - (void)deleteDB
 {
-    [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"roomID = ?"
+    [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"sceneID = ?"
                                      args:[NSArray arrayWithObjects:self.sceneID, nil]];
 }
 

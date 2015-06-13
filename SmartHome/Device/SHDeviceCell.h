@@ -13,4 +13,11 @@
 
 @property (nonatomic, strong) SHDeviceModel *model;
 
+@property (nonatomic, copy) void (^controlStateClick)();
+
+@property (nonatomic, copy) void (^deleteDeviceClick)();
+
+
+- (void)changeDeviceState:(NSString *)string;
+
 @end

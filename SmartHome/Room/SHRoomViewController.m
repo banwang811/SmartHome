@@ -10,12 +10,16 @@
 #import "SHRoomTableViewCell.h"
 #import "SHRoomCellModel.h"
 #import "NSRoomModel.h"
+#import "SHRoomSetingViewController.h"
+#import "SHDeviceViewController.h"
 
-@interface SHRoomViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface SHRoomViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic, strong) UITableView           *tableView;
 
 @property (nonatomic, strong) NSMutableArray        *models;
+
+@property (nonatomic, strong) NSString              *selectRoomID;
 
 @end
 
@@ -38,21 +42,23 @@
 
 - (void)reloadData
 {
-    for (int i= 0; i < 20; i ++)
+    NSArray *roomModels= [NSRoomModel fetchRooms];
+    [self.models removeAllObjects];
+    for (NSRoomModel *model in roomModels)
     {
-        NSRoomModel *model = [[NSRoomModel alloc] init];
-        model.roomID = [NSString stringWithFormat:@"%d",i];
-        model.roomIcon = [NSString stringWithFormat:@"image%d",i];
-        model.roomName = [NSString stringWithFormat:@"房间%d",i];
-        [model saveDB];
-    }
-    for (int i= 0; i < 20; i ++)
-    {
-        NSString *str = [[NSString alloc] initWithFormat:@"房间%d",i];
-        SHRoomCellModel *model = [SHRoomCellModel itemWithTitle:str iconName:@""];
-        [self.models addObject:model];
+        SHRoomCellModel *cellModel = [[SHRoomCellModel alloc] init];
+        cellModel.title = model.roomName;
+        cellModel.iconName = model.roomIcon;
+        cellModel.Id = model.roomID;
+        [self.models addObject:cellModel];
     }
     [self.tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self reloadData];
 }
 
 - (void)setupContentView
@@ -63,7 +69,6 @@
     self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth;
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:self.tableView];
     
@@ -76,7 +81,8 @@
 
 - (void)addRooms
 {
-    
+    SHRoomSetingViewController *setingController = [[SHRoomSetingViewController alloc] init];
+    [self.navigationController pushViewController:setingController animated:YES];
 }
 
 #pragma mark - tableviewDelegate
@@ -100,8 +106,34 @@
     }
     SHRoomCellModel *model = self.models[indexPath.row];
     cell.model = model;
-    
+    __weak SHRoomViewController *weakSelf = self;
+    cell.deleteRoom = ^{
+        weakSelf.selectRoomID = model.Id;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"是否删除房间"
+                                                       delegate:weakSelf
+                                              cancelButtonTitle:@"取消"
+                                              otherButtonTitles:@"确定", nil];
+        [alert show];
+    };
     return cell;
+}
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SHDeviceViewController *deviceController = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
+    [self.navigationController pushViewController:deviceController animated:YES];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        [NSRoomModel deleteDB:self.selectRoomID];
+        [self reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

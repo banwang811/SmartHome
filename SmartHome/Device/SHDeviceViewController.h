@@ -8,6 +8,16 @@
 
 #import "SHBaseViewController.h"
 
+typedef enum {
+    
+    SHDeviceViewController_common,
+    SHDeviceViewController_combination,
+    SHDeviceViewController_select,
+    
+}SHDeviceViewController_type;
+
 @interface SHDeviceViewController : SHBaseViewController
+
+- (id)initWithType:(SHDeviceViewController_type)type;
 
 @end

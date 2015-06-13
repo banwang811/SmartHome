@@ -13,9 +13,24 @@
 /**
  *  读取数据库 更新本地数据
  */
-+ (void)reloadDB
++ (NSArray *)fetchDevices:(NSString *)deviceID;
 {
-    
+    NSArray *array = nil;
+    if (deviceID == nil)
+    {
+       array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
+                                                         conditions:nil
+                                                               args:nil
+                                                              order:nil];
+    }
+    else
+    {
+        array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
+                                                         conditions:@"deviceID = ?"
+                                                               args:[NSArray arrayWithObjects:deviceID, nil]
+                                                              order:nil];
+    }
+    return array;
 }
 
 /**
@@ -26,20 +41,24 @@
     [[NSMeapDB shareMeap] createTable:[self class]];
     // 存数据库
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
-                                                     conditions:@"roomID = ?"
+                                                     conditions:@"deviceID = ?"
                                                            args:[NSArray arrayWithObjects:self.deviceID, nil]
                                                           order:nil];
-    if (array && [array count] > 0)
-    {
-        NSDeviceModel *device = [array objectAtIndex:0];
-        NSString *dbId = [NSString stringWithFormat:@"%ld",device.meap_id];
-        self.meap_id = [dbId integerValue];
-        [[NSMeapDB shareMeap] updateTable:[self class] object:self];
-    }
-    else
+    if (array == nil || [array count] == 0)
     {
         [[NSMeapDB shareMeap] insertTable:[self class] object:self];
     }
+//    if (array && [array count] > 0)
+//    {
+//        NSDeviceModel *device = [array objectAtIndex:0];
+//        NSString *dbId = [NSString stringWithFormat:@"%ld",device.meap_id];
+//        self.meap_id = [dbId integerValue];
+//        [[NSMeapDB shareMeap] updateTable:[self class] object:self];
+//    }
+//    else
+//    {
+//        [[NSMeapDB shareMeap] insertTable:[self class] object:self];
+//    }
 }
 
 /**
@@ -48,7 +67,7 @@
 - (void)uploadDB
 {
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
-                                                     conditions:@"roomID = ?"
+                                                     conditions:@"deviceID = ?"
                                                            args:[NSArray arrayWithObjects:self.deviceID, nil]
                                                           order:nil];
     if (array && [array count] > 0)
@@ -69,8 +88,14 @@
  */
 - (void)deleteDB
 {
-    [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"roomID = ?"
+    [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"deviceID = ?"
                                      args:[NSArray arrayWithObjects:self.deviceID, nil]];
+}
+
++ (void)deleteDevice:(NSString *)deviceID
+{
+    BOOL ret = [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"deviceID = ?"
+                                     args:[NSArray arrayWithObjects:deviceID, nil]];
 }
 
 

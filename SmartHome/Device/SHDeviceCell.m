@@ -36,7 +36,32 @@
     self.nameLabel.text = model.title;
     self.imageView.image = [UIImage imageNamed:model.iconName];
     self.rangeLabel.text = model.rangeName;
+    if (model.deviceState == NSDeviceModelState_On)
+    {
+        [self.controlButton setTitle:@"打开" forState:UIControlStateNormal];
+    }else
+    {
+        [self.controlButton setTitle:@"关闭" forState:UIControlStateNormal];
+    }
     _model = model;
+}
+
+- (IBAction)changState:(UIButton *)sender {
+    if (self.controlStateClick)
+    {
+        self.controlStateClick();
+    }
+}
+
+- (IBAction)deleteDevice:(UIButton *)sender {
+    if (self.deleteDeviceClick)
+    {
+        self.deleteDeviceClick();
+    }
+}
+
+- (void)changeDeviceState:(NSString *)string{
+    [self.controlButton setTitle:string forState:UIControlStateNormal];
 }
 
 @end

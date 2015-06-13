@@ -31,4 +31,9 @@
 #define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
 
+#define SHWidth         (self.view.frame.size.width)
+#define SHHeight        (self.view.frame.size.height)
+
+#define pickerViewHight 216
+
 #endif

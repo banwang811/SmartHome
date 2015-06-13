@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong) SHRoomCellModel  *model;
 
+@property (nonatomic, copy)   void(^deleteRoom)();
 
 @end

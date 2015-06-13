@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 banwang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SHBaseViewController.h"
 
-@interface SHRoomViewController : UIViewController
+@interface SHRoomViewController : SHBaseViewController
 
 @end

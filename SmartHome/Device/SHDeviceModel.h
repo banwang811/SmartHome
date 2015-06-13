@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSString              *rangeName;
 
+@property (nonatomic, assign) NSDeviceModelState    deviceState;
+
 @end

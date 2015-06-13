@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 
 @end
@@ -23,9 +24,14 @@
     self.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:0.8];
 }
 
+- (IBAction)deleteRoom:(UIButton *)sender {
+    if (self.deleteRoom) {
+        self.deleteRoom();
+    }
+}
+
 - (void)setModel:(SHRoomCellModel *)model
 {
-//    self.headImage.image = [UIImage imageNamed:model.iconName];
     self.nameLabel.text = model.title;
     _model = model;
 }

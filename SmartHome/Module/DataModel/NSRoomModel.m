@@ -13,9 +13,13 @@
 /**
  *  读取数据库 更新本地数据
  */
-+ (void)reloadDB
++ (NSArray *)fetchRooms
 {
-
+    NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
+                                                     conditions:nil
+                                                           args:nil
+                                                          order:nil];
+    return array;
 }
 
 /**
@@ -48,9 +52,9 @@
 - (void)uploadDB
 {
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
-                                                         conditions:@"roomID = ?"
-                                                               args:[NSArray arrayWithObjects:self.roomID, nil]
-                                                              order:nil];
+                                                     conditions:@"roomID = ?"
+                                                           args:[NSArray arrayWithObjects:self.roomID, nil]
+                                                          order:nil];
     if (array && [array count] > 0)
     {
         NSRoomModel *room = [array objectAtIndex:0];
@@ -70,7 +74,14 @@
 - (void)deleteDB
 {
     [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"roomID = ?"
-                                         args:[NSArray arrayWithObjects:self.roomID, nil]];
+                                         args:[NSArray arrayWithObjects:self.roomID,nil]];
+}
+
+
++ (void)deleteDB:(NSString *)roomID
+{
+    [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"roomID = ?"
+                                     args:[NSArray arrayWithObjects:roomID,nil]];
 }
 
 

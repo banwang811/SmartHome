@@ -7,7 +7,17 @@
 //
 
 #import "SHTableViewCell.h"
+#import "SHRoomSetingModel.h"
 
 @interface SHRootSetingViewCell : SHTableViewCell
+
++ (SHRootSetingViewCell *)creatBaseInfoCell;
+
++ (SHRootSetingViewCell *)creatAddDeviceCell;
+
+- (void)selectIcon:(NSString *)title imageName:(NSString *)imageName;
+
+@property (nonatomic, copy) void (^selectButtonClick)();
+
 
 @end

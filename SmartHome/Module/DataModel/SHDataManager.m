@@ -34,6 +34,7 @@
     {
         [[NSFileManager defaultManager] createFileAtPath:dbPath contents:nil attributes:nil];
     }
+    NSLog(@"%@",dbPath);
     [[NSMeapDB shareMeap] initDBPath:dbPath];
 }
 
