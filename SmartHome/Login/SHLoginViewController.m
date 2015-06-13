@@ -26,10 +26,14 @@
     [self setupContentView];
 }
 
+
 - (void)setupContentView
 {
-    self.loginView = [[SHLoginView alloc] initWithFrame:CGRectMake(0, 100, SHWidth, SHHeight - 200)];
-    
+    if ([SHAdapter shareAdapter].isIphone4s){
+        self.loginView = [[SHLoginView alloc] initWithFrame:CGRectMake(0, 30, SHWidth, SHHeight - 30)];
+    }else{
+        self.loginView = [[SHLoginView alloc] initWithFrame:CGRectMake(0, 100, SHWidth, SHHeight - 200)];
+    }
     self.loginView.loginBlock = ^{
         SHAPP_DELEGATE.window.rootViewController = [[SidebarViewController alloc] initWithNibName:@"SidebarViewController" bundle:nil];
     };

@@ -45,7 +45,7 @@
 
 - (void)setupContentView
 {
-    self.logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 30, self.frame.size.width - 200,Height)];
+    self.logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 30, self.frame.size.width - 160,Height)];
     self.logoLabel.text = @"华郡智能家居系统";
     self.logoLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.logoLabel];

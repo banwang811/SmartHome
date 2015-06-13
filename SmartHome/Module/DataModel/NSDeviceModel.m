@@ -94,7 +94,7 @@
 
 + (void)deleteDevice:(NSString *)deviceID
 {
-    BOOL ret = [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"deviceID = ?"
+     [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"deviceID = ?"
                                      args:[NSArray arrayWithObjects:deviceID, nil]];
 }
 

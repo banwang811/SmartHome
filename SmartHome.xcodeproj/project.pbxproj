@@ -16,6 +16,7 @@
 		A500D6BE1B2C48ED00C8E2C1 /* SHAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6BD1B2C48ED00C8E2C1 /* SHAddCell.m */; };
 		A500D6C11B2C53A700C8E2C1 /* SHAddModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C01B2C53A700C8E2C1 /* SHAddModel.m */; };
 		A500D6C31B2C544000C8E2C1 /* SHAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A500D6C21B2C544000C8E2C1 /* SHAddCell.xib */; };
+		A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */; };
 		A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B571B1DEE1D005ABF68 /* SHCellModel.m */; };
 		A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B5C1B1DF171005ABF68 /* YYFMDatabase.m */; };
 		A5096B6E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B5E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m */; };
@@ -1124,6 +1125,8 @@
 		A500D6BF1B2C53A700C8E2C1 /* SHAddModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAddModel.h; sourceTree = "<group>"; };
 		A500D6C01B2C53A700C8E2C1 /* SHAddModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAddModel.m; sourceTree = "<group>"; };
 		A500D6C21B2C544000C8E2C1 /* SHAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHAddCell.xib; sourceTree = "<group>"; };
+		A500D6C41B2C6D1900C8E2C1 /* SHAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAdapter.h; sourceTree = "<group>"; };
+		A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAdapter.m; sourceTree = "<group>"; };
 		A5096B561B1DEE1D005ABF68 /* SHCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCellModel.h; sourceTree = "<group>"; };
 		A5096B571B1DEE1D005ABF68 /* SHCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCellModel.m; sourceTree = "<group>"; };
 		A5096B5B1B1DF171005ABF68 /* YYFMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFMDatabase.h; sourceTree = "<group>"; };
@@ -3556,6 +3559,8 @@
 		A5C00A1C1B1CA946004CAA23 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A500D6C41B2C6D1900C8E2C1 /* SHAdapter.h */,
+				A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -4790,6 +4795,7 @@
 				A5C00A111B1CA7D1004CAA23 /* SHHomeViewController.m in Sources */,
 				A5096B7B1B1DF2AF005ABF68 /* SHSceneViewController.m in Sources */,
 				A5C009FD1B1CA46E004CAA23 /* SHBaseViewController.m in Sources */,
+				A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */,
 				A50A981B1B25F7620082DD58 /* SHSceneSetingController.m in Sources */,
 				A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */,
 				A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */,
