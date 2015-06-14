@@ -10,7 +10,8 @@
 #import "SHSceneModel.h"
 #import "SHSceneTableViewCell.h"
 #import "SHSceneSetingController.h"
-
+#import "SHRoomSetingViewController.h"
+#import "SHDeviceViewController.h"
 
 @interface SHSceneViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -67,7 +68,6 @@
     self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth;
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:self.tableView];
     
@@ -80,7 +80,7 @@
 
 - (void)addDevice
 {
-    SHSceneSetingController *controller = [[SHSceneSetingController alloc] init];
+    SHRoomSetingViewController *controller = [[SHRoomSetingViewController alloc] initWithType:SHSetingViewType_scene];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -108,6 +108,14 @@
     cell.model = model;
     
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SHDeviceViewController *deviceController = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
+    [self.navigationController pushViewController:deviceController animated:YES];
+
 }
 
 

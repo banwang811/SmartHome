@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *deviceNumber;
 
+
 @end
 
 @implementation SHRootSetingViewCell

@@ -10,4 +10,6 @@
 
 @interface SHRoomSetingModel : SHCellModel
 
+
+
 @end

@@ -12,6 +12,7 @@
 #import "SHPickerView.h"
 #import "SHDeviceViewController.h"
 
+
 @interface SHRoomSetingViewController()<UITableViewDataSource,
                                         UITableViewDelegate,
                                         UIPickerViewDataSource,
@@ -32,14 +33,17 @@
 
 @property (nonatomic, strong) UIButton              *saveButton;
 
+@property (nonatomic, assign) SHSetingViewType      controlerType;
+
 @end
 
 @implementation SHRoomSetingViewController
 
-- (id)init
+- (id)initWithType:(SHSetingViewType)type
 {
     if (self = [super init])
     {
+        self.controlerType = type;
         self.models = [NSMutableArray array];
         self.pickerArray = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",nil];
     }
@@ -57,7 +61,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.title = @"添加房间";
+    if (self.controlerType == SHSetingViewType_scene) {
+        self.title = @"添加场景";
+    }else
+    {
+        self.title = @"添加房间";
+    }
 }
 
 
@@ -84,7 +93,11 @@
     
     
     self.saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.saveButton setTitle:@"保存房间" forState:UIControlStateNormal];
+    if (self.controlerType == SHSetingViewType_scene) {
+        [self.saveButton setTitle:@"保存场景" forState:UIControlStateNormal];
+    }else{
+        [self.saveButton setTitle:@"保存房间" forState:UIControlStateNormal];
+    }
     self.saveButton.frame = CGRectMake(10, 50, self.view.frame.size.width - 20, 44);
     self.saveButton.backgroundColor = [UIColor redColor];
     [self.saveButton addTarget:self action:@selector(saveRoomSetting) forControlEvents:UIControlEventTouchUpInside];
@@ -172,6 +185,12 @@
             }];
         };
         self.cell = cell;
+        if (self.controlerType == SHSetingViewType_room) {
+            cell.nameLabel.text = @"房间名称";
+        }else
+        {
+            cell.nameLabel.text = @"场景名称";
+        }
         return cell;
     }else
     {
@@ -186,9 +205,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHDeviceViewController *controller = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
-    [self.navigationController pushViewController:controller animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                    message:@"开发中"
+                                                   delegate:self
+                                          cancelButtonTitle:@"确定"
+                                          otherButtonTitles:nil, nil];
+    [alert show];
+    return;
+    if (indexPath.section == 1) {
+        SHDeviceViewController *controller = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
+        [self.navigationController pushViewController:controller animated:YES];
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -203,12 +231,22 @@
 
 - (void)saveRoomSetting
 {
-    int i = rand()%100000;
-    NSRoomModel *model = [[NSRoomModel alloc] init];
-    model.roomID = [NSString stringWithFormat:@"%d",i];
-    model.roomIcon = [NSString stringWithFormat:@"image%d",i];
-    model.roomName = [NSString stringWithFormat:@"房间%d",i];
-    [model saveDB];
+    if (self.controlerType == SHSetingViewType_scene) {
+        int i = rand()%100000;
+        NSSceneModel *model = [[NSSceneModel alloc] init];
+        model.sceneID = [NSString stringWithFormat:@"%d",i];
+        model.sceneIcon = [NSString stringWithFormat:@"image%d",i];
+        model.sceneName = [NSString stringWithFormat:@"场景%d",i];
+        [model saveDB];
+    }else
+    {
+        int i = rand()%100000;
+        NSRoomModel *model = [[NSRoomModel alloc] init];
+        model.roomID = [NSString stringWithFormat:@"%d",i];
+        model.roomIcon = [NSString stringWithFormat:@"image%d",i];
+        model.roomName = [NSString stringWithFormat:@"房间%d",i];
+        [model saveDB];
+    }
 }
 
 @end

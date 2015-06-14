@@ -19,5 +19,7 @@
 
 @property (nonatomic, copy) void (^selectButtonClick)();
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 
 @end

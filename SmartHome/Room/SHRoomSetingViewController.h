@@ -7,7 +7,13 @@
 //
 
 #import "SHBaseViewController.h"
+typedef enum {
+    SHSetingViewType_room,
+    SHSetingViewType_scene,
+}SHSetingViewType;
 
 @interface SHRoomSetingViewController : SHBaseViewController
+
+- (id)initWithType:(SHSetingViewType)type;
 
 @end

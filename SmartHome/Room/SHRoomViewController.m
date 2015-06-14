@@ -81,7 +81,7 @@
 
 - (void)addRooms
 {
-    SHRoomSetingViewController *setingController = [[SHRoomSetingViewController alloc] init];
+    SHRoomSetingViewController *setingController = [[SHRoomSetingViewController alloc] initWithType:SHSetingViewType_room];
     [self.navigationController pushViewController:setingController animated:YES];
 }
 
