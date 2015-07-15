@@ -1108,6 +1108,12 @@
 		A5A6A3B41B2CBB8400C3A0CB /* SHSelectDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A6A3AE1B2CBB8400C3A0CB /* SHSelectDeviceCell.xib */; };
 		A5A6A3B51B2CBB8400C3A0CB /* SHSelectDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6A3B01B2CBB8400C3A0CB /* SHSelectDeviceModel.m */; };
 		A5A6A3B61B2CBB8400C3A0CB /* SHSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6A3B21B2CBB8400C3A0CB /* SHSelectViewController.m */; };
+		A5BD07381B56A7F6005F0E1D /* LeftSideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BD072E1B56A7F5005F0E1D /* LeftSideBarViewController.m */; };
+		A5BD07391B56A7F6005F0E1D /* SHSideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BD07301B56A7F5005F0E1D /* SHSideModel.m */; };
+		A5BD073A1B56A7F6005F0E1D /* SHSideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BD07321B56A7F5005F0E1D /* SHSideTableViewCell.m */; };
+		A5BD073B1B56A7F6005F0E1D /* SHSideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BD07331B56A7F5005F0E1D /* SHSideTableViewCell.xib */; };
+		A5BD073C1B56A7F6005F0E1D /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BD07361B56A7F5005F0E1D /* SidebarViewController.m */; };
+		A5BD073D1B56A7F6005F0E1D /* SidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BD07371B56A7F5005F0E1D /* SidebarViewController.xib */; };
 		A5C009D61B1CA33F004CAA23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009D51B1CA33F004CAA23 /* main.m */; };
 		A5C009D91B1CA33F004CAA23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C009D81B1CA33F004CAA23 /* AppDelegate.m */; };
 		A5C009E11B1CA33F004CAA23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C009E01B1CA33F004CAA23 /* Images.xcassets */; };
@@ -1122,12 +1128,6 @@
 		A5C00A1B1B1CA889004CAA23 /* SHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A1A1B1CA889004CAA23 /* SHMessageViewController.m */; };
 		A5C00A261B1CAB4C004CAA23 /* SHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A251B1CAB4C004CAA23 /* SHLoginViewController.m */; };
 		A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */; };
-		A5FDD9401B27315B00DAAD90 /* LeftSideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD9391B27315B00DAAD90 /* LeftSideBarViewController.m */; };
-		A5FDD9421B27315B00DAAD90 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD93E1B27315B00DAAD90 /* SidebarViewController.m */; };
-		A5FDD9431B27315B00DAAD90 /* SidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FDD93F1B27315B00DAAD90 /* SidebarViewController.xib */; };
-		A5FDD9461B2743C600DAAD90 /* SHSideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD9451B2743C600DAAD90 /* SHSideTableViewCell.m */; };
-		A5FDD9481B2743D700DAAD90 /* SHSideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FDD9471B2743D700DAAD90 /* SHSideTableViewCell.xib */; };
-		A5FDD94B1B2744AB00DAAD90 /* SHSideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD94A1B2744AB00DAAD90 /* SHSideModel.m */; };
 		A5FDD9561B27518200DAAD90 /* NSRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD9551B27518200DAAD90 /* NSRoomModel.m */; };
 		A5FDD9591B2751C200DAAD90 /* NSSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD9581B2751C100DAAD90 /* NSSceneModel.m */; };
 		A5FDD95C1B27522400DAAD90 /* NSDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD95B1B27522400DAAD90 /* NSDeviceModel.m */; };
@@ -2292,6 +2292,17 @@
 		A5A6A3B01B2CBB8400C3A0CB /* SHSelectDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSelectDeviceModel.m; sourceTree = "<group>"; };
 		A5A6A3B11B2CBB8400C3A0CB /* SHSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSelectViewController.h; sourceTree = "<group>"; };
 		A5A6A3B21B2CBB8400C3A0CB /* SHSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSelectViewController.m; sourceTree = "<group>"; };
+		A5BD072D1B56A7F5005F0E1D /* LeftSideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideBarViewController.h; sourceTree = "<group>"; };
+		A5BD072E1B56A7F5005F0E1D /* LeftSideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideBarViewController.m; sourceTree = "<group>"; };
+		A5BD072F1B56A7F5005F0E1D /* SHSideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideModel.h; sourceTree = "<group>"; };
+		A5BD07301B56A7F5005F0E1D /* SHSideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideModel.m; sourceTree = "<group>"; };
+		A5BD07311B56A7F5005F0E1D /* SHSideTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideTableViewCell.h; sourceTree = "<group>"; };
+		A5BD07321B56A7F5005F0E1D /* SHSideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideTableViewCell.m; sourceTree = "<group>"; };
+		A5BD07331B56A7F5005F0E1D /* SHSideTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSideTableViewCell.xib; sourceTree = "<group>"; };
+		A5BD07341B56A7F5005F0E1D /* SideBarSelectedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarSelectedDelegate.h; sourceTree = "<group>"; };
+		A5BD07351B56A7F5005F0E1D /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		A5BD07361B56A7F5005F0E1D /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		A5BD07371B56A7F5005F0E1D /* SidebarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SidebarViewController.xib; sourceTree = "<group>"; };
 		A5C009D01B1CA33F004CAA23 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C009D41B1CA33F004CAA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5C009D51B1CA33F004CAA23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -2320,17 +2331,6 @@
 		A5C00A2D1B1CAF34004CAA23 /* UIColor+SHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SHColor.h"; sourceTree = "<group>"; };
 		A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SHColor.m"; sourceTree = "<group>"; };
 		A5C00A321B1CB13C004CAA23 /* SmartHome.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartHome.pch; sourceTree = "<group>"; };
-		A5FDD9381B27315B00DAAD90 /* LeftSideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftSideBarViewController.h; path = ../LeftSideBarViewController.h; sourceTree = "<group>"; };
-		A5FDD9391B27315B00DAAD90 /* LeftSideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftSideBarViewController.m; path = ../LeftSideBarViewController.m; sourceTree = "<group>"; };
-		A5FDD93C1B27315B00DAAD90 /* SideBarSelectedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarSelectedDelegate.h; sourceTree = "<group>"; };
-		A5FDD93D1B27315B00DAAD90 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
-		A5FDD93E1B27315B00DAAD90 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
-		A5FDD93F1B27315B00DAAD90 /* SidebarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SidebarViewController.xib; sourceTree = "<group>"; };
-		A5FDD9441B2743C600DAAD90 /* SHSideTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideTableViewCell.h; sourceTree = "<group>"; };
-		A5FDD9451B2743C600DAAD90 /* SHSideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideTableViewCell.m; sourceTree = "<group>"; };
-		A5FDD9471B2743D700DAAD90 /* SHSideTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSideTableViewCell.xib; sourceTree = "<group>"; };
-		A5FDD9491B2744AB00DAAD90 /* SHSideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideModel.h; sourceTree = "<group>"; };
-		A5FDD94A1B2744AB00DAAD90 /* SHSideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideModel.m; sourceTree = "<group>"; };
 		A5FDD9541B27518200DAAD90 /* NSRoomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRoomModel.h; sourceTree = "<group>"; };
 		A5FDD9551B27518200DAAD90 /* NSRoomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRoomModel.m; sourceTree = "<group>"; };
 		A5FDD9571B2751C100DAAD90 /* NSSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSceneModel.h; sourceTree = "<group>"; };
@@ -3568,6 +3568,24 @@
 			path = SelectDevice;
 			sourceTree = "<group>";
 		};
+		A5BD072C1B56A7F5005F0E1D /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				A5BD072D1B56A7F5005F0E1D /* LeftSideBarViewController.h */,
+				A5BD072E1B56A7F5005F0E1D /* LeftSideBarViewController.m */,
+				A5BD072F1B56A7F5005F0E1D /* SHSideModel.h */,
+				A5BD07301B56A7F5005F0E1D /* SHSideModel.m */,
+				A5BD07311B56A7F5005F0E1D /* SHSideTableViewCell.h */,
+				A5BD07321B56A7F5005F0E1D /* SHSideTableViewCell.m */,
+				A5BD07331B56A7F5005F0E1D /* SHSideTableViewCell.xib */,
+				A5BD07341B56A7F5005F0E1D /* SideBarSelectedDelegate.h */,
+				A5BD07351B56A7F5005F0E1D /* SidebarViewController.h */,
+				A5BD07361B56A7F5005F0E1D /* SidebarViewController.m */,
+				A5BD07371B56A7F5005F0E1D /* SidebarViewController.xib */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
 		A5C009C71B1CA33F004CAA23 = {
 			isa = PBXGroup;
 			children = (
@@ -3589,7 +3607,7 @@
 		A5C009D21B1CA33F004CAA23 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
-				A5FDD93B1B27315B00DAAD90 /* Sidebar */,
+				A5BD072C1B56A7F5005F0E1D /* Sidebar */,
 				A50A900F1B25CAB60082DD58 /* Image */,
 				A50A8FFE1B25C4D10082DD58 /* Device */,
 				A5C009D71B1CA33F004CAA23 /* AppDelegate.h */,
@@ -3762,25 +3780,6 @@
 			path = Categorys;
 			sourceTree = "<group>";
 		};
-		A5FDD93B1B27315B00DAAD90 /* Sidebar */ = {
-			isa = PBXGroup;
-			children = (
-				A5FDD93C1B27315B00DAAD90 /* SideBarSelectedDelegate.h */,
-				A5FDD93D1B27315B00DAAD90 /* SidebarViewController.h */,
-				A5FDD93E1B27315B00DAAD90 /* SidebarViewController.m */,
-				A5FDD93F1B27315B00DAAD90 /* SidebarViewController.xib */,
-				A5FDD9381B27315B00DAAD90 /* LeftSideBarViewController.h */,
-				A5FDD9391B27315B00DAAD90 /* LeftSideBarViewController.m */,
-				A5FDD9491B2744AB00DAAD90 /* SHSideModel.h */,
-				A5FDD94A1B2744AB00DAAD90 /* SHSideModel.m */,
-				A5FDD9441B2743C600DAAD90 /* SHSideTableViewCell.h */,
-				A5FDD9451B2743C600DAAD90 /* SHSideTableViewCell.m */,
-				A5FDD9471B2743D700DAAD90 /* SHSideTableViewCell.xib */,
-			);
-			name = Sidebar;
-			path = ../../../SideBarNavDemo/SideBarNavDemo/Sidebar;
-			sourceTree = "<group>";
-		};
 		A5FDD9521B27515200DAAD90 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -3890,6 +3889,7 @@
 				A50A94231B25CABC0082DD58 /* 63.png in Resources */,
 				A50A967C1B25CABD0082DD58 /* JXS-2901.png in Resources */,
 				A50A94391B25CABD0082DD58 /* blackArrow.png in Resources */,
+				A5BD073D1B56A7F6005F0E1D /* SidebarViewController.xib in Resources */,
 				A50A97271B25CABD0082DD58 /* pic_ds_cctv8.png in Resources */,
 				A500D70A1B2CA46600C8E2C1 /* 7BtnImage.png in Resources */,
 				A50A97061B25CABD0082DD58 /* pic_cl2_l@2x.png in Resources */,
@@ -3988,7 +3988,6 @@
 				A50A95CF1B25CABD0082DD58 /* icon_sb_dd.png in Resources */,
 				A50A97881B25CABD0082DD58 /* pic_kz_by_off@2x.png in Resources */,
 				A50A945A1B25CABD0082DD58 /* button_cl1_pause@2x.png in Resources */,
-				A5FDD9431B27315B00DAAD90 /* SidebarViewController.xib in Resources */,
 				A50A95A51B25CABD0082DD58 /* icon_hw_leftj.png in Resources */,
 				A50A96321B25CABD0082DD58 /* icon_ts_bdon@2x.png in Resources */,
 				A50A96B81B25CABD0082DD58 /* load_p1@2x.png in Resources */,
@@ -4399,7 +4398,6 @@
 				A50A973B1B25CABD0082DD58 /* pic_ds_guangdong.png in Resources */,
 				A50A978B1B25CABD0082DD58 /* pic_kz_cfkg.png in Resources */,
 				A50A944C1B25CABD0082DD58 /* button_back@2x.png in Resources */,
-				A5FDD9481B2743D700DAAD90 /* SHSideTableViewCell.xib in Resources */,
 				A50A964A1B25CABD0082DD58 /* icon_ts_msopen@2x.png in Resources */,
 				A50A97EC1B25CABD0082DD58 /* THZ-0101.png in Resources */,
 				A50A96D41B25CABD0082DD58 /* pic_cg_pm@2x.png in Resources */,
@@ -4859,6 +4857,7 @@
 				A50A97A71B25CABD0082DD58 /* pic_kz_pl_on.png in Resources */,
 				A5A6A3A71B2CBB5F00C3A0CB /* SHAddCell.xib in Resources */,
 				A50A960E1B25CABD0082DD58 /* icon_sb_sxt@2x.png in Resources */,
+				A5BD073B1B56A7F6005F0E1D /* SHSideTableViewCell.xib in Resources */,
 				A50A953F1B25CABD0082DD58 /* icon_cj_hf.png in Resources */,
 				A50A97761B25CABD0082DD58 /* pic_kz_bd_on@2x.png in Resources */,
 				A50A95501B25CABD0082DD58 /* icon_cj_wx@2x.png in Resources */,
@@ -4966,7 +4965,6 @@
 				A5096B731B1DF171005ABF68 /* NSMeapDBBaseObject.m in Sources */,
 				A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */,
 				A5096B8A1B1DF690005ABF68 /* SHRoomCellModel.m in Sources */,
-				A5FDD9401B27315B00DAAD90 /* LeftSideBarViewController.m in Sources */,
 				A5096B711B1DF171005ABF68 /* YYFMResultSet.m in Sources */,
 				A50A90041B25C5260082DD58 /* SHDeviceModel.m in Sources */,
 				A500D6D11B2C7CEB00C8E2C1 /* SHChangePasswordController.m in Sources */,
@@ -4978,7 +4976,6 @@
 				A5FDD9561B27518200DAAD90 /* NSRoomModel.m in Sources */,
 				A5A6A3B31B2CBB8400C3A0CB /* SHSelectDeviceCell.m in Sources */,
 				A53482131B2086FF00324B48 /* UIBarButtonItem+Extension.m in Sources */,
-				A5FDD94B1B2744AB00DAAD90 /* SHSideModel.m in Sources */,
 				A500D6EB1B2C9DE800C8E2C1 /* SHAircondationView.m in Sources */,
 				A500D6CC1B2C78A900C8E2C1 /* SHSetingCell.m in Sources */,
 				A5FDD95C1B27522400DAAD90 /* NSDeviceModel.m in Sources */,
@@ -4991,11 +4988,13 @@
 				A5FDD9611B2756E100DAAD90 /* SHDataManager.m in Sources */,
 				A500D6DA1B2C867D00C8E2C1 /* SHChangePasswordView.m in Sources */,
 				A5A6A3B51B2CBB8400C3A0CB /* SHSelectDeviceModel.m in Sources */,
+				A5BD07391B56A7F6005F0E1D /* SHSideModel.m in Sources */,
 				A5C00A111B1CA7D1004CAA23 /* SHHomeViewController.m in Sources */,
 				A5096B7B1B1DF2AF005ABF68 /* SHSceneViewController.m in Sources */,
 				A5C009FD1B1CA46E004CAA23 /* SHBaseViewController.m in Sources */,
 				A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */,
 				A50A981B1B25F7620082DD58 /* SHSceneSetingController.m in Sources */,
+				A5BD07381B56A7F6005F0E1D /* LeftSideBarViewController.m in Sources */,
 				A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */,
 				A5A6A3B61B2CBB8400C3A0CB /* SHSelectViewController.m in Sources */,
 				A5A6A3A61B2CBB5F00C3A0CB /* SHAddCell.m in Sources */,
@@ -5003,7 +5002,9 @@
 				A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */,
 				A5C00A091B1CA5A9004CAA23 /* SHTableViewCell.m in Sources */,
 				A5096B8D1B1DF6A5005ABF68 /* SHSceneModel.m in Sources */,
+				A5BD073A1B56A7F6005F0E1D /* SHSideTableViewCell.m in Sources */,
 				A500D6D71B2C7D4F00C8E2C1 /* SHForgetPasswordController.m in Sources */,
+				A5BD073C1B56A7F6005F0E1D /* SidebarViewController.m in Sources */,
 				A500D6E21B2C9B9100C8E2C1 /* SHTVControlController.m in Sources */,
 				A5A6A3AB1B2CBB5F00C3A0CB /* SHScanViewController.m in Sources */,
 				A5096B6E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m in Sources */,
@@ -5012,8 +5013,6 @@
 				A5A6A3AA1B2CBB5F00C3A0CB /* SHManuallyAddController.m in Sources */,
 				A5C009D61B1CA33F004CAA23 /* main.m in Sources */,
 				A5096B701B1DF171005ABF68 /* YYFMDatabaseQueue.m in Sources */,
-				A5FDD9421B27315B00DAAD90 /* SidebarViewController.m in Sources */,
-				A5FDD9461B2743C600DAAD90 /* SHSideTableViewCell.m in Sources */,
 				A50A900C1B25C85D0082DD58 /* SHDeviceCell.m in Sources */,
 				A5C00A141B1CA7E4004CAA23 /* SHSetingViewController.m in Sources */,
 				A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */,

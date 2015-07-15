@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9BDC24FC-BFD2-4524-BF5B-C65A0733DFDB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SmartHome</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C212F744D804EE3F6BEFF93C09A994E9D124B52A</key>
+		<string>github.com:banwang811/SmartHome.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SmartHome.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C212F744D804EE3F6BEFF93C09A994E9D124B52A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:banwang811/SmartHome.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C212F744D804EE3F6BEFF93C09A994E9D124B52A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C212F744D804EE3F6BEFF93C09A994E9D124B52A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SmartHome</string>
+		</dict>
+	</array>
+</dict>
+</plist>
