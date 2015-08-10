@@ -3612,7 +3612,6 @@
 				A50A8FFE1B25C4D10082DD58 /* Device */,
 				A5C009D71B1CA33F004CAA23 /* AppDelegate.h */,
 				A5C009D81B1CA33F004CAA23 /* AppDelegate.m */,
-				A5C00A051B1CA54B004CAA23 /* Common */,
 				A5C00A041B1CA539004CAA23 /* Base */,
 				A5096B781B1DF28D005ABF68 /* Scence */,
 				A5096B771B1DF26E005ABF68 /* Room */,
@@ -3671,13 +3670,6 @@
 				A5C00A081B1CA5A9004CAA23 /* SHTableViewCell.m */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		A5C00A051B1CA54B004CAA23 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		A5C00A061B1CA573004CAA23 /* Improt */ = {
