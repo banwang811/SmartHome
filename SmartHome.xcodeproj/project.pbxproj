@@ -67,6 +67,7 @@
 		04BFB6CC1BA6CDEE00EF51D8 /* UIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6C01BA6CDEE00EF51D8 /* UIView+Hierarchy.m */; };
 		04BFB6CD1BA6CDEE00EF51D8 /* UIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6C21BA6CDEE00EF51D8 /* UIView+IQKeyboardToolbar.m */; };
 		04BFB6CE1BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6C41BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m */; };
+		04BFB6D01BA6D08700EF51D8 /* ver_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6CF1BA6D08700EF51D8 /* ver_bg.png */; };
 		A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */; };
 		A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C81B2C789100C8E2C1 /* SHSetingModel.m */; };
 		A500D6CC1B2C78A900C8E2C1 /* SHSetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */; };
@@ -235,6 +236,7 @@
 		04BFB6C21BA6CDEE00EF51D8 /* UIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		04BFB6C31BA6CDEE00EF51D8 /* UIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Hierarchy.h"; sourceTree = "<group>"; };
 		04BFB6C41BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		04BFB6CF1BA6D08700EF51D8 /* ver_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ver_bg.png; sourceTree = "<group>"; };
 		A500D6C41B2C6D1900C8E2C1 /* SHAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAdapter.h; sourceTree = "<group>"; };
 		A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAdapter.m; sourceTree = "<group>"; };
 		A500D6C71B2C789100C8E2C1 /* SHSetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSetingModel.h; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 		04BFB6A91BA6C9A900EF51D8 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				04BFB6CF1BA6D08700EF51D8 /* ver_bg.png */,
 				04BFB6AA1BA6C9BA00EF51D8 /* acc_bg.png */,
 				04BFB6AB1BA6C9BA00EF51D8 /* psw_bg.png */,
 			);
@@ -1021,6 +1024,7 @@
 				04BFB6591BA6779200EF51D8 /* DOWNBtn.png in Resources */,
 				A560E3271B28A02100445A89 /* SHRootSetingViewCell.xib in Resources */,
 				04BFB6581BA6779200EF51D8 /* BACKBtnImage.png in Resources */,
+				04BFB6D01BA6D08700EF51D8 /* ver_bg.png in Resources */,
 				04BFB6631BA6779200EF51D8 /* USER2BtnImage.png in Resources */,
 				04BFB6521BA6779200EF51D8 /* 4BtnImage.png in Resources */,
 				A5A6A3B41B2CBB8400C3A0CB /* SHSelectDeviceCell.xib in Resources */,
