@@ -62,6 +62,16 @@
     return [self colorModelAtIndex:[defaults integerForKey:@"XHHumidityColor"]];
 }
 
++ (UIColor *)shlightGrayColor{
+    UIColor *color = [UIColor colorWithRed:237/255.0 green:237/255.0 blue:237/255.0 alpha:1];
+    return color;
+}
+
++ (UIColor *)navagationBarColor{
+    UIColor *color = [UIColor colorWithRed:177/255.0 green:208/255.0 blue:0/255.0 alpha:1];
+    return color;
+}
+
 + (UIColor *)smokeColor
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

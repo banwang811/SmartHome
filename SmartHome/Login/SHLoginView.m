@@ -31,24 +31,21 @@
 
 @implementation SHLoginView
 
-- (id)init
-{
+- (id)init{
     if (self = [super init]) {
         [self setupContentView];
     }
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupContentView];
     }
     return self;
 }
 
-- (void)setupContentView
-{
+- (void)setupContentView{
     self.logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 10, self.frame.size.width - 160,Height)];
     self.logoLabel.text = @"华郡智能家居系统";
     self.logoLabel.textAlignment = NSTextAlignmentCenter;
@@ -94,15 +91,13 @@
 #pragma mark - UITextFieldDelegate
 
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
     [UIView animateWithDuration:0.3 animations:^{
         self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     }];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
+- (void)textFieldDidEndEditing:(UITextField *)textField{
     [UIView animateWithDuration:0.3 animations:^{
         if ([SHAdapter shareAdapter].isIphone4s) {
             self.frame = CGRectMake(0, 30, self.frame.size.width, self.frame.size.height);
@@ -114,14 +109,12 @@
 }
 
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.numberTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
 }
 
-- (void)buttonClick:(UIButton *)button
-{
+- (void)buttonClick:(UIButton *)button{
     if (button == self.logInButton) {
         if (self.loginBlock) {
             self.loginBlock();

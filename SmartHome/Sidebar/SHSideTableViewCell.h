@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SHSideModel.h"
 
 @interface SHSideTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView        *iconImage;
+
+@property (weak, nonatomic) IBOutlet UILabel            *titleLabel;
+
+@property (nonatomic, strong) SHSideModel               *model;
 
 @end

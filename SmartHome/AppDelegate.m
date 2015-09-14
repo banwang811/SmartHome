@@ -22,12 +22,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //背景色
     self.window.backgroundColor = [UIColor themeColor];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"IconImage" ofType:@"plist"];
+    self.imageDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
     //打开数据库文件
     [[SHDataManager shareManager] prepareDB];
     //登录
-//    self.window.rootViewController = [SHLoginViewController new];
     self.window.rootViewController = [[SHNavigationController alloc] initWithRootViewController:[SHLoginViewController new]];
-
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,
+                          [UIFont systemFontOfSize:18],UITextAttributeFont, nil];
+    [UINavigationBar appearance].titleTextAttributes = dict;
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];    
+    [UINavigationBar appearance].translucent  = NO;
+    [UINavigationBar appearance].barTintColor = [UIColor navagationBarColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

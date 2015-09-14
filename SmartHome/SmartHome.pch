@@ -11,7 +11,7 @@
 
 //扩展
 #import "UIColor+SHColor.h"
-
+#import "UIImage+SHImage.h"
 
 #import "AppDelegate.h"
 
@@ -21,7 +21,7 @@
 #import "NSRoomModel.h"
 #import "NSDeviceModel.h"
 
-
+#import "AFNetworking.h"
 #import "SHAdapter.h"
 #import "SHError.h"
 

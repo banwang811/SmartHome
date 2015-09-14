@@ -15,6 +15,8 @@
 #import "SHSetingViewController.h"
 #import "SHMessageViewController.h"
 #import "SHDeviceViewController.h"
+#import "SHSideModel.h"
+#import "SHSideTableViewCell.h"
 
 @interface LeftSideBarViewController ()
 {
@@ -24,13 +26,14 @@
 
 @property (nonatomic, strong) UITableView       *tableview;
 
+@property (nonatomic, strong) NSMutableArray    *dataArray;
+
 @end
 
 @implementation LeftSideBarViewController
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -38,31 +41,42 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+
+- (instancetype)init{
+    if (self = [super init]) {
+        _dataList = @[@"首页",@"房间",@"场景",@"设备",@"消息",@"设置"];
+        self.dataArray = [NSMutableArray array];
+    }
+    return self;
+}
+
+- (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableview];
-    _dataList = @[@"首页",@"房间",@"场景",@"设备",@"消息",@"设置"];
     if ([_delegate respondsToSelector:@selector(leftSideBarSelectWithController:)]) {
         [_delegate leftSideBarSelectWithController:[self subConWithIndex:0]];
         _selectIdnex = 0;
     }
+    for (int i = 0; i < [_dataList count]; i++) {
+        NSString *iconName = [NSString stringWithFormat:@"menuItem%d",i+1];
+        SHSideModel *model = [SHSideModel itemWithTitle:[_dataList objectAtIndex:i] iconName:iconName];
+        [self.dataArray addObject:model];
+    }
 }
 
 
-- (UITableView *)tableview
-{
+- (UITableView *)tableview{
     if (_tableview == nil) {
         _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64) style:UITableViewStylePlain];
         _tableview.dataSource = self;
         _tableview.delegate = self;
+        _tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableview;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -70,36 +84,33 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_dataList count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"SHSideTableViewCell";
+    SHSideTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"SHSideTableViewCell" owner:self options:nil] firstObject];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
-    cell.textLabel.text = [_dataList objectAtIndex:indexPath.row];
+    SHSideModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    cell.model = model;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 70;
 }
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if ([_delegate respondsToSelector:@selector(leftSideBarSelectWithController:)]) {
         if (indexPath.row == _selectIdnex) {
@@ -114,8 +125,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (UINavigationController *)subConWithIndex:(NSInteger)index
-{
+- (UINavigationController *)subConWithIndex:(NSInteger)index{
     UIViewController *controller = nil;
     switch (index) {
         case 0:

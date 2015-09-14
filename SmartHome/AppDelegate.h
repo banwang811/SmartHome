@@ -15,5 +15,7 @@
 
 @property (nonatomic, strong)SHTabBarController   *tabBarController;
 
+@property (nonatomic, strong) NSDictionary        *imageDict;
+
 @end
 

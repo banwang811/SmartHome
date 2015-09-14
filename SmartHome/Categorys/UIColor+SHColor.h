@@ -21,4 +21,10 @@
 + (UIColor *)humidityColor;
 + (UIColor *)smokeColor;
 
+
++ (UIColor *)shlightGrayColor;
+
++ (UIColor *)navagationBarColor;
+
+
 @end
