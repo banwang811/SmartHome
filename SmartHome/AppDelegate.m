@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SHLoginViewController.h"
+#import "SHLoginController.h"
 #import "SHNavigationController.h"
 #import "SHDataManager.h"
 
@@ -27,7 +27,7 @@
     //打开数据库文件
     [[SHDataManager shareManager] prepareDB];
     //登录
-    self.window.rootViewController = [[SHNavigationController alloc] initWithRootViewController:[SHLoginViewController new]];
+    self.window.rootViewController = [[SHNavigationController alloc] initWithRootViewController:[SHLoginController new]];
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,
                           [UIFont systemFontOfSize:18],UITextAttributeFont, nil];
     [UINavigationBar appearance].titleTextAttributes = dict;

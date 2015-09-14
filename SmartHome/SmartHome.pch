@@ -12,6 +12,7 @@
 //扩展
 #import "UIColor+SHColor.h"
 #import "UIImage+SHImage.h"
+#import "CALayer+Additions.h"
 
 #import "AppDelegate.h"
 

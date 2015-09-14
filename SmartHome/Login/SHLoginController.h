@@ -1,14 +1,13 @@
 //
-//  SHLoginViewController.h
+//  SHLoginController.h
 //  SmartHome
 //
-//  Created by banwang on 15/6/1.
+//  Created by mac on 15/9/14.
 //  Copyright (c) 2015年 banwang. All rights reserved.
 //
 
 #import "SHBaseViewController.h"
 
-
-@interface SHLoginViewController : SHBaseViewController
+@interface SHLoginController : SHBaseViewController
 
 @end
