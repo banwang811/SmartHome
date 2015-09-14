@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>menuItem5</key>
+	<string>menuItem5</string>
+	<key>menuItem4</key>
+	<string>menuItem4</string>
+	<key>menuItem3</key>
+	<string>menuItem3</string>
+	<key>menuItem2</key>
+	<string>menuItem2</string>
+	<key>menuItem1</key>
+	<string>menuItem1</string>
+</dict>
+</plist>

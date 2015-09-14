@@ -2,12 +2,12 @@
 //  SHSideTableViewCell.h
 //  SmartHome
 //
-//  Created by banwang on 15/7/15.
+//  Created by mac on 15/9/14.
 //  Copyright (c) 2015年 banwang. All rights reserved.
 //
 
-#import "SHTableViewCell.h"
+#import <UIKit/UIKit.h>
 
-@interface SHSideTableViewCell : SHTableViewCell
+@interface SHSideTableViewCell : UITableViewCell
 
 @end
