@@ -131,6 +131,7 @@
 		A5C00A141B1CA7E4004CAA23 /* SHSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A131B1CA7E4004CAA23 /* SHSetingViewController.m */; };
 		A5C00A1B1B1CA889004CAA23 /* SHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A1A1B1CA889004CAA23 /* SHMessageViewController.m */; };
 		A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */; };
+		A5F6C8661BA70F9300A12615 /* SHAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F6C8651BA70F9300A12615 /* SHAccountManager.m */; };
 		A5FDD9561B27518200DAAD90 /* NSRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD9551B27518200DAAD90 /* NSRoomModel.m */; };
 		A5FDD9591B2751C200DAAD90 /* NSSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD9581B2751C100DAAD90 /* NSSceneModel.m */; };
 		A5FDD95C1B27522400DAAD90 /* NSDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDD95B1B27522400DAAD90 /* NSDeviceModel.m */; };
@@ -357,6 +358,8 @@
 		A5C00A2D1B1CAF34004CAA23 /* UIColor+SHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SHColor.h"; sourceTree = "<group>"; };
 		A5C00A2E1B1CAF34004CAA23 /* UIColor+SHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SHColor.m"; sourceTree = "<group>"; };
 		A5C00A321B1CB13C004CAA23 /* SmartHome.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartHome.pch; sourceTree = "<group>"; };
+		A5F6C8641BA70F9300A12615 /* SHAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccountManager.h; sourceTree = "<group>"; };
+		A5F6C8651BA70F9300A12615 /* SHAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccountManager.m; sourceTree = "<group>"; };
 		A5FDD9541B27518200DAAD90 /* NSRoomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRoomModel.h; sourceTree = "<group>"; };
 		A5FDD9551B27518200DAAD90 /* NSRoomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRoomModel.m; sourceTree = "<group>"; };
 		A5FDD9571B2751C100DAAD90 /* NSSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSceneModel.h; sourceTree = "<group>"; };
@@ -392,9 +395,6 @@
 			children = (
 				04BFB6A91BA6C9A900EF51D8 /* login */,
 				04BFB6681BA679BD00EF51D8 /* navagation */,
-				04BFB6671BA6785500EF51D8 /* device */,
-				04BFB6661BA6783D00EF51D8 /* room */,
-				04BFB6651BA6783200EF51D8 /* scence */,
 				04BFB6641BA677E100EF51D8 /* menuItem */,
 				04BFB6371BA6779200EF51D8 /* RemoteImages */,
 			);
@@ -442,27 +442,6 @@
 				04BFB66E1BA69E2400EF51D8 /* menuItem6.png */,
 			);
 			path = menuItem;
-			sourceTree = "<group>";
-		};
-		04BFB6651BA6783200EF51D8 /* scence */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = scence;
-			sourceTree = "<group>";
-		};
-		04BFB6661BA6783D00EF51D8 /* room */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = room;
-			sourceTree = "<group>";
-		};
-		04BFB6671BA6785500EF51D8 /* device */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = device;
 			sourceTree = "<group>";
 		};
 		04BFB6681BA679BD00EF51D8 /* navagation */ = {
@@ -866,6 +845,8 @@
 				A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */,
 				A500D6DB1B2C887100C8E2C1 /* SHError.h */,
 				A500D6DC1B2C887100C8E2C1 /* SHError.m */,
+				A5F6C8641BA70F9300A12615 /* SHAccountManager.h */,
+				A5F6C8651BA70F9300A12615 /* SHAccountManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1108,6 +1089,7 @@
 				A5A6A3B61B2CBB8400C3A0CB /* SHSelectViewController.m in Sources */,
 				A5A6A3A61B2CBB5F00C3A0CB /* SHAddCell.m in Sources */,
 				A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */,
+				A5F6C8661BA70F9300A12615 /* SHAccountManager.m in Sources */,
 				A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */,
 				04BFB6941BA6B18000EF51D8 /* AFURLSessionManager.m in Sources */,
 				A5C00A091B1CA5A9004CAA23 /* SHTableViewCell.m in Sources */,

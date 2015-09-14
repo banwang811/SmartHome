@@ -25,6 +25,7 @@
 #import "AFNetworking.h"
 #import "SHAdapter.h"
 #import "SHError.h"
+#import "SHAccountManager.h"
 
 #define SHAPP_DELEGATE  ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
@@ -37,6 +38,9 @@
 #define SHWidth         (self.view.frame.size.width)
 #define SHHeight        (self.view.frame.size.height)
 
+#define serverAddress   @"http://example.com/api/"
+
+#define login           @"login"
 
 
 #define pickerViewHight 216

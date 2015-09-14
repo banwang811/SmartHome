@@ -28,6 +28,10 @@
 
 @property (nonatomic, strong) NSMutableArray    *dataArray;
 
+@property (nonatomic, strong) UIButton          *loginButton;
+
+@property (nonatomic, strong) UIButton          *registerButton;
+
 @end
 
 @implementation LeftSideBarViewController
@@ -54,6 +58,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableview];
+    
+//    [self.view addSubview:self.loginButton];
+//    [self.view addSubview:self.registerButton];
+
     if ([_delegate respondsToSelector:@selector(leftSideBarSelectWithController:)]) {
         [_delegate leftSideBarSelectWithController:[self subConWithIndex:0]];
         _selectIdnex = 0;
@@ -65,6 +73,40 @@
     }
 }
 
+/*
+- (UIButton *)loginButton{
+    if (_loginButton == nil) {
+        _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _loginButton.frame = CGRectMake(0, 0, 100, 40);
+        _loginButton.backgroundColor = [UIColor redColor];
+        [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
+        [_loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:UIControlEventTouchDragInside];
+    }
+    return _loginButton;
+}
+
+- (UIButton *)registerButton{
+    if (_registerButton == nil) {
+        _registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _registerButton.frame = CGRectMake(140, 0, 100, 40);
+        _registerButton.backgroundColor = [UIColor blueColor];
+
+        [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
+        [_registerButton addTarget:self action:@selector(registerButtonClick) forControlEvents:UIControlEventTouchDragInside];
+
+    }
+    return _registerButton;
+}
+
+- (void)loginButtonClick{
+
+}
+
+- (void)registerButtonClick{
+    
+}
+
+*/
 
 - (UITableView *)tableview{
     if (_tableview == nil) {
@@ -105,7 +147,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 70;
+    return 60;
 }
 
 #pragma mark - Table view delegate

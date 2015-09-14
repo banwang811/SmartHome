@@ -10,6 +10,7 @@
 #import "SHLoginController.h"
 #import "SHNavigationController.h"
 #import "SHDataManager.h"
+#import "SidebarViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,9 @@
     [[SHDataManager shareManager] prepareDB];
     //登录
     self.window.rootViewController = [[SHNavigationController alloc] initWithRootViewController:[SHLoginController new]];
+    
+//    self.window.rootViewController =[SidebarViewController new];
+
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,
                           [UIFont systemFontOfSize:18],UITextAttributeFont, nil];
     [UINavigationBar appearance].titleTextAttributes = dict;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHLoginController">
             <connections>
+                <outlet property="accountTextField" destination="MyJ-oC-g6u" id="iQk-Ul-gh3"/>
+                <outlet property="passwordTextField" destination="HuI-GD-pOF" id="nAN-s6-72d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +36,9 @@
                                             <rect key="frame" x="36" y="5" width="226" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="GNg-l2-Ney"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,7 +92,7 @@
                                         <constraint firstAttribute="height" constant="30" id="QmX-wd-Js9"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <state key="normal" title="忘记密码">
+                                    <state key="normal" title="忘记密码？">
                                         <color key="titleColor" red="0.69411764710000001" green="0.81568627449999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -108,6 +113,9 @@
                                             <rect key="frame" x="36" y="5" width="226" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="Dc9-jr-KXH"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,11 +141,41 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlY-b1-Fph">
+                                    <rect key="frame" x="16" y="395" width="87" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="87" id="d1r-mF-fXU"/>
+                                        <constraint firstAttribute="height" constant="30" id="lEF-Hz-nZP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="新用户注册">
+                                        <color key="titleColor" red="0.69411764710000001" green="0.81568627449999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="registerClick:" destination="-1" eventType="touchUpInside" id="cwm-9B-w8Y"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-c0-Irw">
+                                    <rect key="frame" x="120" y="45" width="80" height="80"/>
+                                    <color key="backgroundColor" red="1" green="0.34554727369999999" blue="0.26045243569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="aOQ-q7-Z06"/>
+                                        <constraint firstAttribute="height" constant="80" id="jD2-KL-z3E"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="y4G-T3-FcI" firstAttribute="top" secondItem="fhw-c0-Irw" secondAttribute="bottom" constant="89" id="7JQ-XF-0BI"/>
                                 <constraint firstAttribute="height" constant="568" id="7SW-JE-pa1"/>
                                 <constraint firstItem="fpo-nk-DiL" firstAttribute="top" secondItem="oZ1-zw-Vq2" secondAttribute="bottom" constant="37" id="ECh-SV-RNZ"/>
+                                <constraint firstItem="AlY-b1-Fph" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="16" id="F2f-My-awF"/>
                                 <constraint firstItem="gmd-yv-9J9" firstAttribute="top" secondItem="fpo-nk-DiL" secondAttribute="bottom" constant="3" id="HR9-PB-RT2"/>
                                 <constraint firstAttribute="trailing" secondItem="y4G-T3-FcI" secondAttribute="trailing" constant="27" id="OD0-vM-UaZ"/>
                                 <constraint firstItem="y4G-T3-FcI" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="Oe5-gn-3W5"/>
@@ -145,7 +183,9 @@
                                 <constraint firstItem="fpo-nk-DiL" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="Vcg-Im-h1b"/>
                                 <constraint firstItem="oZ1-zw-Vq2" firstAttribute="top" secondItem="y4G-T3-FcI" secondAttribute="bottom" constant="21" id="fVb-pU-rrF"/>
                                 <constraint firstAttribute="trailing" secondItem="gmd-yv-9J9" secondAttribute="trailing" constant="18" id="gEq-yq-Lgy"/>
+                                <constraint firstAttribute="centerX" secondItem="fhw-c0-Irw" secondAttribute="centerX" id="iB7-Kd-Xwn"/>
                                 <constraint firstItem="oZ1-zw-Vq2" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="lxC-9y-1DH"/>
+                                <constraint firstItem="AlY-b1-Fph" firstAttribute="top" secondItem="fpo-nk-DiL" secondAttribute="bottom" constant="3" id="oBo-cg-BFB"/>
                                 <constraint firstAttribute="trailing" secondItem="fpo-nk-DiL" secondAttribute="trailing" constant="27" id="ost-Ua-pMv"/>
                                 <constraint firstAttribute="trailing" secondItem="oZ1-zw-Vq2" secondAttribute="trailing" constant="27" id="pJV-ih-2CN"/>
                             </constraints>
@@ -159,6 +199,9 @@
                         <constraint firstItem="rj6-9Z-Wi3" firstAttribute="top" secondItem="VbT-Bi-WmU" secondAttribute="top" id="w5I-dj-MRD"/>
                         <constraint firstAttribute="trailing" secondItem="rj6-9Z-Wi3" secondAttribute="trailing" id="zrK-Np-ap3"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="pgx-qQ-DM1"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
