@@ -57,10 +57,7 @@
 		A5096B7E1B1DF2BE005ABF68 /* SHRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B7D1B1DF2BE005ABF68 /* SHRoomViewController.m */; };
 		A5096B841B1DF633005ABF68 /* SHRoomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B831B1DF633005ABF68 /* SHRoomTableViewCell.m */; };
 		A5096B871B1DF66F005ABF68 /* SHSceneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B861B1DF66F005ABF68 /* SHSceneTableViewCell.m */; };
-		A5096B8A1B1DF690005ABF68 /* SHRoomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B891B1DF690005ABF68 /* SHRoomCellModel.m */; };
-		A5096B8D1B1DF6A5005ABF68 /* SHSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5096B8C1B1DF6A5005ABF68 /* SHSceneModel.m */; };
 		A50A90011B25C4EA0082DD58 /* SHDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50A90001B25C4EA0082DD58 /* SHDeviceViewController.m */; };
-		A50A90041B25C5260082DD58 /* SHDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A50A90031B25C5260082DD58 /* SHDeviceModel.m */; };
 		A50A900C1B25C85D0082DD58 /* SHDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A50A900B1B25C85D0082DD58 /* SHDeviceCell.m */; };
 		A50A900E1B25C8940082DD58 /* SHDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50A900D1B25C8940082DD58 /* SHDeviceCell.xib */; };
 		A50A94121B25CABC0082DD58 /* 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = A50A90101B25CAB60082DD58 /* 120x120.png */; };
@@ -1222,14 +1219,8 @@
 		A5096B831B1DF633005ABF68 /* SHRoomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomTableViewCell.m; sourceTree = "<group>"; };
 		A5096B851B1DF66F005ABF68 /* SHSceneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSceneTableViewCell.h; sourceTree = "<group>"; };
 		A5096B861B1DF66F005ABF68 /* SHSceneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSceneTableViewCell.m; sourceTree = "<group>"; };
-		A5096B881B1DF690005ABF68 /* SHRoomCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomCellModel.h; sourceTree = "<group>"; };
-		A5096B891B1DF690005ABF68 /* SHRoomCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomCellModel.m; sourceTree = "<group>"; };
-		A5096B8B1B1DF6A5005ABF68 /* SHSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSceneModel.h; sourceTree = "<group>"; };
-		A5096B8C1B1DF6A5005ABF68 /* SHSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSceneModel.m; sourceTree = "<group>"; };
 		A50A8FFF1B25C4EA0082DD58 /* SHDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDeviceViewController.h; sourceTree = "<group>"; };
 		A50A90001B25C4EA0082DD58 /* SHDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDeviceViewController.m; sourceTree = "<group>"; };
-		A50A90021B25C5260082DD58 /* SHDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDeviceModel.h; sourceTree = "<group>"; };
-		A50A90031B25C5260082DD58 /* SHDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDeviceModel.m; sourceTree = "<group>"; };
 		A50A900A1B25C85D0082DD58 /* SHDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDeviceCell.h; sourceTree = "<group>"; };
 		A50A900B1B25C85D0082DD58 /* SHDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDeviceCell.m; sourceTree = "<group>"; };
 		A50A900D1B25C8940082DD58 /* SHDeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDeviceCell.xib; sourceTree = "<group>"; };
@@ -2454,8 +2445,6 @@
 				A5096B821B1DF633005ABF68 /* SHRoomTableViewCell.h */,
 				A5096B831B1DF633005ABF68 /* SHRoomTableViewCell.m */,
 				A50A98171B25DDB40082DD58 /* SHRoomTableViewCell.xib */,
-				A5096B881B1DF690005ABF68 /* SHRoomCellModel.h */,
-				A5096B891B1DF690005ABF68 /* SHRoomCellModel.m */,
 				A53482141B20894D00324B48 /* SHRoomSetingViewController.h */,
 				A53482151B20894D00324B48 /* SHRoomSetingViewController.m */,
 				A560E3291B28B59800445A89 /* SHPickerView.h */,
@@ -2477,8 +2466,6 @@
 				A5096B851B1DF66F005ABF68 /* SHSceneTableViewCell.h */,
 				A5096B861B1DF66F005ABF68 /* SHSceneTableViewCell.m */,
 				A50A98151B25DB360082DD58 /* SHSceneTableViewCell.xib */,
-				A5096B8B1B1DF6A5005ABF68 /* SHSceneModel.h */,
-				A5096B8C1B1DF6A5005ABF68 /* SHSceneModel.m */,
 				A50A98191B25F7620082DD58 /* SHSceneSetingController.h */,
 				A50A981A1B25F7620082DD58 /* SHSceneSetingController.m */,
 			);
@@ -2493,8 +2480,6 @@
 				A500D6DF1B2C9B4300C8E2C1 /* DeviceControl */,
 				A50A8FFF1B25C4EA0082DD58 /* SHDeviceViewController.h */,
 				A50A90001B25C4EA0082DD58 /* SHDeviceViewController.m */,
-				A50A90021B25C5260082DD58 /* SHDeviceModel.h */,
-				A50A90031B25C5260082DD58 /* SHDeviceModel.m */,
 				A50A900A1B25C85D0082DD58 /* SHDeviceCell.h */,
 				A50A900B1B25C85D0082DD58 /* SHDeviceCell.m */,
 				A50A900D1B25C8940082DD58 /* SHDeviceCell.xib */,
@@ -4956,9 +4941,7 @@
 				A500D6D41B2C7D2E00C8E2C1 /* SHRegisterController.m in Sources */,
 				A5096B731B1DF171005ABF68 /* NSMeapDBBaseObject.m in Sources */,
 				A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */,
-				A5096B8A1B1DF690005ABF68 /* SHRoomCellModel.m in Sources */,
 				A5096B711B1DF171005ABF68 /* YYFMResultSet.m in Sources */,
-				A50A90041B25C5260082DD58 /* SHDeviceModel.m in Sources */,
 				A500D6D11B2C7CEB00C8E2C1 /* SHChangePasswordController.m in Sources */,
 				A500D6E81B2C9DC400C8E2C1 /* SHTVControlView.m in Sources */,
 				A5096B871B1DF66F005ABF68 /* SHSceneTableViewCell.m in Sources */,
@@ -4993,7 +4976,6 @@
 				A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */,
 				A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */,
 				A5C00A091B1CA5A9004CAA23 /* SHTableViewCell.m in Sources */,
-				A5096B8D1B1DF6A5005ABF68 /* SHSceneModel.m in Sources */,
 				A5BD073A1B56A7F6005F0E1D /* SHSideTableViewCell.m in Sources */,
 				A500D6D71B2C7D4F00C8E2C1 /* SHForgetPasswordController.m in Sources */,
 				A5BD073C1B56A7F6005F0E1D /* SidebarViewController.m in Sources */,

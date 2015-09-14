@@ -7,7 +7,6 @@
 //
 
 #import "SHSceneViewController.h"
-#import "SHSceneModel.h"
 #import "SHSceneTableViewCell.h"
 #import "SHSceneSetingController.h"
 #import "SHRoomSetingViewController.h"
@@ -49,14 +48,7 @@
 {
     NSArray *sceneModels= [NSSceneModel fetchScenes];
     [self.models removeAllObjects];
-    for (NSSceneModel *model in sceneModels)
-    {
-        SHSceneModel *cellModel = [[SHSceneModel alloc] init];
-        cellModel.title = model.sceneName;
-        cellModel.iconName = model.sceneIcon;
-        cellModel.Id = model.sceneID;
-        [self.models addObject:cellModel];
-    }
+    [self.models addObjectsFromArray:sceneModels];
     [self.tableView reloadData];
 }
 
@@ -104,7 +96,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"SHSceneTableViewCell" owner:self options:nil] objectAtIndex:0];
     }
     
-    SHSceneModel *model = self.models[indexPath.row];
+    NSSceneModel *model = self.models[indexPath.row];
     cell.model = model;
     
     return cell;

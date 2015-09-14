@@ -31,11 +31,11 @@
 }
 
 
-- (void)setModel:(SHDeviceModel *)model
+- (void)setModel:(NSDeviceModel *)model
 {
-    self.nameLabel.text = model.title;
-    self.imageView.image = [UIImage imageNamed:model.iconName];
-    self.rangeLabel.text = model.rangeName;
+    self.nameLabel.text = model.deviceName;
+    self.imageView.image = [UIImage imageNamed:model.deviceIcon];
+    self.rangeLabel.text = model.extension;
     BOOL show = [self showControlButton:model.deviceType];
     self.controlButton.hidden = !show;
     if (show)

@@ -10,7 +10,6 @@
 #import "SHAddDeviceViewController.h"
 #import "SHSelectViewController.h"
 //common
-#import "SHDeviceModel.h"
 #import "SHDeviceCell.h"
 #import "SHPickerView.h"
 //other
@@ -102,16 +101,7 @@ NSDeviceModelType_Camera,//摄像头控制
 {
     NSArray *devices = [NSDeviceModel fetchDevices:nil];
     [self.models removeAllObjects];
-    for (NSDeviceModel *model in devices)
-    {
-        SHDeviceModel *cellModel = [[SHDeviceModel alloc] init];
-        cellModel.title = model.deviceName;
-        cellModel.Id = model.deviceID;
-        cellModel.iconName = model.deviceIcon;
-        cellModel.deviceState = model.deviceState;
-        cellModel.deviceType = model.deviceType;
-        [self.models addObject:cellModel];
-    }
+    [self.models addObjectsFromArray:devices];
     [self.tableView reloadData];
 }
 
@@ -228,11 +218,11 @@ NSDeviceModelType_Camera,//摄像头控制
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    SHDeviceModel *model = self.models[indexPath.row];
+    NSDeviceModel *model = self.models[indexPath.row];
     cell.model = model;
     __weak SHDeviceViewController * weakSelf = self;
     cell.deleteDeviceClick = ^{
-        weakSelf.selectDeviceID = model.Id;
+        weakSelf.selectDeviceID = model.deviceID;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
                                                         message:@"是否删除房间"
                                                        delegate:weakSelf
@@ -242,7 +232,7 @@ NSDeviceModelType_Camera,//摄像头控制
     };
     cell.controlStateClick = ^{
         weakSelf.indexPath = indexPath;
-        weakSelf.selectDeviceID = model.Id;
+        weakSelf.selectDeviceID = model.deviceID;
         [UIView animateWithDuration:0.5 animations:^{
             weakSelf.contentOffY = (indexPath.row +1) * 64 + pickerViewHight - weakSelf.tableView.contentOffset.y - weakSelf.view.frame.size.height;
             if (self.contentOffY >= 0)
@@ -262,7 +252,7 @@ NSDeviceModelType_Camera,//摄像头控制
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIViewController *controller = nil;
-    SHDeviceModel *model = self.models[indexPath.row];
+    NSDeviceModel *model = self.models[indexPath.row];
     switch (model.deviceType) {
         case NSDeviceModelType_Light:
             break;

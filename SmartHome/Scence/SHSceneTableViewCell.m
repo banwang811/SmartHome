@@ -20,10 +20,10 @@
 @implementation SHSceneTableViewCell
 
 
-- (void)setModel:(SHSceneModel *)model
+- (void)setModel:(NSSceneModel *)model
 {
-    self.nameLabel.text = model.title;
-    self.imageView.image = [UIImage imageNamed:model.iconName];
+    self.nameLabel.text = model.sceneName;
+    self.imageView.image = [UIImage imageNamed:model.sceneIcon];
     _model = model;
 }
 

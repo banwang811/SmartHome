@@ -63,6 +63,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     self.title = @"选择设备";
     [self reloadData];
 }

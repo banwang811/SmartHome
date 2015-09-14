@@ -7,11 +7,11 @@
 //
 
 #import "SHTableViewCell.h"
-#import "SHRoomCellModel.h"
+#import "NSRoomModel.h"
 
 @interface SHRoomTableViewCell : SHTableViewCell
 
-@property (nonatomic, strong) SHRoomCellModel  *model;
+@property (nonatomic, strong) NSRoomModel  *model;
 
 @property (nonatomic, copy)   void(^deleteRoom)();
 

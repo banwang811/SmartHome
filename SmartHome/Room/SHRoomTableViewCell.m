@@ -30,9 +30,9 @@
     }
 }
 
-- (void)setModel:(SHRoomCellModel *)model
+- (void)setModel:(NSRoomModel *)model
 {
-    self.nameLabel.text = model.title;
+    self.nameLabel.text = model.roomName;
     _model = model;
 }
 

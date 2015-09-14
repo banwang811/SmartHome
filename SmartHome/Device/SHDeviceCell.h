@@ -7,11 +7,10 @@
 //
 
 #import "SHTableViewCell.h"
-#import "SHDeviceModel.h"
 
 @interface SHDeviceCell : SHTableViewCell
 
-@property (nonatomic, strong) SHDeviceModel *model;
+@property (nonatomic, strong) NSDeviceModel *model;
 
 @property (nonatomic, copy) void (^controlStateClick)();
 

@@ -8,7 +8,6 @@
 
 #import "SHRoomViewController.h"
 #import "SHRoomTableViewCell.h"
-#import "SHRoomCellModel.h"
 #import "NSRoomModel.h"
 #import "SHRoomSetingViewController.h"
 #import "SHDeviceViewController.h"
@@ -44,14 +43,7 @@
 {
     NSArray *roomModels= [NSRoomModel fetchRooms];
     [self.models removeAllObjects];
-    for (NSRoomModel *model in roomModels)
-    {
-        SHRoomCellModel *cellModel = [[SHRoomCellModel alloc] init];
-        cellModel.title = model.roomName;
-        cellModel.iconName = model.roomIcon;
-        cellModel.Id = model.roomID;
-        [self.models addObject:cellModel];
-    }
+    [self.models addObjectsFromArray:roomModels];
     [self.tableView reloadData];
 }
 
@@ -104,11 +96,11 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"SHRoomTableViewCell" owner:self options:nil] objectAtIndex:0];
     }
-    SHRoomCellModel *model = self.models[indexPath.row];
+    NSRoomModel *model = self.models[indexPath.row];
     cell.model = model;
     __weak SHRoomViewController *weakSelf = self;
     cell.deleteRoom = ^{
-        weakSelf.selectRoomID = model.Id;
+        weakSelf.selectRoomID = model.roomID;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
                                                         message:@"是否删除房间"
                                                        delegate:weakSelf
