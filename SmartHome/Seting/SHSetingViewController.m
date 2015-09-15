@@ -123,7 +123,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 1){
+    if (indexPath.row == 0 && indexPath.section == 1){
         SHChangePasswordController *controller = [[SHChangePasswordController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }else{

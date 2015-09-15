@@ -2,17 +2,17 @@
 //  SHChangePasswordController.m
 //  SmartHome
 //
-//  Created by banwang on 15/6/13.
+//  Created by mac on 15/9/15.
 //  Copyright (c) 2015年 banwang. All rights reserved.
 //
 
-
 #import "SHChangePasswordController.h"
-#import "SHChangePasswordView.h"
 
-@interface SHChangePasswordController ()<UIAlertViewDelegate>
+@interface SHChangePasswordController ()
 
-@property (nonatomic, strong) SHChangePasswordView          *changeView;
+@property (weak, nonatomic) IBOutlet UITextField *oldpassword;
+@property (weak, nonatomic) IBOutlet UITextField *newpassword;
+@property (weak, nonatomic) IBOutlet UITextField *ensurepassword;
 
 @end
 
@@ -20,35 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupContentView];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
     self.title = @"修改密码";
 }
 
-- (void)setupContentView
-{
-    self.changeView = [[SHChangePasswordView alloc] initWithFrame:self.view.bounds];
-    __weak SHChangePasswordController *blockSelf = self;
-    self.changeView.changeBlcok = ^(BOOL success,SHError *error){
-        if (success) {
-            UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                           message:@"修改成功"
-                                                          delegate:blockSelf
-                                                 cancelButtonTitle:@"确定"
-                                                 otherButtonTitles:nil, nil];
-            [view show];
-        }
-    };
-    [self.view addSubview:self.changeView];
-}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)changePassword:(UIButton *)sender {
+    
 }
 
 @end

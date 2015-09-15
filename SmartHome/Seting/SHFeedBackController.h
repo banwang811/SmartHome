@@ -1,5 +1,5 @@
 //
-//  SHChangePasswordController.h
+//  SHFeedBackController.h
 //  SmartHome
 //
 //  Created by mac on 15/9/15.
@@ -8,6 +8,6 @@
 
 #import "SHBaseViewController.h"
 
-@interface SHChangePasswordController : SHBaseViewController
+@interface SHFeedBackController : SHBaseViewController
 
 @end

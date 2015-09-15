@@ -76,12 +76,12 @@
 		04CC55601BA7C389008F58AC /* SHHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CC555E1BA7C389008F58AC /* SHHomeController.xib */; };
 		04CC55641BA7C8AC008F58AC /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55621BA7C8AC008F58AC /* arrow@2x.png */; };
 		04CC55651BA7C8AC008F58AC /* select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55631BA7C8AC008F58AC /* select@2x.png */; };
+		04CC55691BA7FCE4008F58AC /* SHChangePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC55671BA7FCE4008F58AC /* SHChangePasswordController.m */; };
+		04CC556A1BA7FCE4008F58AC /* SHChangePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55681BA7FCE4008F58AC /* SHChangePasswordController.xib */; };
 		A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */; };
 		A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C81B2C789100C8E2C1 /* SHSetingModel.m */; };
 		A500D6CC1B2C78A900C8E2C1 /* SHSetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */; };
 		A500D6CE1B2C78BC00C8E2C1 /* SHSetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A500D6CD1B2C78BC00C8E2C1 /* SHSetingCell.xib */; };
-		A500D6D11B2C7CEB00C8E2C1 /* SHChangePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6D01B2C7CEB00C8E2C1 /* SHChangePasswordController.m */; };
-		A500D6DA1B2C867D00C8E2C1 /* SHChangePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6D91B2C867D00C8E2C1 /* SHChangePasswordView.m */; };
 		A500D6DD1B2C887100C8E2C1 /* SHError.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6DC1B2C887100C8E2C1 /* SHError.m */; };
 		A500D6E21B2C9B9100C8E2C1 /* SHTVControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6E11B2C9B9100C8E2C1 /* SHTVControlController.m */; };
 		A500D6E51B2C9BBA00C8E2C1 /* SHAirconditionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6E41B2C9BBA00C8E2C1 /* SHAirconditionController.m */; };
@@ -255,6 +255,9 @@
 		04CC555E1BA7C389008F58AC /* SHHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHHomeController.xib; sourceTree = "<group>"; };
 		04CC55621BA7C8AC008F58AC /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		04CC55631BA7C8AC008F58AC /* select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select@2x.png"; sourceTree = "<group>"; };
+		04CC55661BA7FCE4008F58AC /* SHChangePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChangePasswordController.h; sourceTree = "<group>"; };
+		04CC55671BA7FCE4008F58AC /* SHChangePasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChangePasswordController.m; sourceTree = "<group>"; };
+		04CC55681BA7FCE4008F58AC /* SHChangePasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChangePasswordController.xib; sourceTree = "<group>"; };
 		A500D6C41B2C6D1900C8E2C1 /* SHAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAdapter.h; sourceTree = "<group>"; };
 		A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAdapter.m; sourceTree = "<group>"; };
 		A500D6C71B2C789100C8E2C1 /* SHSetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSetingModel.h; sourceTree = "<group>"; };
@@ -262,10 +265,6 @@
 		A500D6CA1B2C78A900C8E2C1 /* SHSetingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSetingCell.h; sourceTree = "<group>"; };
 		A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSetingCell.m; sourceTree = "<group>"; };
 		A500D6CD1B2C78BC00C8E2C1 /* SHSetingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSetingCell.xib; sourceTree = "<group>"; };
-		A500D6CF1B2C7CEB00C8E2C1 /* SHChangePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChangePasswordController.h; sourceTree = "<group>"; };
-		A500D6D01B2C7CEB00C8E2C1 /* SHChangePasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChangePasswordController.m; sourceTree = "<group>"; };
-		A500D6D81B2C867D00C8E2C1 /* SHChangePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChangePasswordView.h; sourceTree = "<group>"; };
-		A500D6D91B2C867D00C8E2C1 /* SHChangePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChangePasswordView.m; sourceTree = "<group>"; };
 		A500D6DB1B2C887100C8E2C1 /* SHError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHError.h; sourceTree = "<group>"; };
 		A500D6DC1B2C887100C8E2C1 /* SHError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHError.m; sourceTree = "<group>"; };
 		A500D6E01B2C9B9100C8E2C1 /* SHTVControlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTVControlController.h; sourceTree = "<group>"; };
@@ -855,10 +854,9 @@
 				A500D6CA1B2C78A900C8E2C1 /* SHSetingCell.h */,
 				A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */,
 				A500D6CD1B2C78BC00C8E2C1 /* SHSetingCell.xib */,
-				A500D6CF1B2C7CEB00C8E2C1 /* SHChangePasswordController.h */,
-				A500D6D01B2C7CEB00C8E2C1 /* SHChangePasswordController.m */,
-				A500D6D81B2C867D00C8E2C1 /* SHChangePasswordView.h */,
-				A500D6D91B2C867D00C8E2C1 /* SHChangePasswordView.m */,
+				04CC55661BA7FCE4008F58AC /* SHChangePasswordController.h */,
+				04CC55671BA7FCE4008F58AC /* SHChangePasswordController.m */,
+				04CC55681BA7FCE4008F58AC /* SHChangePasswordController.xib */,
 			);
 			path = Seting;
 			sourceTree = "<group>";
@@ -1043,6 +1041,7 @@
 				04BFB6581BA6779200EF51D8 /* BACKBtnImage.png in Resources */,
 				04CC555B1BA7C043008F58AC /* placeHolderHeader@2x.png in Resources */,
 				04BFB6D01BA6D08700EF51D8 /* ver_bg.png in Resources */,
+				04CC556A1BA7FCE4008F58AC /* SHChangePasswordController.xib in Resources */,
 				04BFB6631BA6779200EF51D8 /* USER2BtnImage.png in Resources */,
 				04BFB6521BA6779200EF51D8 /* 4BtnImage.png in Resources */,
 				A5A6A3B41B2CBB8400C3A0CB /* SHSelectDeviceCell.xib in Resources */,
@@ -1088,7 +1087,6 @@
 				A5096B731B1DF171005ABF68 /* NSMeapDBBaseObject.m in Sources */,
 				A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */,
 				A5096B711B1DF171005ABF68 /* YYFMResultSet.m in Sources */,
-				A500D6D11B2C7CEB00C8E2C1 /* SHChangePasswordController.m in Sources */,
 				A500D6E81B2C9DC400C8E2C1 /* SHTVControlView.m in Sources */,
 				A5096B871B1DF66F005ABF68 /* SHSceneTableViewCell.m in Sources */,
 				A5096B6F1B1DF171005ABF68 /* YYFMDatabasePool.m in Sources */,
@@ -1115,7 +1113,6 @@
 				A5A6A3A81B2CBB5F00C3A0CB /* SHAddDeviceViewController.m in Sources */,
 				A5FDD9611B2756E100DAAD90 /* SHDataManager.m in Sources */,
 				04BFB68F1BA6B18000EF51D8 /* AFNetworkReachabilityManager.m in Sources */,
-				A500D6DA1B2C867D00C8E2C1 /* SHChangePasswordView.m in Sources */,
 				A5A6A3B51B2CBB8400C3A0CB /* SHSelectDeviceModel.m in Sources */,
 				A5BD07391B56A7F6005F0E1D /* SHSideModel.m in Sources */,
 				A5C00A111B1CA7D1004CAA23 /* SHHomeViewController.m in Sources */,
@@ -1131,6 +1128,7 @@
 				A5A6A3B61B2CBB8400C3A0CB /* SHSelectViewController.m in Sources */,
 				A5A6A3A61B2CBB5F00C3A0CB /* SHAddCell.m in Sources */,
 				A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */,
+				04CC55691BA7FCE4008F58AC /* SHChangePasswordController.m in Sources */,
 				A5F6C8661BA70F9300A12615 /* SHAccountManager.m in Sources */,
 				A5096B6D1B1DF171005ABF68 /* YYFMDatabase.m in Sources */,
 				04BFB6941BA6B18000EF51D8 /* AFURLSessionManager.m in Sources */,
