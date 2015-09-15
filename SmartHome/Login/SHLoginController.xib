@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -156,9 +156,22 @@
                                         <action selector="registerClick:" destination="-1" eventType="touchUpInside" id="cwm-9B-w8Y"/>
                                     </connections>
                                 </button>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-c0-Irw">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CgQ-om-dJj">
+                                    <rect key="frame" x="119" y="44" width="82" height="82"/>
+                                    <color key="backgroundColor" red="0.69411764710000001" green="0.81568627449999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="82" id="Yxp-j4-mn3"/>
+                                        <constraint firstAttribute="width" constant="82" id="xA3-E0-WxN"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="41"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderHeader.png" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-c0-Irw">
                                     <rect key="frame" x="120" y="45" width="80" height="80"/>
-                                    <color key="backgroundColor" red="1" green="0.34554727369999999" blue="0.26045243569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="80" id="aOQ-q7-Z06"/>
                                         <constraint firstAttribute="height" constant="80" id="jD2-KL-z3E"/>
@@ -174,13 +187,16 @@
                             <constraints>
                                 <constraint firstItem="y4G-T3-FcI" firstAttribute="top" secondItem="fhw-c0-Irw" secondAttribute="bottom" constant="89" id="7JQ-XF-0BI"/>
                                 <constraint firstAttribute="height" constant="568" id="7SW-JE-pa1"/>
+                                <constraint firstAttribute="trailing" secondItem="CgQ-om-dJj" secondAttribute="trailing" constant="119" id="C87-gl-PpH"/>
                                 <constraint firstItem="fpo-nk-DiL" firstAttribute="top" secondItem="oZ1-zw-Vq2" secondAttribute="bottom" constant="37" id="ECh-SV-RNZ"/>
                                 <constraint firstItem="AlY-b1-Fph" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="16" id="F2f-My-awF"/>
                                 <constraint firstItem="gmd-yv-9J9" firstAttribute="top" secondItem="fpo-nk-DiL" secondAttribute="bottom" constant="3" id="HR9-PB-RT2"/>
+                                <constraint firstItem="CgQ-om-dJj" firstAttribute="top" secondItem="rj6-9Z-Wi3" secondAttribute="top" constant="44" id="LQf-Nx-NFx"/>
                                 <constraint firstAttribute="trailing" secondItem="y4G-T3-FcI" secondAttribute="trailing" constant="27" id="OD0-vM-UaZ"/>
                                 <constraint firstItem="y4G-T3-FcI" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="Oe5-gn-3W5"/>
                                 <constraint firstItem="y4G-T3-FcI" firstAttribute="top" secondItem="rj6-9Z-Wi3" secondAttribute="top" constant="214" id="PHV-Q1-adB"/>
                                 <constraint firstItem="fpo-nk-DiL" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="Vcg-Im-h1b"/>
+                                <constraint firstItem="CgQ-om-dJj" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="119" id="W7v-Vg-6ki"/>
                                 <constraint firstItem="oZ1-zw-Vq2" firstAttribute="top" secondItem="y4G-T3-FcI" secondAttribute="bottom" constant="21" id="fVb-pU-rrF"/>
                                 <constraint firstAttribute="trailing" secondItem="gmd-yv-9J9" secondAttribute="trailing" constant="18" id="gEq-yq-Lgy"/>
                                 <constraint firstAttribute="centerX" secondItem="fhw-c0-Irw" secondAttribute="centerX" id="iB7-Kd-Xwn"/>
@@ -217,6 +233,7 @@
     </objects>
     <resources>
         <image name="acc_bg.png" width="44" height="57"/>
+        <image name="placeHolderHeader.png" width="94" height="94"/>
         <image name="psw_bg.png" width="44" height="57"/>
     </resources>
 </document>

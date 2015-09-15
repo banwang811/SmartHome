@@ -68,6 +68,10 @@
 		04BFB6CD1BA6CDEE00EF51D8 /* UIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6C21BA6CDEE00EF51D8 /* UIView+IQKeyboardToolbar.m */; };
 		04BFB6CE1BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6C41BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m */; };
 		04BFB6D01BA6D08700EF51D8 /* ver_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6CF1BA6D08700EF51D8 /* ver_bg.png */; };
+		04CC55571BA7BF02008F58AC /* login_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55541BA7BF02008F58AC /* login_back.png */; };
+		04CC55581BA7BF02008F58AC /* login_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55551BA7BF02008F58AC /* login_back@2x.png */; };
+		04CC55591BA7BF02008F58AC /* login_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55561BA7BF02008F58AC /* login_back@3x.png */; };
+		04CC555B1BA7C043008F58AC /* placeHolderHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC555A1BA7C043008F58AC /* placeHolderHeader@2x.png */; };
 		A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */; };
 		A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C81B2C789100C8E2C1 /* SHSetingModel.m */; };
 		A500D6CC1B2C78A900C8E2C1 /* SHSetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */; };
@@ -238,6 +242,10 @@
 		04BFB6C31BA6CDEE00EF51D8 /* UIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Hierarchy.h"; sourceTree = "<group>"; };
 		04BFB6C41BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Hierarchy.m"; sourceTree = "<group>"; };
 		04BFB6CF1BA6D08700EF51D8 /* ver_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ver_bg.png; sourceTree = "<group>"; };
+		04CC55541BA7BF02008F58AC /* login_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_back.png; sourceTree = "<group>"; };
+		04CC55551BA7BF02008F58AC /* login_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_back@2x.png"; sourceTree = "<group>"; };
+		04CC55561BA7BF02008F58AC /* login_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_back@3x.png"; sourceTree = "<group>"; };
+		04CC555A1BA7C043008F58AC /* placeHolderHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeHolderHeader@2x.png"; sourceTree = "<group>"; };
 		A500D6C41B2C6D1900C8E2C1 /* SHAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAdapter.h; sourceTree = "<group>"; };
 		A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAdapter.m; sourceTree = "<group>"; };
 		A500D6C71B2C789100C8E2C1 /* SHSetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSetingModel.h; sourceTree = "<group>"; };
@@ -503,6 +511,10 @@
 		04BFB6A91BA6C9A900EF51D8 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				04CC555A1BA7C043008F58AC /* placeHolderHeader@2x.png */,
+				04CC55541BA7BF02008F58AC /* login_back.png */,
+				04CC55551BA7BF02008F58AC /* login_back@2x.png */,
+				04CC55561BA7BF02008F58AC /* login_back@3x.png */,
 				04BFB6CF1BA6D08700EF51D8 /* ver_bg.png */,
 				04BFB6AA1BA6C9BA00EF51D8 /* acc_bg.png */,
 				04BFB6AB1BA6C9BA00EF51D8 /* psw_bg.png */,
@@ -992,6 +1004,7 @@
 				04BFB6571BA6779200EF51D8 /* 9BtnImage.png in Resources */,
 				04BFB6621BA6779200EF51D8 /* USER1BtnImage.png in Resources */,
 				04BFB65A1BA6779200EF51D8 /* MODEBtnImage.png in Resources */,
+				04CC55581BA7BF02008F58AC /* login_back@2x.png in Resources */,
 				04BFB6551BA6779200EF51D8 /* 7BtnImage.png in Resources */,
 				04BFB65D1BA6779200EF51D8 /* PLUSBtnImage.png in Resources */,
 				04BFB6731BA69E2400EF51D8 /* menuItem5.png in Resources */,
@@ -1005,6 +1018,7 @@
 				04BFB6591BA6779200EF51D8 /* DOWNBtn.png in Resources */,
 				A560E3271B28A02100445A89 /* SHRootSetingViewCell.xib in Resources */,
 				04BFB6581BA6779200EF51D8 /* BACKBtnImage.png in Resources */,
+				04CC555B1BA7C043008F58AC /* placeHolderHeader@2x.png in Resources */,
 				04BFB6D01BA6D08700EF51D8 /* ver_bg.png in Resources */,
 				04BFB6631BA6779200EF51D8 /* USER2BtnImage.png in Resources */,
 				04BFB6521BA6779200EF51D8 /* 4BtnImage.png in Resources */,
@@ -1019,10 +1033,12 @@
 				04BFB65F1BA6779200EF51D8 /* SUBBtnImage.png in Resources */,
 				A5A6A3A71B2CBB5F00C3A0CB /* SHAddCell.xib in Resources */,
 				04BFB65C1BA6779200EF51D8 /* ONOFFBtnImage.png in Resources */,
+				04CC55571BA7BF02008F58AC /* login_back.png in Resources */,
 				04BFB6561BA6779200EF51D8 /* 8BtnImage.png in Resources */,
 				04BFB6AC1BA6C9BA00EF51D8 /* acc_bg.png in Resources */,
 				04BFB64E1BA6779200EF51D8 /* 0BtnImage.png in Resources */,
 				04BFB6541BA6779200EF51D8 /* 6BtnImage.png in Resources */,
+				04CC55591BA7BF02008F58AC /* login_back@3x.png in Resources */,
 				04BFB6331BA674AA00EF51D8 /* SHSideTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
