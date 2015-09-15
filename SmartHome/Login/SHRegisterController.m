@@ -7,6 +7,7 @@
 //
 
 #import "SHRegisterController.h"
+#import "SidebarViewController.h"
 
 @interface SHRegisterController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
@@ -36,6 +37,8 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
+    
+    SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
 }
 
 - (IBAction)back:(UIButton *)sender {

@@ -160,8 +160,8 @@
                                     <rect key="frame" x="119" y="44" width="82" height="82"/>
                                     <color key="backgroundColor" red="0.69411764710000001" green="0.81568627449999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="82" id="Yxp-j4-mn3"/>
-                                        <constraint firstAttribute="width" constant="82" id="xA3-E0-WxN"/>
+                                        <constraint firstAttribute="height" constant="82" id="2k2-D2-U3D"/>
+                                        <constraint firstAttribute="width" constant="82" id="3Wz-tu-Vem"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -185,19 +185,18 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstAttribute="centerX" secondItem="CgQ-om-dJj" secondAttribute="centerX" id="2oV-UG-SuF"/>
                                 <constraint firstItem="y4G-T3-FcI" firstAttribute="top" secondItem="fhw-c0-Irw" secondAttribute="bottom" constant="89" id="7JQ-XF-0BI"/>
                                 <constraint firstAttribute="height" constant="568" id="7SW-JE-pa1"/>
-                                <constraint firstAttribute="trailing" secondItem="CgQ-om-dJj" secondAttribute="trailing" constant="119" id="C87-gl-PpH"/>
                                 <constraint firstItem="fpo-nk-DiL" firstAttribute="top" secondItem="oZ1-zw-Vq2" secondAttribute="bottom" constant="37" id="ECh-SV-RNZ"/>
                                 <constraint firstItem="AlY-b1-Fph" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="16" id="F2f-My-awF"/>
                                 <constraint firstItem="gmd-yv-9J9" firstAttribute="top" secondItem="fpo-nk-DiL" secondAttribute="bottom" constant="3" id="HR9-PB-RT2"/>
-                                <constraint firstItem="CgQ-om-dJj" firstAttribute="top" secondItem="rj6-9Z-Wi3" secondAttribute="top" constant="44" id="LQf-Nx-NFx"/>
                                 <constraint firstAttribute="trailing" secondItem="y4G-T3-FcI" secondAttribute="trailing" constant="27" id="OD0-vM-UaZ"/>
                                 <constraint firstItem="y4G-T3-FcI" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="Oe5-gn-3W5"/>
                                 <constraint firstItem="y4G-T3-FcI" firstAttribute="top" secondItem="rj6-9Z-Wi3" secondAttribute="top" constant="214" id="PHV-Q1-adB"/>
                                 <constraint firstItem="fpo-nk-DiL" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="Vcg-Im-h1b"/>
-                                <constraint firstItem="CgQ-om-dJj" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="119" id="W7v-Vg-6ki"/>
                                 <constraint firstItem="oZ1-zw-Vq2" firstAttribute="top" secondItem="y4G-T3-FcI" secondAttribute="bottom" constant="21" id="fVb-pU-rrF"/>
+                                <constraint firstItem="CgQ-om-dJj" firstAttribute="top" secondItem="rj6-9Z-Wi3" secondAttribute="top" constant="44" id="gEV-nY-OTq"/>
                                 <constraint firstAttribute="trailing" secondItem="gmd-yv-9J9" secondAttribute="trailing" constant="18" id="gEq-yq-Lgy"/>
                                 <constraint firstAttribute="centerX" secondItem="fhw-c0-Irw" secondAttribute="centerX" id="iB7-Kd-Xwn"/>
                                 <constraint firstItem="oZ1-zw-Vq2" firstAttribute="leading" secondItem="rj6-9Z-Wi3" secondAttribute="leading" constant="28" id="lxC-9y-1DH"/>

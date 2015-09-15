@@ -28,10 +28,8 @@
     //打开数据库文件
     [[SHDataManager shareManager] prepareDB];
     //登录
-    self.window.rootViewController = [[SHNavigationController alloc] initWithRootViewController:[SHLoginController new]];
+    self.window.rootViewController = [[SHNavigationController alloc] initWithRootViewController:self.loginController];
     
-//    self.window.rootViewController =[SidebarViewController new];
-
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,
                           [UIFont systemFontOfSize:18],UITextAttributeFont, nil];
     [UINavigationBar appearance].titleTextAttributes = dict;
@@ -41,6 +39,21 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (SidebarViewController *)mainController{
+    if (_mainController == nil) {
+        _mainController = [[SidebarViewController alloc] init];
+    }
+    return _mainController;
+}
+
+- (SHLoginController *)loginController{
+    if (_loginController == nil) {
+        _loginController = [[SHLoginController alloc] init];
+    }
+    return _loginController;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
   

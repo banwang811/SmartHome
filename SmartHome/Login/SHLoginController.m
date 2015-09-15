@@ -53,7 +53,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
-    SHAPP_DELEGATE.window.rootViewController = [SidebarViewController new];
+    SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
 }
 
 - (IBAction)forgetPassword:(UIButton *)sender {

@@ -10,9 +10,9 @@
 
 @interface SHSetingCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UILabel            *nameLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (nonatomic, strong) UILabel                   *line;
 
 @end
 
@@ -20,7 +20,11 @@
 
 - (void)setModel:(SHSetingModel *)model
 {
-    self.headImage.image = [UIImage imageNamed:model.iconName];
+    if (self.line == nil) {
+        self.line = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 0.5, SCREEN_WIDTH, 0.5)];
+        self.line.backgroundColor = [UIColor  shlightGrayColor];
+        [self addSubview:self.line];
+    }
     self.nameLabel.text = model.title;
     _model = model;
 }
