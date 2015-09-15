@@ -78,6 +78,10 @@
 		04CC55651BA7C8AC008F58AC /* select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55631BA7C8AC008F58AC /* select@2x.png */; };
 		04CC55691BA7FCE4008F58AC /* SHChangePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC55671BA7FCE4008F58AC /* SHChangePasswordController.m */; };
 		04CC556A1BA7FCE4008F58AC /* SHChangePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CC55681BA7FCE4008F58AC /* SHChangePasswordController.xib */; };
+		04CC556E1BA8020E008F58AC /* SHFeedBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC556C1BA8020E008F58AC /* SHFeedBackController.m */; };
+		04CC556F1BA8020E008F58AC /* SHFeedBackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CC556D1BA8020E008F58AC /* SHFeedBackController.xib */; };
+		04CC55751BA802D9008F58AC /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC55721BA802D9008F58AC /* HPGrowingTextView.m */; };
+		04CC55761BA802D9008F58AC /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC55741BA802D9008F58AC /* HPTextViewInternal.m */; };
 		A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */; };
 		A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C81B2C789100C8E2C1 /* SHSetingModel.m */; };
 		A500D6CC1B2C78A900C8E2C1 /* SHSetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */; };
@@ -258,6 +262,13 @@
 		04CC55661BA7FCE4008F58AC /* SHChangePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHChangePasswordController.h; sourceTree = "<group>"; };
 		04CC55671BA7FCE4008F58AC /* SHChangePasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHChangePasswordController.m; sourceTree = "<group>"; };
 		04CC55681BA7FCE4008F58AC /* SHChangePasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHChangePasswordController.xib; sourceTree = "<group>"; };
+		04CC556B1BA8020E008F58AC /* SHFeedBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFeedBackController.h; sourceTree = "<group>"; };
+		04CC556C1BA8020E008F58AC /* SHFeedBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFeedBackController.m; sourceTree = "<group>"; };
+		04CC556D1BA8020E008F58AC /* SHFeedBackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHFeedBackController.xib; sourceTree = "<group>"; };
+		04CC55711BA802D9008F58AC /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGrowingTextView.h; sourceTree = "<group>"; };
+		04CC55721BA802D9008F58AC /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
+		04CC55731BA802D9008F58AC /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
+		04CC55741BA802D9008F58AC /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
 		A500D6C41B2C6D1900C8E2C1 /* SHAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAdapter.h; sourceTree = "<group>"; };
 		A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAdapter.m; sourceTree = "<group>"; };
 		A500D6C71B2C789100C8E2C1 /* SHSetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSetingModel.h; sourceTree = "<group>"; };
@@ -569,6 +580,17 @@
 			path = seting;
 			sourceTree = "<group>";
 		};
+		04CC55701BA802D9008F58AC /* HPGrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				04CC55711BA802D9008F58AC /* HPGrowingTextView.h */,
+				04CC55721BA802D9008F58AC /* HPGrowingTextView.m */,
+				04CC55731BA802D9008F58AC /* HPTextViewInternal.h */,
+				04CC55741BA802D9008F58AC /* HPTextViewInternal.m */,
+			);
+			path = HPGrowingTextView;
+			sourceTree = "<group>";
+		};
 		A500D6DF1B2C9B4300C8E2C1 /* DeviceControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,6 +836,7 @@
 		A5C00A061B1CA573004CAA23 /* Improt */ = {
 			isa = PBXGroup;
 			children = (
+				04CC55701BA802D9008F58AC /* HPGrowingTextView */,
 				04BFB6AE1BA6CDEE00EF51D8 /* IQKeyBoardManager */,
 				04BFB6361BA6778000EF51D8 /* images */,
 				04BFB6781BA6B18000EF51D8 /* AFNetworking */,
@@ -857,6 +880,9 @@
 				04CC55661BA7FCE4008F58AC /* SHChangePasswordController.h */,
 				04CC55671BA7FCE4008F58AC /* SHChangePasswordController.m */,
 				04CC55681BA7FCE4008F58AC /* SHChangePasswordController.xib */,
+				04CC556B1BA8020E008F58AC /* SHFeedBackController.h */,
+				04CC556C1BA8020E008F58AC /* SHFeedBackController.m */,
+				04CC556D1BA8020E008F58AC /* SHFeedBackController.xib */,
 			);
 			path = Seting;
 			sourceTree = "<group>";
@@ -1030,6 +1056,7 @@
 				04BFB65D1BA6779200EF51D8 /* PLUSBtnImage.png in Resources */,
 				04BFB6731BA69E2400EF51D8 /* menuItem5.png in Resources */,
 				04BFB65E1BA6779200EF51D8 /* RemoteBackgroundImage.png in Resources */,
+				04CC556F1BA8020E008F58AC /* SHFeedBackController.xib in Resources */,
 				04BFB6701BA69E2400EF51D8 /* menuItem2.png in Resources */,
 				A5C009E41B1CA33F004CAA23 /* LaunchScreen.xib in Resources */,
 				04BFB6741BA69E2400EF51D8 /* menuItem6.png in Resources */,
@@ -1122,6 +1149,7 @@
 				04BFB6321BA674AA00EF51D8 /* SHSideTableViewCell.m in Sources */,
 				A500D6C61B2C6D1900C8E2C1 /* SHAdapter.m in Sources */,
 				A50A981B1B25F7620082DD58 /* SHSceneSetingController.m in Sources */,
+				04CC55751BA802D9008F58AC /* HPGrowingTextView.m in Sources */,
 				04BFB6C71BA6CDEE00EF51D8 /* IQSegmentedNextPrevious.m in Sources */,
 				A5BD07381B56A7F6005F0E1D /* LeftSideBarViewController.m in Sources */,
 				A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */,
@@ -1136,6 +1164,7 @@
 				A5BD073C1B56A7F6005F0E1D /* SidebarViewController.m in Sources */,
 				A500D6E21B2C9B9100C8E2C1 /* SHTVControlController.m in Sources */,
 				A5A6A3AB1B2CBB5F00C3A0CB /* SHScanViewController.m in Sources */,
+				04CC556E1BA8020E008F58AC /* SHFeedBackController.m in Sources */,
 				04BFB6C61BA6CDEE00EF51D8 /* IQKeyboardManager.m in Sources */,
 				04BFB6CB1BA6CDEE00EF51D8 /* NSArray+Sort.m in Sources */,
 				A5096B6E1B1DF171005ABF68 /* YYFMDatabaseAdditions.m in Sources */,
@@ -1158,6 +1187,7 @@
 				04BFB6A41BA6B72100EF51D8 /* SHForgetPasswordController.m in Sources */,
 				04BFB6C91BA6CDEE00EF51D8 /* IQTitleBarButtonItem.m in Sources */,
 				A5096B841B1DF633005ABF68 /* SHRoomTableViewCell.m in Sources */,
+				04CC55761BA802D9008F58AC /* HPTextViewInternal.m in Sources */,
 				04BFB6901BA6B18000EF51D8 /* AFSecurityPolicy.m in Sources */,
 				04BFB6C81BA6CDEE00EF51D8 /* IQTextView.m in Sources */,
 				A5096B721B1DF171005ABF68 /* NSMeapDB.m in Sources */,

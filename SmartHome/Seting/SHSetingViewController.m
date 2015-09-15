@@ -10,6 +10,7 @@
 #import "SHSetingCell.h"
 #import "SHSetingModel.h"
 #import "SHChangePasswordController.h"
+#import "SHFeedBackController.h"
 
 @interface SHSetingViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -38,14 +39,15 @@
     SHSetingModel *model1 = [SHSetingModel itemWithTitle:@"意见反馈" iconName:@""];
     SHSetingModel *model2 = [SHSetingModel itemWithTitle:@"我要评价" iconName:@""];
     SHSetingModel *model3 = [SHSetingModel itemWithTitle:@"修改密码" iconName:@""];
-    SHSetingModel *model4 = [SHSetingModel itemWithTitle:@"版本更新" iconName:@""];
-    SHSetingModel *model5 = [SHSetingModel itemWithTitle:@"关于我们" iconName:@""];
+    SHSetingModel *model4 = [SHSetingModel itemWithTitle:@"关于我们" iconName:@""];
+    SHSetingModel *model5 = [SHSetingModel itemWithTitle:@"当前版本" iconName:@""];
     self.models = [NSMutableArray arrayWithObjects:model1,model2,model3,model4,model5, nil];
     [self.tableView reloadData];
 }
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
+        
         _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -126,10 +128,8 @@
     if (indexPath.row == 0 && indexPath.section == 1){
         SHChangePasswordController *controller = [[SHChangePasswordController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
-    }else{
-        UIViewController *controller = [[UIViewController alloc] init];
-        SHSetingModel *model = self.models[indexPath.row];
-        controller.title = model.title;
+    }else if(indexPath.section == 0 && indexPath.row == 0){
+        SHFeedBackController *controller = [[SHFeedBackController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }
