@@ -24,10 +24,8 @@
 
 @implementation SHRoomViewController
 
-- (id)init
-{
-    if (self = [super init])
-    {
+- (id)init{
+    if (self = [super init]){
         self.models = [NSMutableArray array];
     }
     return self;
@@ -39,22 +37,19 @@
     [self reloadData];
 }
 
-- (void)reloadData
-{
+- (void)reloadData{
     NSArray *roomModels= [NSRoomModel fetchRooms];
     [self.models removeAllObjects];
     [self.models addObjectsFromArray:roomModels];
     [self.tableView reloadData];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self reloadData];
+    [self fetchRooms];
 }
 
-- (void)setupContentView
-{
+- (void)setupContentView{
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -71,26 +66,28 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
-- (void)addRooms
-{
-    SHRoomSetingViewController *setingController = [[SHRoomSetingViewController alloc] initWithType:SHSetingViewType_room];
-    [self.navigationController pushViewController:setingController animated:YES];
+- (void)addRooms{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"添加房间"
+                                                    message:@"请输入房间名称"
+                                                   delegate:self
+                                          cancelButtonTitle:@"取消"
+                                          otherButtonTitles:@"确定", nil];
+    alert.tag = 100;
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
 }
 
 #pragma mark - tableviewDelegate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.models.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 64;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"SHRoomTableViewCell";
     SHRoomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
@@ -106,6 +103,7 @@
                                                        delegate:weakSelf
                                               cancelButtonTitle:@"取消"
                                               otherButtonTitles:@"确定", nil];
+        alert.tag = 200;
         [alert show];
     };
     return cell;
@@ -113,19 +111,59 @@
 
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SHDeviceViewController *deviceController = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
     [self.navigationController pushViewController:deviceController animated:YES];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1)
-    {
-        [NSRoomModel deleteDB:self.selectRoomID];
-        [self reloadData];
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag == 200) {
+        if (buttonIndex == 1){
+            [NSRoomModel deleteDB:self.selectRoomID];
+            [self reloadData];
+        }
+    }else{
+        if (buttonIndex == 1){
+            [self requestAddRoom];
+            [self reloadData];
+        }
     }
+}
+
+- (void)fetchRooms{
+    [self showHudView:nil];
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,login] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self hideHudView];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:nil];
+        if([[dict objectForKey:@"error"]integerValue] == 0){
+            SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self hideHudView];
+    }];
+}
+
+
+- (void)requestAddRoom{
+    [self showHudView:nil];
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *parameter=@{@"name":@"客厅"};
+    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,addRoom] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self hideHudView];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:nil];
+        if([[dict objectForKey:@"error"]integerValue] == 0){
+            SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self hideHudView];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

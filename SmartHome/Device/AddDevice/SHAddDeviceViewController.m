@@ -33,51 +33,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setupContentView];
+    [self.view addSubview:self.tableView];
 }
 
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.title = @"添加方式";
     [self reloadData];
 }
 
-- (void)reloadData
-{
+- (void)reloadData{
     SHAddModel *model = [SHAddModel itemWithTitle:@"扫描" iconName:@""];
     SHAddModel *model2 = [SHAddModel itemWithTitle:@"手动输入" iconName:@""];
     self.models  = [NSMutableArray arrayWithObjects:model,model2, nil];
 }
 
-- (void)setupContentView
-{
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth;
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    self.tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    self.tableView.showsVerticalScrollIndicator = NO;
-    [self.view addSubview:self.tableView];
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+        self.tableView.dataSource = self;
+        self.tableView.delegate = self;
+        self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth;
+        self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        self.tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+        self.tableView.showsVerticalScrollIndicator = NO;
+    }
+    return _tableView;
 }
+
 
 #pragma mark - tableviewDelegate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.models.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 64;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellID = @"SHAddCell";
     SHAddCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
@@ -88,14 +84,11 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == 0)
-    {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0){
         SHScanViewController *controller = [[SHScanViewController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
-    }else
-    {
+    }else{
         SHManuallyAddController *controller = [[SHManuallyAddController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }

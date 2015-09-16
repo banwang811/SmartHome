@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"关于我们";
     NSURL *url = [NSURL URLWithString:@"http://www.huajunkeji.cn"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webview loadRequest:request];
