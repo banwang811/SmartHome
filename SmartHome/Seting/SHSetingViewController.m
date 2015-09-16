@@ -11,6 +11,7 @@
 #import "SHSetingModel.h"
 #import "SHChangePasswordController.h"
 #import "SHFeedBackController.h"
+#import "SHAboutViewController.h"
 
 @interface SHSetingViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -130,6 +131,9 @@
         [self.navigationController pushViewController:controller animated:YES];
     }else if(indexPath.section == 0 && indexPath.row == 0){
         SHFeedBackController *controller = [[SHFeedBackController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }else if(indexPath.section == 1 && indexPath.row == 1){
+        SHAboutViewController *controller = [[SHAboutViewController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

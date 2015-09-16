@@ -10,4 +10,8 @@
 
 @interface SHBaseViewController : UIViewController
 
+- (void)showHudView:(NSString *)string;
+
+- (void)hideHudView;
+
 @end

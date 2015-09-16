@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046CE1821BA906EE00959A53 /* SHAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE1801BA906EE00959A53 /* SHAboutViewController.m */; };
+		046CE1831BA906EE00959A53 /* SHAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046CE1811BA906EE00959A53 /* SHAboutViewController.xib */; };
+		046CE18F1BA9097F00959A53 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE1861BA9097F00959A53 /* 37x-Checkmark.png */; };
+		046CE1901BA9097F00959A53 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE1871BA9097F00959A53 /* 37x-Checkmark@2x.png */; };
+		046CE1911BA9097F00959A53 /* Icon-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE1881BA9097F00959A53 /* Icon-iOS7@2x.png */; };
+		046CE1921BA9097F00959A53 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE1891BA9097F00959A53 /* Icon-Small.png */; };
+		046CE1931BA9097F00959A53 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE18A1BA9097F00959A53 /* Icon-Small@2x.png */; };
+		046CE1941BA9097F00959A53 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE18B1BA9097F00959A53 /* Icon.png */; };
+		046CE1951BA9097F00959A53 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE18C1BA9097F00959A53 /* Icon@2x.png */; };
+		046CE1961BA9097F00959A53 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE18E1BA9097F00959A53 /* MBProgressHUD.m */; };
 		04BFB6321BA674AA00EF51D8 /* SHSideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6301BA674AA00EF51D8 /* SHSideTableViewCell.m */; };
 		04BFB6331BA674AA00EF51D8 /* SHSideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6311BA674AA00EF51D8 /* SHSideTableViewCell.xib */; };
 		04BFB6351BA675F000EF51D8 /* IconImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6341BA675F000EF51D8 /* IconImage.plist */; };
@@ -161,6 +171,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046CE17F1BA906EE00959A53 /* SHAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAboutViewController.h; sourceTree = "<group>"; };
+		046CE1801BA906EE00959A53 /* SHAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAboutViewController.m; sourceTree = "<group>"; };
+		046CE1811BA906EE00959A53 /* SHAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHAboutViewController.xib; sourceTree = "<group>"; };
+		046CE1861BA9097F00959A53 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		046CE1871BA9097F00959A53 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
+		046CE1881BA9097F00959A53 /* Icon-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iOS7@2x.png"; sourceTree = "<group>"; };
+		046CE1891BA9097F00959A53 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		046CE18A1BA9097F00959A53 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		046CE18B1BA9097F00959A53 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		046CE18C1BA9097F00959A53 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		046CE18D1BA9097F00959A53 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		046CE18E1BA9097F00959A53 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		04BFB62F1BA674AA00EF51D8 /* SHSideTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideTableViewCell.h; sourceTree = "<group>"; };
 		04BFB6301BA674AA00EF51D8 /* SHSideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideTableViewCell.m; sourceTree = "<group>"; };
 		04BFB6311BA674AA00EF51D8 /* SHSideTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSideTableViewCell.xib; sourceTree = "<group>"; };
@@ -417,6 +439,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046CE1841BA9097F00959A53 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				046CE1851BA9097F00959A53 /* Image */,
+				046CE18D1BA9097F00959A53 /* MBProgressHUD.h */,
+				046CE18E1BA9097F00959A53 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		046CE1851BA9097F00959A53 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				046CE1861BA9097F00959A53 /* 37x-Checkmark.png */,
+				046CE1871BA9097F00959A53 /* 37x-Checkmark@2x.png */,
+				046CE1881BA9097F00959A53 /* Icon-iOS7@2x.png */,
+				046CE1891BA9097F00959A53 /* Icon-Small.png */,
+				046CE18A1BA9097F00959A53 /* Icon-Small@2x.png */,
+				046CE18B1BA9097F00959A53 /* Icon.png */,
+				046CE18C1BA9097F00959A53 /* Icon@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		04BFB6361BA6778000EF51D8 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,6 +882,7 @@
 		A5C00A061B1CA573004CAA23 /* Improt */ = {
 			isa = PBXGroup;
 			children = (
+				046CE1841BA9097F00959A53 /* MBProgressHUD */,
 				04CC55701BA802D9008F58AC /* HPGrowingTextView */,
 				04BFB6AE1BA6CDEE00EF51D8 /* IQKeyBoardManager */,
 				04BFB6361BA6778000EF51D8 /* images */,
@@ -883,6 +930,9 @@
 				04CC556B1BA8020E008F58AC /* SHFeedBackController.h */,
 				04CC556C1BA8020E008F58AC /* SHFeedBackController.m */,
 				04CC556D1BA8020E008F58AC /* SHFeedBackController.xib */,
+				046CE17F1BA906EE00959A53 /* SHAboutViewController.h */,
+				046CE1801BA906EE00959A53 /* SHAboutViewController.m */,
+				046CE1811BA906EE00959A53 /* SHAboutViewController.xib */,
 			);
 			path = Seting;
 			sourceTree = "<group>";
@@ -1038,6 +1088,7 @@
 				04BFB6C51BA6CDEE00EF51D8 /* IQKeyboardManager.bundle in Resources */,
 				A5BD073D1B56A7F6005F0E1D /* SidebarViewController.xib in Resources */,
 				04BFB69B1BA6B6F300EF51D8 /* SHLoginController.xib in Resources */,
+				046CE1931BA9097F00959A53 /* Icon-Small@2x.png in Resources */,
 				A50A98181B25DDB40082DD58 /* SHRoomTableViewCell.xib in Resources */,
 				04BFB6721BA69E2400EF51D8 /* menuItem4.png in Resources */,
 				04CC55601BA7C389008F58AC /* SHHomeController.xib in Resources */,
@@ -1053,9 +1104,11 @@
 				04BFB65A1BA6779200EF51D8 /* MODEBtnImage.png in Resources */,
 				04CC55581BA7BF02008F58AC /* login_back@2x.png in Resources */,
 				04BFB6551BA6779200EF51D8 /* 7BtnImage.png in Resources */,
+				046CE1831BA906EE00959A53 /* SHAboutViewController.xib in Resources */,
 				04BFB65D1BA6779200EF51D8 /* PLUSBtnImage.png in Resources */,
 				04BFB6731BA69E2400EF51D8 /* menuItem5.png in Resources */,
 				04BFB65E1BA6779200EF51D8 /* RemoteBackgroundImage.png in Resources */,
+				046CE18F1BA9097F00959A53 /* 37x-Checkmark.png in Resources */,
 				04CC556F1BA8020E008F58AC /* SHFeedBackController.xib in Resources */,
 				04BFB6701BA69E2400EF51D8 /* menuItem2.png in Resources */,
 				A5C009E41B1CA33F004CAA23 /* LaunchScreen.xib in Resources */,
@@ -1078,11 +1131,16 @@
 				04BFB6A01BA6B70E00EF51D8 /* SHRegisterController.xib in Resources */,
 				04BFB6A51BA6B72100EF51D8 /* SHForgetPasswordController.xib in Resources */,
 				04BFB6511BA6779200EF51D8 /* 3BtnImage.png in Resources */,
+				046CE1911BA9097F00959A53 /* Icon-iOS7@2x.png in Resources */,
 				A5C009E11B1CA33F004CAA23 /* Images.xcassets in Resources */,
 				04BFB6351BA675F000EF51D8 /* IconImage.plist in Resources */,
+				046CE1951BA9097F00959A53 /* Icon@2x.png in Resources */,
+				046CE1901BA9097F00959A53 /* 37x-Checkmark@2x.png in Resources */,
 				04BFB65F1BA6779200EF51D8 /* SUBBtnImage.png in Resources */,
 				A5A6A3A71B2CBB5F00C3A0CB /* SHAddCell.xib in Resources */,
+				046CE1921BA9097F00959A53 /* Icon-Small.png in Resources */,
 				04BFB65C1BA6779200EF51D8 /* ONOFFBtnImage.png in Resources */,
+				046CE1941BA9097F00959A53 /* Icon.png in Resources */,
 				04CC55571BA7BF02008F58AC /* login_back.png in Resources */,
 				04BFB6561BA6779200EF51D8 /* 8BtnImage.png in Resources */,
 				04BFB6AC1BA6C9BA00EF51D8 /* acc_bg.png in Resources */,
@@ -1115,6 +1173,7 @@
 				A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */,
 				A5096B711B1DF171005ABF68 /* YYFMResultSet.m in Sources */,
 				A500D6E81B2C9DC400C8E2C1 /* SHTVControlView.m in Sources */,
+				046CE1961BA9097F00959A53 /* MBProgressHUD.m in Sources */,
 				A5096B871B1DF66F005ABF68 /* SHSceneTableViewCell.m in Sources */,
 				A5096B6F1B1DF171005ABF68 /* YYFMDatabasePool.m in Sources */,
 				04BFB6A81BA6C60F00EF51D8 /* CALayer+Additions.m in Sources */,
@@ -1131,6 +1190,7 @@
 				A53482161B20894D00324B48 /* SHRoomSetingViewController.m in Sources */,
 				04BFB6931BA6B18000EF51D8 /* AFURLResponseSerialization.m in Sources */,
 				04BFB6CE1BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m in Sources */,
+				046CE1821BA906EE00959A53 /* SHAboutViewController.m in Sources */,
 				A500D6E51B2C9BBA00C8E2C1 /* SHAirconditionController.m in Sources */,
 				04BFB69F1BA6B70E00EF51D8 /* SHRegisterController.m in Sources */,
 				A5C009D91B1CA33F004CAA23 /* AppDelegate.m in Sources */,

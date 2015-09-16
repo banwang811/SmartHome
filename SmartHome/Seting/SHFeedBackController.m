@@ -23,6 +23,7 @@
     [super viewDidLoad];
     self.title = @"意见反馈";
     [self.view addSubview:self.textView];
+    [self.view addSubview:self.commitButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,10 +54,24 @@
 
 
 - (UIButton *)commitButton{
+    if (_commitButton == nil) {
+        _commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _commitButton.frame = CGRectMake(10, 200, SCREEN_WIDTH - 20, 40);
+        _commitButton.layer.cornerRadius = 5;
+        _commitButton.backgroundColor = [UIColor navagationBarColor];
+        [_commitButton setTitle:@"提交" forState:UIControlStateNormal];
+        [_commitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_commitButton addTarget:self action:@selector(commitButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _commitButton;
+}
+
+- (void)commitButtonClick{
     
 }
 
 
+#pragma mark - HPGrowingTextViewDelegate
 - (void)growingTextViewDidChange:(HPGrowingTextView *)growingTextView{
     NSCharacterSet *whiltSpace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     NSString *textStr = [growingTextView.text stringByTrimmingCharactersInSet:whiltSpace];
