@@ -32,6 +32,7 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     return YES;
 }
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
 
 }
@@ -45,15 +46,36 @@
 }
 
 - (IBAction)longin:(UIButton *)sender {
+    [self showHudView:@"登陆中..."];
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSDictionary *parameter=@{};
-    [manager POST:serverAddress parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSDictionary *parameter=@{@"phone":@"13691495062",
+                              @"password":@"123"};
+    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,login] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self hideHudView];
         
+//        NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",serverAddress,login]]];
+//        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:cookies];
+//        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"kUserDefaultsCookie"];
+//        
+//        NSData *cookiesdata = [[NSUserDefaults standardUserDefaults] objectForKey:@"kUserDefaultsCookie"];
+//        if([cookiesdata length]) {
+//            NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData:cookiesdata];
+//            NSHTTPCookie *cookie;
+//            for (cookie in cookies) {
+//                [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+//            }
+//        }
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:nil];
+        if([[dict objectForKey:@"error"]integerValue] == 0){
+            SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        [self hideHudView];
     }];
-    SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
 }
 
 - (IBAction)forgetPassword:(UIButton *)sender {

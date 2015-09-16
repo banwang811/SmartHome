@@ -63,8 +63,7 @@
     [super viewWillAppear:animated];
     if (self.controlerType == SHSetingViewType_scene) {
         self.title = @"添加场景";
-    }else
-    {
+    }else{
         self.title = @"添加房间";
     }
 }

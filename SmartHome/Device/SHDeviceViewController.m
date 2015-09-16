@@ -99,10 +99,27 @@ NSDeviceModelType_Camera,//摄像头控制
 
 - (void)reloadData
 {
-    NSArray *devices = [NSDeviceModel fetchDevices:nil];
-    [self.models removeAllObjects];
-    [self.models addObjectsFromArray:devices];
-    [self.tableView reloadData];
+//    NSArray *devices = [NSDeviceModel fetchDevices:nil];
+//    [self.models removeAllObjects];
+//    [self.models addObjectsFromArray:devices];
+//    [self.tableView reloadData];
+    
+    
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:@"http://121.40.30.197/api/device" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:nil];
+        if (![dict isKindOfClass:[NSNull class]]) {
+            NSArray *devices = [dict objectForKey:@"devices"];
+            for (NSDictionary *deviceInfo in devices) {
+                
+            }
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    }];
 }
 
 - (void)setupContentView

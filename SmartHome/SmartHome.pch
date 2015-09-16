@@ -42,9 +42,13 @@
 #define SHWidth         (self.view.frame.size.width)
 #define SHHeight        (self.view.frame.size.height)
 
-#define serverAddress   @"http://example.com/api/"
-
-#define login           @"login"
+#define serverAddress   @"http://121.40.30.197/api"
+//登陆
+#define login           @"/login"
+//注册
+#define registerUser    @"/register"
+//添加房间 
+#define addRoom         @"/room"
 
 
 #define pickerViewHight 216

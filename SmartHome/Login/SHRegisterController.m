@@ -29,16 +29,22 @@
 }
 
 - (IBAction)registerClick:(UIButton *)sender {
+    [self showHudView:nil];
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSDictionary *parameter=@{};
-    [manager POST:serverAddress parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
+    NSDictionary *parameter=@{@"phone":@"13691495062",
+                              @"password":@"123"};
+    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,registerUser] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self hideHudView];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:nil];
+        if([[dict objectForKey:@"error"]integerValue] == 0){
+            SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        [self hideHudView];
     }];
-    
-    SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
 }
 
 - (IBAction)back:(UIButton *)sender {
