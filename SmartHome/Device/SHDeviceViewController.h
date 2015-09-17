@@ -8,20 +8,14 @@
 
 #import "SHBaseViewController.h"
 
-typedef enum {
-    
-    SHDeviceViewController_common,
-    SHDeviceViewController_combination,
-    SHDeviceViewController_select,
-    
-}SHDeviceViewController_type;
-
 @interface SHDeviceViewController : SHBaseViewController
 
-@property (nonatomic, assign) NSInteger          roomID;
+@property (nonatomic, strong) NSMutableArray            *models;
 
-- (id)initWithType:(SHDeviceViewController_type)type;
+@property (nonatomic, strong) UITableView               *tableView;
 
+- (void)reloadData;
 
+- (void)addDevice;
 
 @end

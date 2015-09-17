@@ -210,7 +210,7 @@
     [alert show];
     return;
     if (indexPath.section == 1) {
-        SHDeviceViewController *controller = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
+        SHDeviceViewController *controller = [[SHDeviceViewController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }

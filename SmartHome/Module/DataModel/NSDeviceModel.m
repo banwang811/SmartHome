@@ -42,7 +42,7 @@
     // 存数据库
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
                                                      conditions:@"deviceID = ?"
-                                                           args:[NSArray arrayWithObjects:self.deviceID, nil]
+                                                           args:[NSArray arrayWithObjects:[NSNumber numberWithInteger:self.deviceID], nil]
                                                           order:nil];
     if (array == nil || [array count] == 0)
     {
@@ -68,12 +68,12 @@
 {
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
                                                      conditions:@"deviceID = ?"
-                                                           args:[NSArray arrayWithObjects:self.deviceID, nil]
+                                                           args:[NSArray arrayWithObjects:[NSNumber numberWithInteger:self.deviceID], nil]
                                                           order:nil];
     if (array && [array count] > 0)
     {
-        NSDeviceModel *device = [array objectAtIndex:0];
-        NSString *dbId = [NSString stringWithFormat:@"%ld",device.meap_id];
+        NSDeviceModel *deviceModel = [array objectAtIndex:0];
+        NSString *dbId = [NSString stringWithFormat:@"%ld",deviceModel.meap_id];
         self.meap_id = [dbId integerValue];
         [[NSMeapDB shareMeap] updateTable:[self class] object:self];
     }
@@ -89,7 +89,7 @@
 - (void)deleteDB
 {
     [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"deviceID = ?"
-                                     args:[NSArray arrayWithObjects:self.deviceID, nil]];
+                                     args:[NSArray arrayWithObjects:[NSNumber numberWithInteger:self.deviceID], nil]];
 }
 
 + (void)deleteDevice:(NSString *)deviceID

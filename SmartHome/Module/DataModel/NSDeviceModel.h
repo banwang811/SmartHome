@@ -29,7 +29,7 @@ typedef enum{
 
 @interface NSDeviceModel : NSMeapDBBaseObject
 
-@property (nonatomic, strong) NSString              *deviceID;
+@property (nonatomic, assign) NSInteger             deviceID;
 
 @property (nonatomic, strong) NSString              *deviceName;
 

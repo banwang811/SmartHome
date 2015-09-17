@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *iconName;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *detail;
-@property (nonatomic, copy) NSString *Id;
+@property (nonatomic, assign) NSInteger Id;
 
 + (instancetype)itemWithTitle:(NSString *)title iconName:(NSString *)iconName;
 + (instancetype)itemWithTitle:(NSString *)title;

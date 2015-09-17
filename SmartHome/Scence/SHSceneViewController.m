@@ -105,7 +105,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHDeviceViewController *deviceController = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
+    SHDeviceViewController *deviceController = [[SHDeviceViewController alloc] init];
     [self.navigationController pushViewController:deviceController animated:YES];
 
 }

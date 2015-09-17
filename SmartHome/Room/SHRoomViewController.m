@@ -10,7 +10,7 @@
 #import "SHRoomTableViewCell.h"
 #import "NSRoomModel.h"
 #import "SHRoomSetingViewController.h"
-#import "SHDeviceViewController.h"
+#import "SHRoomDeviceController.h"
 
 @interface SHRoomViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
@@ -98,7 +98,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SHDeviceViewController *deviceController = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
+    SHRoomDeviceController *deviceController = [[SHRoomDeviceController alloc] init];
     NSRoomModel *model = [self.models objectAtIndex:indexPath.row];
     deviceController.roomID = model.roomID;
     [self.navigationController pushViewController:deviceController animated:YES];

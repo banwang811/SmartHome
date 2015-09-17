@@ -1,5 +1,5 @@
 //
-//  SHRoomDeviceController.h
+//  SHScenceDeviceController.h
 //  SmartHome
 //
 //  Created by mac on 15/9/17.
@@ -8,8 +8,6 @@
 
 #import "SHDeviceViewController.h"
 
-@interface SHRoomDeviceController : SHDeviceViewController
-
-@property (nonatomic, assign) NSInteger                 roomID;
+@interface SHScenceDeviceController : SHDeviceViewController
 
 @end

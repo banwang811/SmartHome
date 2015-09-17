@@ -44,7 +44,7 @@
     {
         NSDeviceModel *model = [[NSDeviceModel alloc] init];
         model.deviceName = [[NSString alloc] initWithFormat:@"设备%d",i];
-        model.deviceID = [[NSString alloc] initWithFormat:@"设备%d",i];
+        model.deviceID = i;
         [model saveDB];
     }
     NSArray *devices = [NSDeviceModel fetchDevices:nil];
