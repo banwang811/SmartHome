@@ -50,7 +50,6 @@
 //添加房间 
 #define rooms           @"/room"
 
-
 #define pickerViewHight 216
 
 #endif

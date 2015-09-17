@@ -36,6 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupContentView];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -44,20 +45,24 @@
 }
 
 - (void)setupContentView{
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth;
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    self.tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
-    self.tableView.showsVerticalScrollIndicator = NO;
-    [self.view addSubview:self.tableView];
-    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"添加"
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
                                                                  action:@selector(addRooms)];
     self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth;
+        _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        _tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+        _tableView.showsVerticalScrollIndicator = NO;
+    }
+    return _tableView;
 }
 
 - (void)addRooms{
@@ -92,10 +97,10 @@
     return cell;
 }
 
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SHDeviceViewController *deviceController = [[SHDeviceViewController alloc] initWithType:SHDeviceViewController_combination];
+    NSRoomModel *model = [self.models objectAtIndex:indexPath.row];
+    deviceController.roomID = model.roomID;
     [self.navigationController pushViewController:deviceController animated:YES];
 }
 

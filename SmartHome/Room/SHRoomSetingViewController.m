@@ -69,13 +69,11 @@
 }
 
 
-- (void)reloadData
-{
+- (void)reloadData{
     
 }
 
-- (void)setupContentView
-{
+- (void)setupContentView{
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;

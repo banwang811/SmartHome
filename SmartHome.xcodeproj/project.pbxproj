@@ -17,6 +17,8 @@
 		046CE1941BA9097F00959A53 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE18B1BA9097F00959A53 /* Icon.png */; };
 		046CE1951BA9097F00959A53 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE18C1BA9097F00959A53 /* Icon@2x.png */; };
 		046CE1961BA9097F00959A53 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE18E1BA9097F00959A53 /* MBProgressHUD.m */; };
+		04989C571BAAAE0D0031119E /* SHRoomDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04989C551BAAAE0D0031119E /* SHRoomDeviceController.m */; };
+		04989C581BAAAE0D0031119E /* SHRoomDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04989C561BAAAE0D0031119E /* SHRoomDeviceController.xib */; };
 		04BFB6321BA674AA00EF51D8 /* SHSideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6301BA674AA00EF51D8 /* SHSideTableViewCell.m */; };
 		04BFB6331BA674AA00EF51D8 /* SHSideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6311BA674AA00EF51D8 /* SHSideTableViewCell.xib */; };
 		04BFB6351BA675F000EF51D8 /* IconImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6341BA675F000EF51D8 /* IconImage.plist */; };
@@ -183,6 +185,9 @@
 		046CE18C1BA9097F00959A53 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		046CE18D1BA9097F00959A53 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		046CE18E1BA9097F00959A53 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		04989C541BAAAE0D0031119E /* SHRoomDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomDeviceController.h; sourceTree = "<group>"; };
+		04989C551BAAAE0D0031119E /* SHRoomDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomDeviceController.m; sourceTree = "<group>"; };
+		04989C561BAAAE0D0031119E /* SHRoomDeviceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHRoomDeviceController.xib; sourceTree = "<group>"; };
 		04BFB62F1BA674AA00EF51D8 /* SHSideTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideTableViewCell.h; sourceTree = "<group>"; };
 		04BFB6301BA674AA00EF51D8 /* SHSideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideTableViewCell.m; sourceTree = "<group>"; };
 		04BFB6311BA674AA00EF51D8 /* SHSideTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSideTableViewCell.xib; sourceTree = "<group>"; };
@@ -710,6 +715,9 @@
 				A560E3261B28A02100445A89 /* SHRootSetingViewCell.xib */,
 				A534821D1B20924000324B48 /* SHRoomSetingModel.h */,
 				A534821E1B20924000324B48 /* SHRoomSetingModel.m */,
+				04989C541BAAAE0D0031119E /* SHRoomDeviceController.h */,
+				04989C551BAAAE0D0031119E /* SHRoomDeviceController.m */,
+				04989C561BAAAE0D0031119E /* SHRoomDeviceController.xib */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -1090,6 +1098,7 @@
 				04BFB69B1BA6B6F300EF51D8 /* SHLoginController.xib in Resources */,
 				046CE1931BA9097F00959A53 /* Icon-Small@2x.png in Resources */,
 				A50A98181B25DDB40082DD58 /* SHRoomTableViewCell.xib in Resources */,
+				04989C581BAAAE0D0031119E /* SHRoomDeviceController.xib in Resources */,
 				04BFB6721BA69E2400EF51D8 /* menuItem4.png in Resources */,
 				04CC55601BA7C389008F58AC /* SHHomeController.xib in Resources */,
 				A500D6CE1B2C78BC00C8E2C1 /* SHSetingCell.xib in Resources */,
@@ -1171,6 +1180,7 @@
 				A5A6A3A91B2CBB5F00C3A0CB /* SHAddModel.m in Sources */,
 				A5096B731B1DF171005ABF68 /* NSMeapDBBaseObject.m in Sources */,
 				A5096B581B1DEE1D005ABF68 /* SHCellModel.m in Sources */,
+				04989C571BAAAE0D0031119E /* SHRoomDeviceController.m in Sources */,
 				A5096B711B1DF171005ABF68 /* YYFMResultSet.m in Sources */,
 				A500D6E81B2C9DC400C8E2C1 /* SHTVControlView.m in Sources */,
 				046CE1961BA9097F00959A53 /* MBProgressHUD.m in Sources */,

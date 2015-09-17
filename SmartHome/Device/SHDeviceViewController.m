@@ -58,8 +58,7 @@ NSDeviceModelType_OpenStaircase,//开窗器
 NSDeviceModelType_THTB,//温湿度传感器
 NSDeviceModelType_Camera,//摄像头控制
 */
-- (id)initWithType:(SHDeviceViewController_type)type
-{
+- (id)initWithType:(SHDeviceViewController_type)type{
     if (self = [super init]) {
         self.models = [NSMutableArray array];
         self.pickerArray = [NSArray arrayWithObjects:@"打开",@"关闭", nil];
@@ -72,8 +71,7 @@ NSDeviceModelType_Camera,//摄像头控制
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    for (int i= 0; i < 20; i ++)
-    {
+    for (int i= 0; i < 20; i ++){
         NSInteger j = random() %10;
         NSDeviceModel *model = [[NSDeviceModel alloc] init];
         NSString *deviceName = [self.titleArray objectAtIndex:j];
@@ -86,8 +84,7 @@ NSDeviceModelType_Camera,//摄像头控制
     [self setupContentView];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (self.controllerType == SHDeviceViewController_common) {
         self.title = @"设备";
@@ -97,33 +94,23 @@ NSDeviceModelType_Camera,//摄像头控制
     [self reloadData];
 }
 
-- (void)reloadData
-{
-//    NSArray *devices = [NSDeviceModel fetchDevices:nil];
-//    [self.models removeAllObjects];
-//    [self.models addObjectsFromArray:devices];
-//    [self.tableView reloadData];
-    
-    
+- (void)reloadData{
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:@"http://121.40.30.197/api/device" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@%@/%ld",serverAddress,rooms,self.roomID] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
          NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
                                                              options:NSJSONReadingMutableContainers
                                                                error:nil];
         if (![dict isKindOfClass:[NSNull class]]) {
             NSArray *devices = [dict objectForKey:@"devices"];
-            for (NSDictionary *deviceInfo in devices) {
-                
-            }
+            
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     }];
 }
 
-- (void)setupContentView
-{
+- (void)setupContentView{
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -166,8 +153,7 @@ NSDeviceModelType_Camera,//摄像头控制
     
 }
 
-- (void)addDevice
-{
+- (void)addDevice{
     if (self.controllerType == SHDeviceViewController_common) {
         //新的设备
         SHAddDeviceViewController   *controller = [[SHAddDeviceViewController alloc] init];
@@ -194,13 +180,11 @@ NSDeviceModelType_Camera,//摄像头控制
     return [self.pickerArray objectAtIndex:row];
 }
 
-- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
-{
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
     return 50;
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     //改变cell
     SHDeviceCell *cell = (SHDeviceCell *)[self.tableView cellForRowAtIndexPath:self.indexPath];
     [cell changeDeviceState:[self.pickerArray objectAtIndex:row]];
@@ -216,18 +200,15 @@ NSDeviceModelType_Camera,//摄像头控制
 
 #pragma mark - tableviewDelegate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.models.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 64;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"SHDeviceCell";
     SHDeviceCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
@@ -266,8 +247,7 @@ NSDeviceModelType_Camera,//摄像头控制
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *controller = nil;
     NSDeviceModel *model = self.models[indexPath.row];
     switch (model.deviceType) {
@@ -304,10 +284,8 @@ NSDeviceModelType_Camera,//摄像头控制
 }
 
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1)
-    {
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1){
         [NSDeviceModel deleteDevice:self.selectDeviceID];
         [self reloadData];
     }

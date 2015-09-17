@@ -18,6 +18,10 @@ typedef enum {
 
 @interface SHDeviceViewController : SHBaseViewController
 
+@property (nonatomic, assign) NSInteger          roomID;
+
 - (id)initWithType:(SHDeviceViewController_type)type;
+
+
 
 @end
