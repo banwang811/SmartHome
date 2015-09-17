@@ -10,17 +10,16 @@
 
 @interface NSRoomModel : NSMeapDBBaseObject
 
-@property (nonatomic, strong) NSString              *roomID;
+@property (nonatomic, assign) NSInteger             roomID;
 
 @property (nonatomic, strong) NSString              *roomName;
 
 @property (nonatomic, strong) NSString              *roomIcon;
 
-@property (nonatomic, strong) NSString              *roomMembers;
-
-@property (nonatomic, strong) NSString              *deviceID;
-
 @property (nonatomic, strong) NSString              *extension;
+
+@property (nonatomic, strong) NSString              *floor;
+
 
 + (NSArray *)fetchRooms;
 

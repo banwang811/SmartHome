@@ -48,7 +48,7 @@
 //注册
 #define registerUser    @"/register"
 //添加房间 
-#define addRoom         @"/room"
+#define rooms           @"/room"
 
 
 #define pickerViewHight 216

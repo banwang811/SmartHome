@@ -31,7 +31,7 @@
     // 存数据库
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
                                                          conditions:@"roomID = ?"
-                                                               args:[NSArray arrayWithObjects:self.roomID, nil]
+                                                               args:[NSArray arrayWithObjects:[NSNumber numberWithInteger:self.roomID], nil]
                                                               order:nil];
     if (array && [array count] > 0)
     {
@@ -53,7 +53,7 @@
 {
     NSArray *array = [[NSMeapDB shareMeap] queryObjectFromTable:[self class]
                                                      conditions:@"roomID = ?"
-                                                           args:[NSArray arrayWithObjects:self.roomID, nil]
+                                                           args:[NSArray arrayWithObjects:[NSNumber numberWithInteger:self.roomID], nil]
                                                           order:nil];
     if (array && [array count] > 0)
     {
@@ -74,7 +74,7 @@
 - (void)deleteDB
 {
     [[NSMeapDB shareMeap] deleteFromTable:[self class] conditions:@"roomID = ?"
-                                         args:[NSArray arrayWithObjects:self.roomID,nil]];
+                                     args:[NSArray arrayWithObjects:[NSNumber numberWithInteger:self.roomID], nil]];
 }
 
 

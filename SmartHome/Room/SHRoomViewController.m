@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSString              *selectRoomID;
 
+@property (nonatomic, strong) NSString              *roomName;
+
 @end
 
 @implementation SHRoomViewController
@@ -34,14 +36,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupContentView];
-    [self reloadData];
-}
-
-- (void)reloadData{
-    NSArray *roomModels= [NSRoomModel fetchRooms];
-    [self.models removeAllObjects];
-    [self.models addObjectsFromArray:roomModels];
-    [self.tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -50,7 +44,7 @@
 }
 
 - (void)setupContentView{
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth;
@@ -95,17 +89,6 @@
     }
     NSRoomModel *model = self.models[indexPath.row];
     cell.model = model;
-    __weak SHRoomViewController *weakSelf = self;
-    cell.deleteRoom = ^{
-        weakSelf.selectRoomID = model.roomID;
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                        message:@"是否删除房间"
-                                                       delegate:weakSelf
-                                              cancelButtonTitle:@"取消"
-                                              otherButtonTitles:@"确定", nil];
-        alert.tag = 200;
-        [alert show];
-    };
     return cell;
 }
 
@@ -120,12 +103,12 @@
     if (alertView.tag == 200) {
         if (buttonIndex == 1){
             [NSRoomModel deleteDB:self.selectRoomID];
-            [self reloadData];
         }
     }else{
         if (buttonIndex == 1){
+            UITextField *textField = [alertView textFieldAtIndex:0];
+            self.roomName = textField.text;
             [self requestAddRoom];
-            [self reloadData];
         }
     }
 }
@@ -134,13 +117,22 @@
     [self showHudView:nil];
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,login] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@%@",serverAddress,rooms] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self hideHudView];
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
                                                              options:NSJSONReadingMutableContainers
                                                                error:nil];
         if([[dict objectForKey:@"error"]integerValue] == 0){
-            SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
+            [self.models removeAllObjects];
+            NSArray *roomInfos = [dict objectForKey:@"rooms"];
+            for (NSDictionary *info in roomInfos) {
+                NSRoomModel *model = [[NSRoomModel alloc] init];
+                model.roomName = [info objectForKey:@"name"];
+                model.roomID = [[info objectForKey:@"id"] integerValue];
+                model.floor = [info objectForKey:@"floor"];
+                [self.models addObject:model];
+            }
+            [self.tableView reloadData];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self hideHudView];
@@ -152,14 +144,19 @@
     [self showHudView:nil];
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSDictionary *parameter=@{@"name":@"客厅"};
-    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,addRoom] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSDictionary *parameter=@{@"name":self.roomName};
+    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,rooms] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self hideHudView];
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
                                                              options:NSJSONReadingMutableContainers
                                                                error:nil];
         if([[dict objectForKey:@"error"]integerValue] == 0){
-            SHAPP_DELEGATE.window.rootViewController = SHAPP_DELEGATE.mainController;
+            NSRoomModel *model = [[NSRoomModel alloc] init];
+            model.roomName = [dict objectForKey:@"name"];
+            model.roomID = [[dict objectForKey:@"id"] integerValue];
+            model.floor = [dict objectForKey:@"floor"];
+            [self.models addObject:model];
+            [self.tableView reloadData];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self hideHudView];
