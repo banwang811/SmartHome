@@ -8,7 +8,6 @@
 
 #import "SHRoomViewController.h"
 #import "SHRoomTableViewCell.h"
-#import "NSRoomModel.h"
 #import "SHRoomSetingViewController.h"
 #import "SHRoomDeviceController.h"
 
