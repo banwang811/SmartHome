@@ -26,7 +26,6 @@
 #import "SHAdapter.h"
 #import "SHError.h"
 #import "SHAccountManager.h"
-
 //第三方
 #import "MBProgressHUD.h"
 //#import "MJRefresh.h"

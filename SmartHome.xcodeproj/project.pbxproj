@@ -126,11 +126,6 @@
 		A50A98181B25DDB40082DD58 /* SHRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50A98171B25DDB40082DD58 /* SHRoomTableViewCell.xib */; };
 		A50A981B1B25F7620082DD58 /* SHSceneSetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50A981A1B25F7620082DD58 /* SHSceneSetingController.m */; };
 		A53482131B2086FF00324B48 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A53482121B2086FF00324B48 /* UIBarButtonItem+Extension.m */; };
-		A53482161B20894D00324B48 /* SHRoomSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53482151B20894D00324B48 /* SHRoomSetingViewController.m */; };
-		A53482191B2090B000324B48 /* SHRootSetingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53482181B2090B000324B48 /* SHRootSetingViewCell.m */; };
-		A534821F1B20924000324B48 /* SHRoomSetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A534821E1B20924000324B48 /* SHRoomSetingModel.m */; };
-		A560E3271B28A02100445A89 /* SHRootSetingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A560E3261B28A02100445A89 /* SHRootSetingViewCell.xib */; };
-		A560E32B1B28B59800445A89 /* SHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A560E32A1B28B59800445A89 /* SHPickerView.m */; };
 		A5A6A3B31B2CBB8400C3A0CB /* SHSelectDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6A3AD1B2CBB8400C3A0CB /* SHSelectDeviceCell.m */; };
 		A5A6A3B41B2CBB8400C3A0CB /* SHSelectDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A6A3AE1B2CBB8400C3A0CB /* SHSelectDeviceCell.xib */; };
 		A5A6A3B51B2CBB8400C3A0CB /* SHSelectDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6A3B01B2CBB8400C3A0CB /* SHSelectDeviceModel.m */; };
@@ -351,15 +346,6 @@
 		A50A981A1B25F7620082DD58 /* SHSceneSetingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSceneSetingController.m; sourceTree = "<group>"; };
 		A53482111B2086FF00324B48 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		A53482121B2086FF00324B48 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
-		A53482141B20894D00324B48 /* SHRoomSetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomSetingViewController.h; sourceTree = "<group>"; };
-		A53482151B20894D00324B48 /* SHRoomSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomSetingViewController.m; sourceTree = "<group>"; };
-		A53482171B2090B000324B48 /* SHRootSetingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRootSetingViewCell.h; sourceTree = "<group>"; };
-		A53482181B2090B000324B48 /* SHRootSetingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRootSetingViewCell.m; sourceTree = "<group>"; };
-		A534821D1B20924000324B48 /* SHRoomSetingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomSetingModel.h; sourceTree = "<group>"; };
-		A534821E1B20924000324B48 /* SHRoomSetingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomSetingModel.m; sourceTree = "<group>"; };
-		A560E3261B28A02100445A89 /* SHRootSetingViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHRootSetingViewCell.xib; sourceTree = "<group>"; };
-		A560E3291B28B59800445A89 /* SHPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPickerView.h; sourceTree = "<group>"; };
-		A560E32A1B28B59800445A89 /* SHPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPickerView.m; sourceTree = "<group>"; };
 		A5A6A3AC1B2CBB8400C3A0CB /* SHSelectDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSelectDeviceCell.h; sourceTree = "<group>"; };
 		A5A6A3AD1B2CBB8400C3A0CB /* SHSelectDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSelectDeviceCell.m; sourceTree = "<group>"; };
 		A5A6A3AE1B2CBB8400C3A0CB /* SHSelectDeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSelectDeviceCell.xib; sourceTree = "<group>"; };
@@ -694,15 +680,6 @@
 				A5096B821B1DF633005ABF68 /* SHRoomTableViewCell.h */,
 				A5096B831B1DF633005ABF68 /* SHRoomTableViewCell.m */,
 				A50A98171B25DDB40082DD58 /* SHRoomTableViewCell.xib */,
-				A53482141B20894D00324B48 /* SHRoomSetingViewController.h */,
-				A53482151B20894D00324B48 /* SHRoomSetingViewController.m */,
-				A560E3291B28B59800445A89 /* SHPickerView.h */,
-				A560E32A1B28B59800445A89 /* SHPickerView.m */,
-				A53482171B2090B000324B48 /* SHRootSetingViewCell.h */,
-				A53482181B2090B000324B48 /* SHRootSetingViewCell.m */,
-				A560E3261B28A02100445A89 /* SHRootSetingViewCell.xib */,
-				A534821D1B20924000324B48 /* SHRoomSetingModel.h */,
-				A534821E1B20924000324B48 /* SHRoomSetingModel.m */,
 				04989C541BAAAE0D0031119E /* SHRoomDeviceController.h */,
 				04989C551BAAAE0D0031119E /* SHRoomDeviceController.m */,
 				04989C561BAAAE0D0031119E /* SHRoomDeviceController.xib */,
@@ -1099,7 +1076,6 @@
 				04BFB6601BA6779200EF51D8 /* TVAVBtnImage.png in Resources */,
 				04BFB6591BA6779200EF51D8 /* DOWNBtn.png in Resources */,
 				04989C5D1BAAB5F10031119E /* SHScenceDeviceController.xib in Resources */,
-				A560E3271B28A02100445A89 /* SHRootSetingViewCell.xib in Resources */,
 				04BFB6581BA6779200EF51D8 /* BACKBtnImage.png in Resources */,
 				04CC555B1BA7C043008F58AC /* placeHolderHeader@2x.png in Resources */,
 				04BFB6D01BA6D08700EF51D8 /* ver_bg.png in Resources */,
@@ -1169,7 +1145,6 @@
 				A5FDD95C1B27522400DAAD90 /* NSDeviceModel.m in Sources */,
 				04BFB6911BA6B18000EF51D8 /* AFURLConnectionOperation.m in Sources */,
 				04CC555F1BA7C389008F58AC /* SHHomeController.m in Sources */,
-				A53482161B20894D00324B48 /* SHRoomSetingViewController.m in Sources */,
 				04BFB6931BA6B18000EF51D8 /* AFURLResponseSerialization.m in Sources */,
 				04BFB6CE1BA6CDEE00EF51D8 /* UIWindow+Hierarchy.m in Sources */,
 				046CE1821BA906EE00959A53 /* SHAboutViewController.m in Sources */,
@@ -1216,9 +1191,6 @@
 				04BFB68D1BA6B18000EF51D8 /* AFHTTPRequestOperationManager.m in Sources */,
 				A5C00A141B1CA7E4004CAA23 /* SHSetingViewController.m in Sources */,
 				A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */,
-				A534821F1B20924000324B48 /* SHRoomSetingModel.m in Sources */,
-				A53482191B2090B000324B48 /* SHRootSetingViewCell.m in Sources */,
-				A560E32B1B28B59800445A89 /* SHPickerView.m in Sources */,
 				04BFB68C1BA6B18000EF51D8 /* AFHTTPRequestOperation.m in Sources */,
 				04BFB6921BA6B18000EF51D8 /* AFURLRequestSerialization.m in Sources */,
 				A50A90011B25C4EA0082DD58 /* SHDeviceViewController.m in Sources */,

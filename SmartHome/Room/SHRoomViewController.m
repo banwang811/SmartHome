@@ -8,7 +8,6 @@
 
 #import "SHRoomViewController.h"
 #import "SHRoomTableViewCell.h"
-#import "SHRoomSetingViewController.h"
 #import "SHRoomDeviceController.h"
 
 @interface SHRoomViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
@@ -17,7 +16,7 @@
 
 @property (nonatomic, strong) NSMutableArray        *models;
 
-@property (nonatomic, strong) NSString              *selectRoomID;
+@property (nonatomic, assign) NSIndexPath           *indexPath;
 
 @property (nonatomic, strong) NSString              *roomName;
 
@@ -93,6 +92,16 @@
     }
     NSRoomModel *model = self.models[indexPath.row];
     cell.model = model;
+    cell.deleteRoom = ^(){
+        self.indexPath = indexPath;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"是否删除房间"
+                                                       delegate:self
+                                              cancelButtonTitle:@"取消"
+                                              otherButtonTitles:@"确定", nil];
+        alert.tag = 200;
+        [alert show];
+    };
     return cell;
 }
 
@@ -106,7 +115,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 200) {
         if (buttonIndex == 1){
-            [NSRoomModel deleteDB:self.selectRoomID];
+            [self requestDeleteRoom];
         }
     }else{
         if (buttonIndex == 1){
@@ -166,6 +175,28 @@
         [self hideHudView];
     }];
 }
+
+- (void)requestDeleteRoom{
+    [self showHudView:nil];
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSRoomModel *model = [self.models objectAtIndex:self.indexPath.row];
+    [manager DELETE:[NSString stringWithFormat:@"%@%@/%ld",serverAddress,rooms,model.roomID] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self hideHudView];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:nil];
+        if([[dict objectForKey:@"error"]integerValue] == 0){
+            [self.models removeObject:model];
+            [self.tableView reloadData];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self hideHudView];
+    }];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

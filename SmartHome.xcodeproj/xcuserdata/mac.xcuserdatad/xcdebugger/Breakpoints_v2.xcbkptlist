@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartHome/Device/SHDeviceViewController.m"
-            timestampString = "464175261.762787"
+            timestampString = "464238445.260769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "-addDevice"
             landmarkType = "5">
          </BreakpointContent>

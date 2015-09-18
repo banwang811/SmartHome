@@ -7,7 +7,6 @@
 //
 
 #import "SHSceneSetingController.h"
-#import "SHPickerView.h"
 
 @interface SHSceneSetingController ()
 

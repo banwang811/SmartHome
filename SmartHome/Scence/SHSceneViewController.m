@@ -9,7 +9,6 @@
 #import "SHSceneViewController.h"
 #import "SHSceneTableViewCell.h"
 #import "SHSceneSetingController.h"
-#import "SHRoomSetingViewController.h"
 #import "SHDeviceViewController.h"
 
 @interface SHSceneViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -72,8 +71,7 @@
 
 - (void)addDevice
 {
-    SHRoomSetingViewController *controller = [[SHRoomSetingViewController alloc] initWithType:SHSetingViewType_scene];
-    [self.navigationController pushViewController:controller animated:YES];
+    
 }
 
 #pragma mark - tableviewDelegate

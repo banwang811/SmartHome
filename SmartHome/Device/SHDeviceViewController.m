@@ -10,7 +10,6 @@
 #import "SHSelectViewController.h"
 //common
 #import "SHDeviceCell.h"
-#import "SHPickerView.h"
 //other
 #import "SHTVControlController.h"
 #import "SHAirconditionController.h"
