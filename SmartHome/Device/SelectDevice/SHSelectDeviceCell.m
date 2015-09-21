@@ -20,11 +20,11 @@
 
 @implementation SHSelectDeviceCell
 
-- (void)setModel:(SHSelectDeviceModel *)model
+- (void)setModel:(NSDeviceModel *)model
 {
-    self.headImage.image = [UIImage imageNamed:model.iconName];
-    self.nameLabel.text = model.title;
-    if (model.hasSelected) {
+    self.headImage.image = [UIImage imageNamed:model.deviceIcon];
+    self.nameLabel.text = model.deviceName;
+    if (/* DISABLES CODE */ (1)) {
         self.showIcon.image = [UIImage imageNamed:@"hasSelected"];
         self.showIcon.backgroundColor = [UIColor redColor];
 

@@ -18,4 +18,8 @@
 
 - (void)addDevice;
 
+- (UITableViewCell *)shtableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)shtableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

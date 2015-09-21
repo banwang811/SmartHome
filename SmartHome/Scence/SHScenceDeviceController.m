@@ -7,7 +7,7 @@
 //
 
 #import "SHScenceDeviceController.h"
-#import "SHSelectViewController.h"
+#import "SHSelectDeviceController.h"
 
 @interface SHScenceDeviceController ()
 
@@ -28,7 +28,7 @@
 }
 
 - (void)addDevice{
-    SHSelectViewController *controller = [[SHSelectViewController alloc] init];
+    SHDeviceViewController *controller = [[SHDeviceViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

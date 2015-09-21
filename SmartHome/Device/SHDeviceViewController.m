@@ -7,7 +7,7 @@
 //
 
 #import "SHDeviceViewController.h"
-#import "SHSelectViewController.h"
+#import "SHSelectDeviceController.h"
 //common
 #import "SHDeviceCell.h"
 //other
@@ -114,20 +114,6 @@ NSDeviceModelType_Camera,//摄像头控制
                                  @"model":@"0",};
     [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,device] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self hideHudView];
-//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
-//                                                             options:NSJSONReadingMutableContainers
-//                                                               error:nil];
-//        if([[dict objectForKey:@"error"]integerValue] == 0){
-//            [self.models removeAllObjects];
-//            NSArray *roomInfos = [dict objectForKey:@"rooms"];
-//            for (NSDictionary *info in roomInfos) {
-//                NSDeviceModel *model = [[NSDeviceModel alloc] init];
-//                model.deviceName = [info objectForKey:@"name"];
-//                model.deviceID = [[info objectForKey:@"id"] integerValue];
-//                [self.models addObject:model];
-//            }
-//            [self.tableView reloadData];
-//        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self hideHudView];
     }];
@@ -144,6 +130,10 @@ NSDeviceModelType_Camera,//摄像头控制
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [self shtableView:tableView cellForRowAtIndexPath:indexPath];
+}
+
+- (UITableViewCell *)shtableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"SHDeviceCell";
     SHDeviceCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
@@ -156,7 +146,13 @@ NSDeviceModelType_Camera,//摄像头控制
     return cell;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self shtableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+
+- (void)shtableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *controller = nil;
     NSDeviceModel *model = self.models[indexPath.row];
     switch (model.deviceType) {

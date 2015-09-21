@@ -17,6 +17,8 @@
 		046CE1941BA9097F00959A53 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE18B1BA9097F00959A53 /* Icon.png */; };
 		046CE1951BA9097F00959A53 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046CE18C1BA9097F00959A53 /* Icon@2x.png */; };
 		046CE1961BA9097F00959A53 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE18E1BA9097F00959A53 /* MBProgressHUD.m */; };
+		04737E7C1BAF9CBC0018E341 /* SHSelectDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04737E7A1BAF9CBC0018E341 /* SHSelectDeviceController.m */; };
+		04737E7D1BAF9CBC0018E341 /* SHSelectDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04737E7B1BAF9CBC0018E341 /* SHSelectDeviceController.xib */; };
 		04989C571BAAAE0D0031119E /* SHRoomDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04989C551BAAAE0D0031119E /* SHRoomDeviceController.m */; };
 		04989C581BAAAE0D0031119E /* SHRoomDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04989C561BAAAE0D0031119E /* SHRoomDeviceController.xib */; };
 		04989C5C1BAAB5F10031119E /* SHScenceDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04989C5A1BAAB5F10031119E /* SHScenceDeviceController.m */; };
@@ -128,8 +130,6 @@
 		A53482131B2086FF00324B48 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A53482121B2086FF00324B48 /* UIBarButtonItem+Extension.m */; };
 		A5A6A3B31B2CBB8400C3A0CB /* SHSelectDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6A3AD1B2CBB8400C3A0CB /* SHSelectDeviceCell.m */; };
 		A5A6A3B41B2CBB8400C3A0CB /* SHSelectDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A6A3AE1B2CBB8400C3A0CB /* SHSelectDeviceCell.xib */; };
-		A5A6A3B51B2CBB8400C3A0CB /* SHSelectDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6A3B01B2CBB8400C3A0CB /* SHSelectDeviceModel.m */; };
-		A5A6A3B61B2CBB8400C3A0CB /* SHSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A6A3B21B2CBB8400C3A0CB /* SHSelectViewController.m */; };
 		A5BD07381B56A7F6005F0E1D /* LeftSideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BD072E1B56A7F5005F0E1D /* LeftSideBarViewController.m */; };
 		A5BD07391B56A7F6005F0E1D /* SHSideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BD07301B56A7F5005F0E1D /* SHSideModel.m */; };
 		A5BD073C1B56A7F6005F0E1D /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BD07361B56A7F5005F0E1D /* SidebarViewController.m */; };
@@ -176,6 +176,9 @@
 		046CE18C1BA9097F00959A53 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		046CE18D1BA9097F00959A53 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		046CE18E1BA9097F00959A53 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		04737E791BAF9CBC0018E341 /* SHSelectDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSelectDeviceController.h; sourceTree = "<group>"; };
+		04737E7A1BAF9CBC0018E341 /* SHSelectDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSelectDeviceController.m; sourceTree = "<group>"; };
+		04737E7B1BAF9CBC0018E341 /* SHSelectDeviceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSelectDeviceController.xib; sourceTree = "<group>"; };
 		04989C541BAAAE0D0031119E /* SHRoomDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRoomDeviceController.h; sourceTree = "<group>"; };
 		04989C551BAAAE0D0031119E /* SHRoomDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRoomDeviceController.m; sourceTree = "<group>"; };
 		04989C561BAAAE0D0031119E /* SHRoomDeviceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHRoomDeviceController.xib; sourceTree = "<group>"; };
@@ -349,10 +352,6 @@
 		A5A6A3AC1B2CBB8400C3A0CB /* SHSelectDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSelectDeviceCell.h; sourceTree = "<group>"; };
 		A5A6A3AD1B2CBB8400C3A0CB /* SHSelectDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSelectDeviceCell.m; sourceTree = "<group>"; };
 		A5A6A3AE1B2CBB8400C3A0CB /* SHSelectDeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSelectDeviceCell.xib; sourceTree = "<group>"; };
-		A5A6A3AF1B2CBB8400C3A0CB /* SHSelectDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSelectDeviceModel.h; sourceTree = "<group>"; };
-		A5A6A3B01B2CBB8400C3A0CB /* SHSelectDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSelectDeviceModel.m; sourceTree = "<group>"; };
-		A5A6A3B11B2CBB8400C3A0CB /* SHSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSelectViewController.h; sourceTree = "<group>"; };
-		A5A6A3B21B2CBB8400C3A0CB /* SHSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSelectViewController.m; sourceTree = "<group>"; };
 		A5BD072D1B56A7F5005F0E1D /* LeftSideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideBarViewController.h; sourceTree = "<group>"; };
 		A5BD072E1B56A7F5005F0E1D /* LeftSideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideBarViewController.m; sourceTree = "<group>"; };
 		A5BD072F1B56A7F5005F0E1D /* SHSideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideModel.h; sourceTree = "<group>"; };
@@ -724,10 +723,9 @@
 				A5A6A3AC1B2CBB8400C3A0CB /* SHSelectDeviceCell.h */,
 				A5A6A3AD1B2CBB8400C3A0CB /* SHSelectDeviceCell.m */,
 				A5A6A3AE1B2CBB8400C3A0CB /* SHSelectDeviceCell.xib */,
-				A5A6A3AF1B2CBB8400C3A0CB /* SHSelectDeviceModel.h */,
-				A5A6A3B01B2CBB8400C3A0CB /* SHSelectDeviceModel.m */,
-				A5A6A3B11B2CBB8400C3A0CB /* SHSelectViewController.h */,
-				A5A6A3B21B2CBB8400C3A0CB /* SHSelectViewController.m */,
+				04737E791BAF9CBC0018E341 /* SHSelectDeviceController.h */,
+				04737E7A1BAF9CBC0018E341 /* SHSelectDeviceController.m */,
+				04737E7B1BAF9CBC0018E341 /* SHSelectDeviceController.xib */,
 			);
 			path = SelectDevice;
 			sourceTree = "<group>";
@@ -1060,6 +1058,7 @@
 				04BFB6571BA6779200EF51D8 /* 9BtnImage.png in Resources */,
 				04BFB6621BA6779200EF51D8 /* USER1BtnImage.png in Resources */,
 				04BFB65A1BA6779200EF51D8 /* MODEBtnImage.png in Resources */,
+				04737E7D1BAF9CBC0018E341 /* SHSelectDeviceController.xib in Resources */,
 				04CC55581BA7BF02008F58AC /* login_back@2x.png in Resources */,
 				04BFB6551BA6779200EF51D8 /* 7BtnImage.png in Resources */,
 				046CE1831BA906EE00959A53 /* SHAboutViewController.xib in Resources */,
@@ -1156,7 +1155,6 @@
 				04BFB6CD1BA6CDEE00EF51D8 /* UIView+IQKeyboardToolbar.m in Sources */,
 				A5FDD9611B2756E100DAAD90 /* SHDataManager.m in Sources */,
 				04BFB68F1BA6B18000EF51D8 /* AFNetworkReachabilityManager.m in Sources */,
-				A5A6A3B51B2CBB8400C3A0CB /* SHSelectDeviceModel.m in Sources */,
 				A5BD07391B56A7F6005F0E1D /* SHSideModel.m in Sources */,
 				A5C00A111B1CA7D1004CAA23 /* SHHomeViewController.m in Sources */,
 				A5096B7B1B1DF2AF005ABF68 /* SHSceneViewController.m in Sources */,
@@ -1169,7 +1167,6 @@
 				04BFB6C71BA6CDEE00EF51D8 /* IQSegmentedNextPrevious.m in Sources */,
 				A5BD07381B56A7F6005F0E1D /* LeftSideBarViewController.m in Sources */,
 				A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */,
-				A5A6A3B61B2CBB8400C3A0CB /* SHSelectViewController.m in Sources */,
 				A5C00A001B1CA49A004CAA23 /* SHNavigationController.m in Sources */,
 				04CC55691BA7FCE4008F58AC /* SHChangePasswordController.m in Sources */,
 				A5F6C8661BA70F9300A12615 /* SHAccountManager.m in Sources */,
@@ -1193,6 +1190,7 @@
 				A5C00A2F1B1CAF34004CAA23 /* UIColor+SHColor.m in Sources */,
 				04BFB68C1BA6B18000EF51D8 /* AFHTTPRequestOperation.m in Sources */,
 				04BFB6921BA6B18000EF51D8 /* AFURLRequestSerialization.m in Sources */,
+				04737E7C1BAF9CBC0018E341 /* SHSelectDeviceController.m in Sources */,
 				A50A90011B25C4EA0082DD58 /* SHDeviceViewController.m in Sources */,
 				04BFB6A41BA6B72100EF51D8 /* SHForgetPasswordController.m in Sources */,
 				04BFB6C91BA6CDEE00EF51D8 /* IQTitleBarButtonItem.m in Sources */,

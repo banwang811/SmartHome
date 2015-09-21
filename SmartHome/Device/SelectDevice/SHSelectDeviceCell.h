@@ -7,10 +7,10 @@
 //
 
 #import "SHTableViewCell.h"
-#import "SHSelectDeviceModel.h"
+#import "NSDeviceModel.h"
 
 @interface SHSelectDeviceCell : SHTableViewCell
 
-@property (nonatomic, strong) SHSelectDeviceModel    *model;
+@property (nonatomic, strong) NSDeviceModel    *model;
 
 @end

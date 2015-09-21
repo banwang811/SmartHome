@@ -7,7 +7,7 @@
 //
 
 #import "SHRoomDeviceController.h"
-#import "SHSelectViewController.h"
+#import "SHSelectDeviceController.h"
 
 @interface SHRoomDeviceController ()
 
@@ -49,9 +49,27 @@
     }];
 }
 
+//- (void)addDevice{
+//    SHSelectDeviceController *controller = [[SHSelectDeviceController alloc] init];
+//    [self.navigationController pushViewController:controller animated:YES];
+//}
+
 - (void)addDevice{
-    SHSelectViewController *controller = [[SHSelectViewController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
+    [self showHudView:nil];
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *parameters = @{@"name":@"灯",
+                                 @"room_id":[NSNumber numberWithInteger:self.roomID],
+                                 @"type":@"1",
+                                 @"infrared":@"0",
+                                 @"brand":@"0",
+                                 @"model":@"0",
+                                 @"imei":@"0"};
+    [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,device] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self hideHudView];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self hideHudView];
+    }];
 }
 
 @end
