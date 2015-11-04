@@ -52,21 +52,7 @@
     NSDictionary *parameter=@{@"phone":@"13691495062",
                               @"password":@"123"};
     [manager POST:[NSString stringWithFormat:@"%@%@",serverAddress,login] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [self hideHudView];
-        
-//        NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",serverAddress,login]]];
-//        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:cookies];
-//        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"kUserDefaultsCookie"];
-//        
-//        NSData *cookiesdata = [[NSUserDefaults standardUserDefaults] objectForKey:@"kUserDefaultsCookie"];
-//        if([cookiesdata length]) {
-//            NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData:cookiesdata];
-//            NSHTTPCookie *cookie;
-//            for (cookie in cookies) {
-//                [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
-//            }
-//        }
-        
+        [self hideHudView];        
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
                                                              options:NSJSONReadingMutableContainers
                                                                error:nil];
