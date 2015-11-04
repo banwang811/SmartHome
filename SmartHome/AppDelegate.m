@@ -11,6 +11,7 @@
 #import "SHNavigationController.h"
 #import "SHDataManager.h"
 #import "SidebarViewController.h"
+#import "APService.h"
 
 @interface AppDelegate ()
 
@@ -37,7 +38,28 @@
     [UINavigationBar appearance].translucent  = NO;
     [UINavigationBar appearance].barTintColor = [UIColor navagationBarColor];
     [self.window makeKeyAndVisible];
+    //极光注册
+    [self registerJGPush:launchOptions];
     return YES;
+}
+
+- (void)registerJGPush:(NSDictionary *)launchOptions{
+    // Required
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                       UIUserNotificationTypeSound |
+                                                       UIUserNotificationTypeAlert)
+                                           categories:nil];
+    } else {
+        //categories 必须为nil
+        [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                       UIRemoteNotificationTypeSound |
+                                                       UIRemoteNotificationTypeAlert)
+                                           categories:nil];
+    }
+    // Required
+    [APService setupWithOption:launchOptions];
 }
 
 - (SidebarViewController *)mainController{
@@ -54,6 +76,22 @@
     return _loginController;
 }
 
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Required
+    [APService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // Required
+    [APService handleRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // IOS 7 Support Required
+    [APService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
   

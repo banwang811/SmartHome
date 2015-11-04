@@ -23,6 +23,15 @@
 		04989C581BAAAE0D0031119E /* SHRoomDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04989C561BAAAE0D0031119E /* SHRoomDeviceController.xib */; };
 		04989C5C1BAAB5F10031119E /* SHScenceDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04989C5A1BAAB5F10031119E /* SHScenceDeviceController.m */; };
 		04989C5D1BAAB5F10031119E /* SHScenceDeviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04989C5B1BAAB5F10031119E /* SHScenceDeviceController.xib */; };
+		04A775961BE9EFCB00BE3B1D /* libPushSDK-1.8.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A775951BE9EFCB00BE3B1D /* libPushSDK-1.8.8.a */; };
+		04A775981BE9F00500BE3B1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A775971BE9F00500BE3B1D /* CFNetwork.framework */; };
+		04A7759A1BE9F00B00BE3B1D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A775991BE9F00B00BE3B1D /* CoreFoundation.framework */; };
+		04A7759C1BE9F01400BE3B1D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7759B1BE9F01400BE3B1D /* CoreTelephony.framework */; };
+		04A7759E1BE9F01E00BE3B1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7759D1BE9F01E00BE3B1D /* SystemConfiguration.framework */; };
+		04A775A01BE9F02400BE3B1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7759F1BE9F02400BE3B1D /* CoreGraphics.framework */; };
+		04A775A41BE9F03900BE3B1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A775A31BE9F03900BE3B1D /* Security.framework */; };
+		04A775A61BE9F05000BE3B1D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A775A51BE9F05000BE3B1D /* libz.tbd */; };
+		04A775A81BE9F13700BE3B1D /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A775A71BE9F13700BE3B1D /* PushConfig.plist */; };
 		04BFB6321BA674AA00EF51D8 /* SHSideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BFB6301BA674AA00EF51D8 /* SHSideTableViewCell.m */; };
 		04BFB6331BA674AA00EF51D8 /* SHSideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6311BA674AA00EF51D8 /* SHSideTableViewCell.xib */; };
 		04BFB6351BA675F000EF51D8 /* IconImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BFB6341BA675F000EF51D8 /* IconImage.plist */; };
@@ -185,6 +194,17 @@
 		04989C591BAAB5F10031119E /* SHScenceDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHScenceDeviceController.h; sourceTree = "<group>"; };
 		04989C5A1BAAB5F10031119E /* SHScenceDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHScenceDeviceController.m; sourceTree = "<group>"; };
 		04989C5B1BAAB5F10031119E /* SHScenceDeviceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHScenceDeviceController.xib; sourceTree = "<group>"; };
+		04A775941BE9EFCB00BE3B1D /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		04A775951BE9EFCB00BE3B1D /* libPushSDK-1.8.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.8.a"; sourceTree = "<group>"; };
+		04A775971BE9F00500BE3B1D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		04A775991BE9F00B00BE3B1D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		04A7759B1BE9F01400BE3B1D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		04A7759D1BE9F01E00BE3B1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		04A7759F1BE9F02400BE3B1D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04A775A11BE9F02D00BE3B1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04A775A31BE9F03900BE3B1D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		04A775A51BE9F05000BE3B1D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		04A775A71BE9F13700BE3B1D /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		04BFB62F1BA674AA00EF51D8 /* SHSideTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSideTableViewCell.h; sourceTree = "<group>"; };
 		04BFB6301BA674AA00EF51D8 /* SHSideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSideTableViewCell.m; sourceTree = "<group>"; };
 		04BFB6311BA674AA00EF51D8 /* SHSideTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSideTableViewCell.xib; sourceTree = "<group>"; };
@@ -403,6 +423,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A775A61BE9F05000BE3B1D /* libz.tbd in Frameworks */,
+				04A775A41BE9F03900BE3B1D /* Security.framework in Frameworks */,
+				04A775A01BE9F02400BE3B1D /* CoreGraphics.framework in Frameworks */,
+				04A7759E1BE9F01E00BE3B1D /* SystemConfiguration.framework in Frameworks */,
+				04A7759C1BE9F01400BE3B1D /* CoreTelephony.framework in Frameworks */,
+				04A7759A1BE9F00B00BE3B1D /* CoreFoundation.framework in Frameworks */,
+				04A775981BE9F00500BE3B1D /* CFNetwork.framework in Frameworks */,
+				04A775961BE9EFCB00BE3B1D /* libPushSDK-1.8.8.a in Frameworks */,
 				A5096B761B1DF1F6005ABF68 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +467,15 @@
 				046CE18C1BA9097F00959A53 /* Icon@2x.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		04A775931BE9EFCB00BE3B1D /* JGPush */ = {
+			isa = PBXGroup;
+			children = (
+				04A775941BE9EFCB00BE3B1D /* APService.h */,
+				04A775951BE9EFCB00BE3B1D /* libPushSDK-1.8.8.a */,
+			);
+			path = JGPush;
 			sourceTree = "<group>";
 		};
 		04BFB6361BA6778000EF51D8 /* images */ = {
@@ -796,10 +833,19 @@
 		A5C009D31B1CA33F004CAA23 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04A775A51BE9F05000BE3B1D /* libz.tbd */,
+				04A775A31BE9F03900BE3B1D /* Security.framework */,
+				04A775A11BE9F02D00BE3B1D /* Foundation.framework */,
+				04A7759F1BE9F02400BE3B1D /* CoreGraphics.framework */,
+				04A7759D1BE9F01E00BE3B1D /* SystemConfiguration.framework */,
+				04A7759B1BE9F01400BE3B1D /* CoreTelephony.framework */,
+				04A775991BE9F00B00BE3B1D /* CoreFoundation.framework */,
+				04A775971BE9F00500BE3B1D /* CFNetwork.framework */,
 				A5C009D41B1CA33F004CAA23 /* Info.plist */,
 				A5C009D51B1CA33F004CAA23 /* main.m */,
 				A5C00A321B1CB13C004CAA23 /* SmartHome.pch */,
 				04BFB6341BA675F000EF51D8 /* IconImage.plist */,
+				04A775A71BE9F13700BE3B1D /* PushConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -837,6 +883,7 @@
 		A5C00A061B1CA573004CAA23 /* Improt */ = {
 			isa = PBXGroup;
 			children = (
+				04A775931BE9EFCB00BE3B1D /* JGPush */,
 				046CE1841BA9097F00959A53 /* MBProgressHUD */,
 				04CC55701BA802D9008F58AC /* HPGrowingTextView */,
 				04BFB6AE1BA6CDEE00EF51D8 /* IQKeyBoardManager */,
@@ -1056,6 +1103,7 @@
 				04BFB65B1BA6779200EF51D8 /* MUTEBtnImage.png in Resources */,
 				04BFB64F1BA6779200EF51D8 /* 1BtnImage.png in Resources */,
 				04BFB6571BA6779200EF51D8 /* 9BtnImage.png in Resources */,
+				04A775A81BE9F13700BE3B1D /* PushConfig.plist in Resources */,
 				04BFB6621BA6779200EF51D8 /* USER1BtnImage.png in Resources */,
 				04BFB65A1BA6779200EF51D8 /* MODEBtnImage.png in Resources */,
 				04737E7D1BAF9CBC0018E341 /* SHSelectDeviceController.xib in Resources */,
@@ -1314,11 +1362,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shiming Zhang (Z3LZPWU662)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shiming Zhang (Z3LZPWU662)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SmartHome/SmartHome.pch";
 				INFOPLIST_FILE = SmartHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome/Improt/JGPush",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bde64ae6-9c39-417b-9e15-100831e14539";
 			};
 			name = Debug;
 		};
@@ -1326,11 +1381,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shiming Zhang (Z3LZPWU662)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shiming Zhang (Z3LZPWU662)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SmartHome/SmartHome.pch";
 				INFOPLIST_FILE = SmartHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome/Improt/JGPush",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bde64ae6-9c39-417b-9e15-100831e14539";
 			};
 			name = Release;
 		};
