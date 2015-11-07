@@ -2,12 +2,23 @@
 //  SHError.h
 //  SmartHome
 //
-//  Created by banwang on 15/6/13.
-//  Copyright (c) 2015年 banwang. All rights reserved.
+//  Created by mac on 15/11/7.
+//  Copyright © 2015年 banwang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef SHError_h
+#define SHError_h
 
-@interface SHError : NSError
+typedef NS_ENUM(NSInteger,SHErrorSatate) {
+    //登陆成功
+    SHErrorSatate_LoginSuccess = 0,
+    //登陆失败
+    SHErrorSatate_LoginFailed = 101,
+    //email已经注册
+    SHErrorSatate_EmailRegisted = 102,
+    //phone已经注册
+    SHErrorSatate_PhoneRegisted = 103,
 
-@end
+};
+
+#endif

@@ -111,7 +111,6 @@
 		A500D6C91B2C789100C8E2C1 /* SHSetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6C81B2C789100C8E2C1 /* SHSetingModel.m */; };
 		A500D6CC1B2C78A900C8E2C1 /* SHSetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */; };
 		A500D6CE1B2C78BC00C8E2C1 /* SHSetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A500D6CD1B2C78BC00C8E2C1 /* SHSetingCell.xib */; };
-		A500D6DD1B2C887100C8E2C1 /* SHError.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6DC1B2C887100C8E2C1 /* SHError.m */; };
 		A500D6E21B2C9B9100C8E2C1 /* SHTVControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6E11B2C9B9100C8E2C1 /* SHTVControlController.m */; };
 		A500D6E51B2C9BBA00C8E2C1 /* SHAirconditionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6E41B2C9BBA00C8E2C1 /* SHAirconditionController.m */; };
 		A500D6E81B2C9DC400C8E2C1 /* SHTVControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A500D6E71B2C9DC400C8E2C1 /* SHTVControlView.m */; };
@@ -173,6 +172,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0401BB951BEDDB48002E0A0C /* SHComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHComponent.h; sourceTree = "<group>"; };
+		0401BB961BEDDC07002E0A0C /* SHError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHError.h; sourceTree = "<group>"; };
 		046CE17F1BA906EE00959A53 /* SHAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAboutViewController.h; sourceTree = "<group>"; };
 		046CE1801BA906EE00959A53 /* SHAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAboutViewController.m; sourceTree = "<group>"; };
 		046CE1811BA906EE00959A53 /* SHAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHAboutViewController.xib; sourceTree = "<group>"; };
@@ -320,8 +321,6 @@
 		A500D6CA1B2C78A900C8E2C1 /* SHSetingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSetingCell.h; sourceTree = "<group>"; };
 		A500D6CB1B2C78A900C8E2C1 /* SHSetingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSetingCell.m; sourceTree = "<group>"; };
 		A500D6CD1B2C78BC00C8E2C1 /* SHSetingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHSetingCell.xib; sourceTree = "<group>"; };
-		A500D6DB1B2C887100C8E2C1 /* SHError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHError.h; sourceTree = "<group>"; };
-		A500D6DC1B2C887100C8E2C1 /* SHError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHError.m; sourceTree = "<group>"; };
 		A500D6E01B2C9B9100C8E2C1 /* SHTVControlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTVControlController.h; sourceTree = "<group>"; };
 		A500D6E11B2C9B9100C8E2C1 /* SHTVControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTVControlController.m; sourceTree = "<group>"; };
 		A500D6E31B2C9BBA00C8E2C1 /* SHAirconditionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAirconditionController.h; sourceTree = "<group>"; };
@@ -953,10 +952,10 @@
 			children = (
 				A500D6C41B2C6D1900C8E2C1 /* SHAdapter.h */,
 				A500D6C51B2C6D1900C8E2C1 /* SHAdapter.m */,
-				A500D6DB1B2C887100C8E2C1 /* SHError.h */,
-				A500D6DC1B2C887100C8E2C1 /* SHError.m */,
 				A5F6C8641BA70F9300A12615 /* SHAccountManager.h */,
 				A5F6C8651BA70F9300A12615 /* SHAccountManager.m */,
+				0401BB951BEDDB48002E0A0C /* SHComponent.h */,
+				0401BB961BEDDC07002E0A0C /* SHError.h */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1181,7 +1180,6 @@
 				A5096B871B1DF66F005ABF68 /* SHSceneTableViewCell.m in Sources */,
 				A5096B6F1B1DF171005ABF68 /* YYFMDatabasePool.m in Sources */,
 				04BFB6A81BA6C60F00EF51D8 /* CALayer+Additions.m in Sources */,
-				A500D6DD1B2C887100C8E2C1 /* SHError.m in Sources */,
 				A5FDD9561B27518200DAAD90 /* NSRoomModel.m in Sources */,
 				A5A6A3B31B2CBB8400C3A0CB /* SHSelectDeviceCell.m in Sources */,
 				A53482131B2086FF00324B48 /* UIBarButtonItem+Extension.m in Sources */,

@@ -20,7 +20,6 @@
 
 @property (nonatomic, strong) NSString              *floor;
 
-
 + (NSArray *)fetchRooms;
 
 + (void)deleteDB:(NSString *)roomID;

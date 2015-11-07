@@ -15,6 +15,10 @@
 #import "CALayer+Additions.h"
 
 #import "AppDelegate.h"
+//公共方法
+#import "SHComponent.h"
+//错误tag
+#import "SHError.h"
 
 //数据库
 #import "NSMeapDB.h"

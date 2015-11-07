@@ -61,6 +61,7 @@
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self hideHudView];
+        
     }];
 }
 

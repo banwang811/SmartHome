@@ -40,7 +40,23 @@ typedef enum{
 @property (nonatomic, assign) NSDeviceModelState    deviceState;
 
 @property (nonatomic, assign) NSDeviceModelType     deviceType;
-
+/*
+ address = "";
+ brand = 0;
+ "created_at" = "2015-11-07 07:16:17";
+ id = 508;
+ imei = 11fefefe;
+ index = 1;
+ infrared = 0;
+ model = 0;
+ name = "\U6d4b\U8bd5\U706f1";
+ nodeID = 8180;
+ "room_id" = 502;
+ status = 0;
+ type = 1;
+ "updated_at" = "2015-11-07 07:16:17";
+ "user_id" = 52;
+ */
 
 + (NSArray *)fetchDevices:(NSString *)deviceID;
 

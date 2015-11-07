@@ -49,11 +49,6 @@
     }];
 }
 
-//- (void)addDevice{
-//    SHSelectDeviceController *controller = [[SHSelectDeviceController alloc] init];
-//    [self.navigationController pushViewController:controller animated:YES];
-//}
-
 - (void)addDevice{
     [self showHudView:nil];
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
